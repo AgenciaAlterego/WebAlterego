@@ -1,138 +1,10 @@
-/* 
-Paleta de colores
-
-{
-    --aecolor-negro: #000000;
-    --aecolor-gris-oscuro: #333333;
-    --aecolor-gris-intermedio: #999999;
-    --aecolor-gris-claro: #CCCCCC;
-    --aecolor-blanco: #FFFFFF;
-    --aecolor-rojo: #F2333A;
-    --aecolor-CURRENT-MAIN-COLOR
+body {
+    background: var(--aecolor-negro);
+    background: linear-gradient(90deg, var(--aecolor-negro) 0%,
+            var(--aecolor-gris-oscuro) 25%,
+            var(--aecolor-gris-intermedio) 50%,
+            var(--aecolor-gris-claro) 75% var(--aecolor-blanco) 100%);
 }
-
-son variables. Se llaman con la fución var().
-Ej: 
-background-color: var(aecolor-rojo);
-
-
-en el caso de --aecolor-CURRENT-MAIN-COLOR es una variable
-para ir actualizando a medida que se cambia de sección,
-y que todo tenga el mismo color base (principalmente para textos)
-
-********
-
-Se aconseja usar las clases:
-
-+ Para fondos:
-.BackgroundAecolorNegro
-.BackgroundAecolorGrisOscuro
-.BackgroundAecolorGrisIntermedio
-.BackgroundAecolorGrisClaro
-.BackgroundAecolorBlanco
-.BackgroundAecolorRojo
-
-+ Para Color:
-.AecolorNegro
-.AecolorGrisOscuro
-.AecolorGrisIntermedio
-.AecolorGrisClaro
-.AecolorBlanco
-.AecolorRojo
-
-
-********
-
-Adicionalmente, se cuenta con clases para colorear por tipo de mensaje:
-
-.info{
-    color: skyblue;
-}
-.success{
-    color: greenyellow;
-}
-.warning {
-    color: orange;
-}
-.error{
-    color: orangered;
-}
-
-(estas clases ya están definidas, se pueden usar directamente)
-
-
-******************************************************************
-
-
-*/
-
-/*
-Fonts utilizables:
-    'Baron_neue_regular'
-    'Gotham-Thin'
-    'Gotham-Light'
-    'Gotham-Medium'
-    'Gotham-Book'
-    'Gotham-Bold'
-    'Gotham-Black'
-    'Gotham-Ultra'
-    'Roboto'
-        300
-        400
-        700
-    'Barlow-Thin'
-    'Barlow-ThinItalic'
-    'Barlow-Light'
-    'Barlow-Regular'
-    'Barlow-Medium'
-    'Barlow-Medium-italic'
-    'Barlow-Bold'
-
-
-
-*/
-
-/*
-Iconpack - fontAwesome
-https://fontawesome.com/
-
-como usar:
-<i class="fas fa-camera"></i>
-la clase puede ser:
-- fas= para estilo "sólido"
-- fab= para marcas / brands
-
-fa-camera
-"fa" es prefijo de fontawesome. Para todos los íconos es el mismo
-"camera" es el ícono seleccionado, es lo que hay qeu cambiar
-
-
-acá se pueden encontrar todos los íconos gratuitos:
-https://fontawesome.com/icons?d=gallery&s=solid&m=free
-
-
-*/
-
-/*
-*****************************************************************************
-Definiciones generales
-*****************************************************************************
-*/
-
-.titulo-estacion {
-    position: fixed;
-    left: 5vw;
-    font-size: 6em;
-    text-transform: uppercase;
-    line-height: 150px;
-}
-
-
-#sectionLogin .titulo-login-primeralinea,
-#sectionLogin .titulo-login-segundalinea {
-    text-transform: uppercase;
-}
-
 
 /*
 *****************************************************************************
@@ -141,23 +13,36 @@ Header
 */
 
 header {
-    height: 8vh;
-    width: 100%;
-    padding: 3vh 0;
+    max-height: 80px;
+    border-bottom: 2px solid var(--aecolor-gris-intermedio);
+}
+
+header nav {
+    flex-grow: 1;
+}
+
+header span,
+header div {
+    flex-grow: 1;
+}
+
+header div {
+    height: 100%;
 }
 
 header img {
-    height: 100%;
-    max-height: 20px;
-    margin-left: 5vw;
-    margin-top: -20px;
+    max-height: 100%;
 }
 
-header a {
-    position: absolute;
-    right: 5vw;
+header nav {
+    display: flex;
 }
 
+header nav ul {
+    flex-grow: 1;
+    vertical-align: center;
+    align-content: center;
+}
 
 /*
 *****************************************************************************
@@ -166,13 +51,7 @@ Footer
 */
 
 footer {
-    background: none;
-    width: 100%;
-    padding: 3vh 0;
-    position: fixed;
-    bottom: 0;
-    right: -5vw;
-    color: var(--aecolor-gris-intermedio);
+    background-color: var(--aecolor-gris-oscuro);
 }
 
 
@@ -182,7 +61,7 @@ Aside
 *****************************************************************************
 */
 
-#asidebackground{
+#asidebackground {
     position: fixed;
     bottom: 0;
     right: 0;
@@ -196,7 +75,7 @@ Aside
     animation: animShowBackground 1s ease;
 }
 
-#aside{
+#aside {
     width: 30vw;
     height: 100%;
     position: fixed;
@@ -211,21 +90,21 @@ Aside
     animation: animShow 1s ease;
 }
 
-#aside a{
-        /*width: 10px;*/
-        height: 10px;
-        position: fixed;
-        top: 3vh;
-        right: 5vw;
-        padding: 10px;
-        /*background-color: var(--aecolor-gris-oscuro);
+#aside a {
+    /*width: 10px;*/
+    height: 10px;
+    position: fixed;
+    top: 3vh;
+    right: 5vw;
+    padding: 10px;
+    /*background-color: var(--aecolor-gris-oscuro);
         border-radius: 50%;
         box-shadow: 0 0 5px 1px rgba(255, 255, 255, 1);*/
-        /*transform: scale(1);
+    /*transform: scale(1);
         animation: pulse 2s infinite;*/
 }
 
-#aside form button{
+#aside form button {
     font-family: 'Barlow-Medium';
     font-size: 1.1em;
     padding: 5px 20px;
@@ -235,7 +114,7 @@ Aside
     border: none;
 }
 
-#aside form button:focus{
+#aside form button:focus {
     transition: 0.5s;
     background-color: var(--aecolor-gris-oscuro);
     outline: none !important;
