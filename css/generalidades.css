@@ -1,0 +1,424 @@
+/* 
+Paleta de colores
+
+{
+    --aecolor-negro: #000000;
+    --aecolor-gris-oscuro: #333333;
+    --aecolor-gris-intermedio: #999999;
+    --aecolor-gris-claro: #CCCCCC;
+    --aecolor-blanco: #FFFFFF;
+    --aecolor-rojo: #F2333A;
+    --aecolor-CURRENT-MAIN-COLOR
+}
+
+son variables. Se llaman con la fución var().
+Ej: 
+background-color: var(aecolor-rojo);
+
+
+en el caso de --aecolor-CURRENT-MAIN-COLOR es una variable
+para ir actualizando a medida que se cambia de sección,
+y que todo tenga el mismo color base (principalmente para textos)
+
+********
+
+Se aconseja usar las clases:
+
++ Para fondos:
+.BackgroundAecolorNegro
+.BackgroundAecolorGrisOscuro
+.BackgroundAecolorGrisIntermedio
+.BackgroundAecolorGrisClaro
+.BackgroundAecolorBlanco
+.BackgroundAecolorRojo
+
++ Para Color:
+.AecolorNegro
+.AecolorGrisOscuro
+.AecolorGrisIntermedio
+.AecolorGrisClaro
+.AecolorBlanco
+.AecolorRojo
+
+
+********
+
+Adicionalmente, se cuenta con clases para colorear por tipo de mensaje:
+
+.info{
+    color: skyblue;
+}
+.success{
+    color: greenyellow;
+}
+.warning {
+    color: orange;
+}
+.error{
+    color: orangered;
+}
+
+(estas clases ya están definidas, se pueden usar directamente)
+
+
+******************************************************************
+
+
+*/
+
+/*
+Fonts utilizables:
+    'Baron_neue_regular'
+    'Gotham-Thin'
+    'Gotham-Light'
+    'Gotham-Medium'
+    'Gotham-Book'
+    'Gotham-Bold'
+    'Gotham-Black'
+    'Gotham-Ultra'
+    'Roboto'
+        300
+        400
+        700
+    'Barlow-Thin'
+    'Barlow-ThinItalic'
+    'Barlow-Light'
+    'Barlow-Regular'
+    'Barlow-Medium'
+    'Barlow-Medium-italic'
+    'Barlow-Bold'
+
+
+
+*/
+
+/*
+Iconpack - fontAwesome
+https://fontawesome.com/
+
+como usar:
+<i class="fas fa-camera"></i>
+la clase puede ser:
+- fas= para estilo "sólido"
+- fab= para marcas / brands
+
+fa-camera
+"fa" es prefijo de fontawesome. Para todos los íconos es el mismo
+"camera" es el ícono seleccionado, es lo que hay qeu cambiar
+
+
+acá se pueden encontrar todos los íconos gratuitos:
+https://fontawesome.com/icons?d=gallery&s=solid&m=free
+
+
+*/
+
+
+/*
+*****************************************************************************
+Fuentes
+*****************************************************************************
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap');
+
+
+/*
+BARON NEUE
+*/
+
+@font-face {
+    font-family: 'Baron_neue_regular';
+    src: url('../fonts/baron_neue/BaronNeue.otf');
+}
+
+/*
+GOTHAM
+*/
+
+@font-face {
+    font-family: 'Gotham-Thin';
+    src: url('../fonts/Gotham/Gotham-Thin.otf');
+}
+
+@font-face {
+    font-family: 'Gotham-Light';
+    src: url('../fonts/Gotham/Gotham-Light.otf');
+}
+
+@font-face {
+    font-family: 'Gotham-Medium';
+    src: url('../fonts/Gotham/Gotham-Medium.otf');
+}
+
+@font-face {
+    font-family: 'Gotham-Book';
+    src: url('../fonts/Gotham/Gotham-Book.otf');
+}
+
+@font-face {
+    font-family: 'Gotham-Bold';
+    src: url('../fonts/Gotham/Gotham-Bold.otf');
+}
+
+@font-face {
+    font-family: 'Gotham-Black';
+    src: url('../fonts/Gotham/Gotham-Black.ttf');
+}
+
+@font-face {
+    font-family: 'Gotham-Ultra';
+    src: url('../fonts/Gotham/Gotham-Ultra.otf');
+}
+
+/*
+Barlow
+*/
+
+@font-face {
+    font-family: 'Barlow-Thin';
+    src: url('../fonts/barlow/Barlow-Thin.otf');
+}
+
+@font-face {
+    font-family: 'Barlow-ThinItalic';
+    src: url('../fonts/barlow/Barlow-ThinItalic.otf');
+}
+
+@font-face {
+    font-family: 'Barlow-Light';
+    src: url('../fonts/barlow/Barlow-Light.otf');
+}
+
+@font-face {
+    font-family: 'Barlow-Regular';
+    src: url('../fonts/barlow/Barlow-Regular.otf');
+}
+
+@font-face {
+    font-family: 'Barlow-Medium';
+    src: url('../fonts/barlow/Barlow-Medium.otf');
+}
+
+@font-face {
+    font-family: 'Barlow-Medium-italic';
+    src: url('../fonts/barlow/Barlow-MediumItalic.otf');
+}
+
+@font-face {
+    font-family: 'Barlow-Bold';
+    src: url('../fonts/barlow/Barlow-Bold.otf');
+}
+
+
+
+/*
+*****************************************************************************
+Paleta de colores
+*****************************************************************************
+*/
+
+
+html {
+    --aecolor-negro: #000000;
+    --aecolor-gris-oscuro: #333333;
+    --aecolor-gris-intermedio: #999999;
+    --aecolor-gris-claro: #CCCCCC;
+    --aecolor-blanco: #FFFFFF;
+    --aecolor-rojo: #F2333A;
+    --aecolor-CURRENT-MAIN-COLOR: #FFFFFF;
+}
+
+.BackgroundAecolorNegro {
+    background-color: var(--aecolor-negro);
+}
+
+.AecolorNegro {
+    color: var(--aecolor-negro);
+}
+
+.BackgroundAecolorGrisOscuro {
+    background-color: var(--aecolor-gris-oscuro);
+}
+
+.AecolorGrisOscuro {
+    color: var(--aecolor-gris-oscuro);
+}
+
+.BackgroundAecolorGrisIntermedio {
+    background-color: var(--aecolor-gris-intermedio);
+}
+
+.AecolorGrisIntermedio {
+    color: var(--aecolor-gris-intermedio);
+}
+
+.BackgroundAecolorGrisClaro {
+    background-color: var(--aecolor-gris-claro);
+}
+
+.AecolorGrisClaro {
+    color: var(--aecolor-gris-claro);
+}
+
+.BackgroundAecolorBlanco {
+    background-color: var(--aecolor-blanco);
+}
+
+.AecolorBlanco {
+    color: var(--aecolor-blanco);
+}
+
+.BackgroundAecolorRojo {
+    background-color: var(--aecolor-rojo);
+}
+
+.AecolorRojo {
+    color: var(--aecolor-rojo);
+}
+
+
+/*
+*****************************************************************************
+Definiciones generales
+*****************************************************************************
+*/
+
+/*Intentemos no usar esto. */
+.hidden {
+    display: none !important;
+}
+
+body {
+    width: 100vw;
+    /*height: 100vh;*/
+    margin: 0;
+    padding: 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    align-content: space-between;
+    
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    min-height: calc(min-content + 1000px);
+}
+
+header,
+footer {
+    width: 100vw;
+    margin: 0;
+    padding: 15px 0;
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+}
+/*
+#background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+}*/
+
+#backgroundColour {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);
+}
+
+#backgroundTexture {
+    margin: 0;
+    padding: 0;
+    background-image: url(../imgs/noisy_net/noisy_net_@2X.png);
+    height: 300%;
+    width: 300%;
+    position: fixed;
+    left: -50%;
+    top: -100%;
+    animation: grainMovement 10s steps(10) infinite;
+    mix-blend-mode: multiply;
+    z-index: -1;
+}
+
+a {
+    text-decoration: none;
+    color: var(--aecolor-CURRENT-MAIN-COLOR);
+}
+
+ul,
+ol {
+    list-style-type: none;
+    /*padding: 0;
+    margin: 0;*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+li {
+    flex-grow: 2;
+    flex-shrink: 1;
+}
+
+main,
+footer,
+header,
+p,
+a {
+    font-family: 'Barlow-Regular', sans-serif !important;
+    /*font-family: 'Gotham-Black', sans-serif !important;*/
+    /*color: var(--aecolor-gris-oscuro);*/
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Gotham-Book', sans-serif !important;
+}
+
+.errores {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-right: 5vw;
+    margin-bottom: 3vh;
+    padding: 0 10px;
+    animation: animShow 1s;
+    z-index: 1;
+    width: 40%;
+    text-align: right;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.1);
+    overflow: auto;
+}
+
+.info {
+    color: skyblue;
+}
+
+.success {
+    color: greenyellow;
+}
+
+.warning {
+    color: orange;
+}
+
+.error {
+    color: orangered;
+}
