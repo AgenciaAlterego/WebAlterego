@@ -1,11 +1,3 @@
-body {
-    background: var(--aecolor-negro);
-    background: linear-gradient(90deg, var(--aecolor-negro) 0%,
-            var(--aecolor-gris-oscuro) 25%,
-            var(--aecolor-gris-intermedio) 50%,
-            var(--aecolor-gris-claro) 75% var(--aecolor-blanco) 100%);
-}
-
 /*
 *****************************************************************************
 Header
@@ -27,7 +19,7 @@ header div {
 }
 
 header div {
-    height: 100%;
+    max-height: min-content;
 }
 
 header img {
@@ -46,237 +38,40 @@ header nav ul {
 
 /*
 *****************************************************************************
+Main
+*****************************************************************************
+*/
+
+main {
+/*    margin-top: 50px;*/
+    padding: 0 10vw;
+}
+
+main #manifiesto {
+    margin: 50px 50px;
+    text-align: center;
+}
+
+main #imagenesPerfil{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+main #imagenesPerfil span img{
+    max-width: 100%;
+    max-height: 50vh;
+}
+
+/*
+*****************************************************************************
 Footer
 *****************************************************************************
 */
 
-footer {
+/*footer {
     background-color: var(--aecolor-gris-oscuro);
-}
-
-
-/*
-*****************************************************************************
-Aside
-*****************************************************************************
-*/
-
-#asidebackground {
     position: fixed;
     bottom: 0;
-    right: 0;
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    background-color: var(--aecolor-gris-oscuro);
-    opacity: 0.3;
-    z-index: 3;
-    animation: animShowBackground 1s ease;
-}
-
-#aside {
-    width: 30vw;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    right: 0;
-    text-align: center;
-    z-index: 3;
-    padding-top: 10vh;
-    padding-left: 3vw;
-    padding-right: 3vw;
-    border-left: 1px solid var(--aecolor-gris-claro);
-    animation: animShow 1s ease;
-}
-
-#aside a {
-    /*width: 10px;*/
-    height: 10px;
-    position: fixed;
-    top: 3vh;
-    right: 5vw;
-    padding: 10px;
-    /*background-color: var(--aecolor-gris-oscuro);
-        border-radius: 50%;
-        box-shadow: 0 0 5px 1px rgba(255, 255, 255, 1);*/
-    /*transform: scale(1);
-        animation: pulse 2s infinite;*/
-}
-
-#aside form button {
-    font-family: 'Barlow-Medium';
-    font-size: 1.1em;
-    padding: 5px 20px;
-    color: var(--aecolor-blanco);
-    background-color: var(--aecolor-negro);
-    text-transform: uppercase;
-    border: none;
-}
-
-#aside form button:focus {
-    transition: 0.5s;
-    background-color: var(--aecolor-gris-oscuro);
-    outline: none !important;
-    border-radius: 0;
-
-}
-
-/*
-*****************************************************************************
-barrita lateral
-*****************************************************************************
-*/
-#sliderlateral {
-    position: fixed;
-    right: 0;
-    top: 50%;
-    width: 100px;
-    height: 10px;
-    text-align: right;
-}
-
-#sliderlateral a {
-    display: block;
-    /*height: 50px;*/
-    width: 100%;
-    text-align: right;
-    line-height: 25px;
-}
-
-
-#sliderlateral span {
-    transition-duration: 0.3s;
-    display: inline-block;
-    width: 50%;
-    height: 2px;
-    background-color: var(--aecolor-gris-oscuro);
-    vertical-align: middle;
-
-}
-
-#sliderlateral a:hover span {
-    transition-duration: 0.3s;
-    width: 100%;
-    background-color: var(--aecolor-rojo);
-}
-
-#sliderlateral a p {
-    /*transition-duration: 0.3s;*/
-    display: none;
-    text-align: left;
-    margin-top: 0;
-    padding-top: 0;
-    line-height: auto;
-    color: var(--aecolor-CURRENT-MAIN-COLOR);
-    /*
-No funciona
-
-    -webkit-animation: fadeOutToNone 5.5s ease-out;
-    -moz-animation: fadeOutToNone 5.5s ease-out;
-    -o-animation: fadeOutToNone 5.5s ease-out;
-    animation: fadeOutToNone 5.5s ease-out;*/
-}
-
-#sliderlateral .active:hover p {
-    display: block;
-    -webkit-animation: fadeInFromNone 0.5s ease-out;
-    -moz-animation: fadeInFromNone 0.5s ease-out;
-    -o-animation: fadeInFromNone 0.5s ease-out;
-    animation: fadeInFromNone 0.5s ease-out;
-}
-
-#sliderlateral .active span {
-    background-color: var(--aecolor-CURRENT-MAIN-COLOR);
-    width: 75%;
-}
-
-/*
-*****************************************************************************
-Secciones
-*****************************************************************************
-*/
-
-.estacion {
-    width: 100%;
-    height: 100%;
-}
-
-#sectionLogin {
-    padding-left: 10vw;
-    padding-top: 10vh;
-}
-
-#sectionLogin #login {
-    width: 100%;
-    margin-top: 5em;
-}
-
-#sectionLogin h1 {
-    font-family: 'Barlow-Thin' !important;
-}
-
-#sectionLogin h1 strong {
-    font-size: 2em;
-    font-family: 'Barlow-Bold';
-}
-
-#sectionLogin form input {
-    margin-bottom: 2em;
-    display: block;
-    height: 2em;
-    width: 40%;
-    background-color: transparent;
-    text-decoration-color: var(--aecolor-blanco);
-    color: var(--aecolor-blanco);
-    border: none;
-    border-bottom: 1px solid var(--aecolor-gris-intermedio);
-}
-
-#sectionLogin form input::placeholder {
-    color: var(--aecolor-gris-claro);
-    font-family: 'Barlow-ThinItalic';
-}
-
-#sectionLogin form input:focus {
-    /*border: none !important;*/
-    outline: none !important;
-}
-
-#sectionLogin form button {
-    font-family: 'Barlow-Medium';
-    font-size: 1.1em;
-    padding: 5px 20px;
-    color: var(--aecolor-blanco);
-    background-color: var(--aecolor-negro);
-    text-transform: uppercase;
-    border: none;
-}
-
-#sectionLogin form button:focus {
-    transition: 0.5s;
-    background-color: var(--aecolor-gris-oscuro);
-    outline: none !important;
-    border-radius: 0;
-    /*border: 3px solid var(--aecolor-gris-oscuro);*/
-}
-
-.estacion a {
-    /*width: 10px;*/
-    height: 10px;
-    position: fixed;
-    bottom: 100px;
-    right: 100px;
-    background-color: var(--aecolor-gris-oscuro);
-    padding: 10px;
-    border-radius: 50%;
-    box-shadow: 0 0 0 0 rgba(255, 255, 255, 1);
-    transform: scale(1);
-    animation: pulse 2s infinite;
-}
-
-.estacion a i {
-    position: relative;
-    bottom: 40%;
-    left: 20%;
-}
+    left: 0;
+}*/

@@ -229,40 +229,51 @@ html {
     --aecolor-CURRENT-MAIN-COLOR: #FFFFFF;
 }
 
-.BackgroundAecolorNegro{
+.BackgroundAecolorNegro {
     background-color: var(--aecolor-negro);
 }
-.AecolorNegro{
+
+.AecolorNegro {
     color: var(--aecolor-negro);
 }
-.BackgroundAecolorGrisOscuro{
+
+.BackgroundAecolorGrisOscuro {
     background-color: var(--aecolor-gris-oscuro);
 }
-.AecolorGrisOscuro{
+
+.AecolorGrisOscuro {
     color: var(--aecolor-gris-oscuro);
 }
-.BackgroundAecolorGrisIntermedio{
+
+.BackgroundAecolorGrisIntermedio {
     background-color: var(--aecolor-gris-intermedio);
 }
-.AecolorGrisIntermedio{
+
+.AecolorGrisIntermedio {
     color: var(--aecolor-gris-intermedio);
 }
-.BackgroundAecolorGrisClaro{
+
+.BackgroundAecolorGrisClaro {
     background-color: var(--aecolor-gris-claro);
 }
-.AecolorGrisClaro{
+
+.AecolorGrisClaro {
     color: var(--aecolor-gris-claro);
 }
-.BackgroundAecolorBlanco{
+
+.BackgroundAecolorBlanco {
     background-color: var(--aecolor-blanco);
 }
-.AecolorBlanco{
+
+.AecolorBlanco {
     color: var(--aecolor-blanco);
 }
-.BackgroundAecolorRojo{
+
+.BackgroundAecolorRojo {
     background-color: var(--aecolor-rojo);
 }
-.AecolorRojo{
+
+.AecolorRojo {
     color: var(--aecolor-rojo);
 }
 
@@ -279,21 +290,26 @@ Definiciones generales
 }
 
 body {
-    /*
-    position: relative;
-    padding: 0;
-    margin: 0;
-    */
     width: 100vw;
-    height: 100vh;
+    /*height: 100vh;*/
     margin: 0;
     padding: 0;
-    /*overflow-x: hidden;*/
+    flex: 1;
     display: flex;
     flex-direction: column;
+    overflow: auto;
+    align-content: space-between;
+    
 }
 
-header, footer{
+main{
+    display: flex;
+    flex-direction: column;
+    min-height: calc(min-content + 1000px);
+}
+
+header,
+footer {
     width: 100vw;
     margin: 0;
     padding: 15px 0;
@@ -301,8 +317,8 @@ header, footer{
     flex-direction: row;
     align-content: space-between;
 }
-
-body:last-child{
+/*
+#background {
     position: fixed;
     top: 0;
     left: 0;
@@ -310,42 +326,40 @@ body:last-child{
     padding: 0;
     width: 100vw;
     height: 100vh;
+}*/
+
+#backgroundColour {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);
 }
 
-#backgroundSupport {
+#backgroundTexture {
     margin: 0;
     padding: 0;
     background-image: url(../imgs/noisy_net/noisy_net_@2X.png);
-    /*background-repeat: repeat-x repeat-y;*/
     height: 300%;
     width: 300%;
-    /*background-color: transparent;*/
-    background-blend-mode: screen;
     position: fixed;
     left: -50%;
     top: -100%;
-    z-index: -50;
     animation: grainMovement 10s steps(10) infinite;
-
-    /*
-    opacity: 0.3;
-    */
+    mix-blend-mode: multiply;
+    z-index: -1;
 }
-/*
-header img{
-    height: 100%;
-    max-height: 20px;
-    margin-left: 5vw;
-    margin-top: -20px;
-}
-*/
 
 a {
     text-decoration: none;
     color: var(--aecolor-CURRENT-MAIN-COLOR);
 }
 
-ul, ol{
+ul,
+ol {
     list-style-type: none;
     /*padding: 0;
     margin: 0;*/
@@ -354,18 +368,30 @@ ul, ol{
     flex-wrap: wrap;
 }
 
-li{
+li {
     flex-grow: 2;
     flex-shrink: 1;
 }
 
-main, footer, header, p, a{
+main,
+footer,
+header,
+p,
+a {
     font-family: 'Barlow-Regular', sans-serif !important;
     /*font-family: 'Gotham-Black', sans-serif !important;*/
     /*color: var(--aecolor-gris-oscuro);*/
 }
 
-.errores{
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Gotham-Book', sans-serif !important;
+}
+
+.errores {
     position: fixed;
     bottom: 0;
     right: 0;
@@ -377,20 +403,22 @@ main, footer, header, p, a{
     width: 40%;
     text-align: right;
     height: 100px;
-    background-color: rgba(255,255,255,0.1);
+    background-color: rgba(255, 255, 255, 0.1);
     overflow: auto;
 }
 
-.info{
+.info {
     color: skyblue;
 }
-.success{
+
+.success {
     color: greenyellow;
 }
+
 .warning {
     color: orange;
 }
-.error{
+
+.error {
     color: orangered;
 }
-
