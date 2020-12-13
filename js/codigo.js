@@ -1,11 +1,5 @@
 'use strict'
 
-const d = document;
-const mainTextBlock = d.getElementById('mainTextBlock');
-const mainTitle = d.getElementById('mainTitle');
-const mainParagraph = d.getElementById('mainParagraph');
-const mainShowcase = d.getElementById('mainShowcase');
-
 
 function VaciarCanvas() {
     while (mainTitle.firstChild) {
@@ -105,7 +99,7 @@ function GenerarHome() {
         block.appendChild(blockContent);
         section.appendChild(block);
 
-        
+
 
         for (let trabajo of tipoDeTrabajo.trabajos) {
             // Ahora cargo todos los trabajos por bloque
@@ -121,7 +115,7 @@ function GenerarHome() {
 
             section.appendChild(block);
 
-            
+
         }
 
         mainShowcase.appendChild(section);
@@ -135,3 +129,101 @@ function GenerarNosotros() {
 
 
 d.onload = GenerarHome();
+
+
+
+
+
+
+/**
+ * 
+ * Armado de Navegación superior
+ * 
+ */
+
+
+
+// Creo las interacciones del nav:
+let navElements = d.querySelectorAll('header nav ul li a');
+
+for (let nroElemento in navElements) {
+
+    switch (nroElemento) {
+        case '0':
+            navElements[nroElemento].addEventListener('click', function () {
+                navigateTo(aTrabajos[nroElemento].tipoDeTrabajo);
+            });
+            break;
+        case '1':
+            navElements[nroElemento].addEventListener('click', function () {
+                navigateTo(aTrabajos[nroElemento].tipoDeTrabajo);
+            });
+            break;
+        case '2':
+            navElements[nroElemento].addEventListener('click', function () {
+                navigateTo(aTrabajos[nroElemento].tipoDeTrabajo);
+            });
+            break;
+        case '3':
+            navElements[nroElemento].addEventListener('click', function () {
+                navigateTo(aTrabajos[nroElemento].tipoDeTrabajo);
+            });
+            break;
+        case '4':
+            navElements[nroElemento].addEventListener('click', function () {
+                navigateTo(aTrabajos[nroElemento].tipoDeTrabajo);
+            });
+            break;
+        case '5':
+            navElements[nroElemento].addEventListener('click', function () {
+                navigateTo('Nosotros');
+            });
+            break;
+    }
+}
+
+function navigateTo(anchor) {
+    //console.log(anchor);
+
+    // Posición del scroll:
+    let posInicial = window.pageYOffset;
+    let posDestino = d.getElementById(anchor).offsetTop;
+
+    //console.log(posDestino);
+
+    // Verificamos que el scroll no esté arriba de todo, de no ser así, animamos el scroll:
+    if (posInicial != posDestino) {
+        // Me fijo primero si está más arriba o más abajo del destino:
+        if (posInicial > posDestino) {
+            let fx = setInterval(
+                () => {
+                    posInicial -= 20;
+                    // Cuando llega o supera los 0px, colocar en 0 y detener el intervalo:
+                    if (posInicial <= posDestino) {
+                        posInicial = posDestino;
+                        clearInterval(fx);
+                    }
+                    window.scrollTo(0, posInicial);
+                },
+                5
+            );
+        } else {
+            let fx = setInterval(
+                () => {
+                    posInicial += 25;
+                    // Cuando llega o supera los 0px, colocar en 0 y detener el intervalo:
+                    if (posInicial >= posDestino) {
+                        posInicial = posDestino;
+                        clearInterval(fx);
+                    }
+                    window.scrollTo(0, posInicial);
+                },
+                5
+            );
+        }
+
+
+    }
+    return false;
+
+}

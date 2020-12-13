@@ -1,5 +1,16 @@
 'use strict'
 
+'use strict'
+
+const d = document;
+const mainTextBlock = d.getElementById('mainTextBlock');
+const mainTitle = d.getElementById('mainTitle');
+const mainParagraph = d.getElementById('mainParagraph');
+const mainShowcase = d.getElementById('mainShowcase');
+
+
+
+
 var manifiesto = `No somos uno, compartimos más que la pasión. De chicos siempre quisimos \n
 más. Una galletita más, una vuelta más en bici, un ratito más en el agua. <br>\n
 <br>\n
