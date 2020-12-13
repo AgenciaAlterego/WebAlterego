@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Experiencia Álterego</title>
+
+    <link rel="shortcut icon" href="imgs/favicon-01.png" type="image/x-icon">
+
     <link rel="stylesheet" href="css/generalidades.css">
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/keyframing.css">
@@ -14,42 +17,29 @@
 
     <header>
         <div>
-            <img src="imgs/MARCA_AE-Principal.svg" alt="Isologotipo de la Agencia Álterego">
+            <img src="imgs/MARCA_AE-Secundario-ver2-negro.svg" alt="Isologotipo de la Agencia Álterego"
+                style="color: black;">
         </div>
         <span></span>
         <nav>
             <ul>
-                <li><a>La Agencia</a></li>
                 <li><a>3D</a></li>
                 <li><a>Motion</a></li>
-                <li><a>Diseño</a></li>
+                <li><a>Diseño e Ilustración</a></li>
                 <li><a>Publicidad</a></li>
-                <li><a>Código</a></li>
+                <li><a>Apps y Webs</a></li>
+                <li><a>Nosotros</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <h1 class="AecolorBlanco">La Agencia</h1>
-        <p id="manifiesto" class="AecolorBlanco">No somos uno, compartimos más que la pasión. De chicos siempre quisimos
-            más. Una galletita más, una vuelta más en bici, un ratito más en el agua. <br>
-            <br>
-            Somos un Nokia 1100 y un iPhone X. Un disquete sin espacio y una nube que todo lo guarda. Somos la
-            generación inalámbrica que creció desenredando luces de navidad. Las ganas de aprender, un camino recorrido
-            con paciencia. Somos tanto que no nos entra en el cuerpo. Con el otro, somos. Lo personal es colectivo, y
-            ahí nos encontramos, queriendo más, trabajando juntos. <br>
-            <br>
-            Y si coincidimos es porque nosotros también somos algo de vos. <br>
-            Sabemos que solos llegamos más rápido, pero acompañados llegamos más lejos. Por eso es bueno saber que tenés
-            un Álterego dando tu mejor versión. <br>
-            <br>
-            <strong>:: Agencia Álterego ::</strong>
-        </p>
-        <div id="imagenesPerfil">
-            <span><img src="imgs/FotosAgencia/Foto-Perfil-Emiliano-Vallaro.jpg"
-                    alt="Foto de Emiliano Vallaro, Head Designer de la Agencia especializado en interfaces"></span>
-            <span><img src="imgs/FotosAgencia/Foto-Perfil-Luisina-Scuffi.jpg" alt="Foto de Luisina Scuffi, Head Designer de la Agencia especializada en 3D"></span>
-            <span><img src="imgs/FotosAgencia/Foto-Perfil-Julian-Ame.jpg"
-                    alt="Foto de Julián Amé, Head Designer de la Agencia especializado en desarrollos web"></span>
+        <div class="spacer"></div>
+        <div id="mainTextBlock">
+            <h1 id="mainTitle"></h1>
+            <p id="mainParagraph"></p>
+        </div>
+        <div class="spacer"></div>
+        <div id="mainShowcase">
         </div>
     </main>
     <footer>
@@ -57,9 +47,14 @@
     </footer>
 
     <div id="backgroundColour"></div>
+    <!-- 
     <div id="background">
         <div id="backgroundTexture"></div>
     </div>
+ -->
+
+    <script src="js/datos.js"></script>
+    <script src="js/codigo.js"></script>
 </body>
 
 </html>

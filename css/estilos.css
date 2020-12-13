@@ -6,7 +6,6 @@ Header
 
 header {
     max-height: 80px;
-    border-bottom: 2px solid var(--aecolor-gris-intermedio);
 }
 
 header nav {
