@@ -163,6 +163,23 @@ function GenerarHome() {
     main.appendChild(seccionNosotros);
 }
 
+
+
+
+
+
+
+
+
+/**
+     * *****************************************************************
+     * 
+     * Generación de vistas de trabajos
+     * 
+     * *****************************************************************
+     */
+
+
 function GenerarTrabajo() {
     console.log('quiero generar un trabajito');
 
@@ -194,6 +211,7 @@ function GenerarTrabajo() {
                     block.className = 'showcase2Box';
                     block.style.backgroundImage = `url(${trabajo.imgPrincipal})`;
                     block.title = trabajo.titulo;
+                    block.style.cursor = 'pointer';
 
                     let blockContent = d.createElement('img');
                     blockContent.src = trabajo.imgPrincipal;
@@ -209,6 +227,7 @@ function GenerarTrabajo() {
                         for (let contenido of trabajo.contenidoAdicional) {
 
                             block = d.createElement('span');
+                            block.style.cursor = 'pointer';
 
                             if (contenido.includes('youtu')) {
                                 // El contenido es un video de youtube
@@ -250,7 +269,7 @@ function GenerarTrabajo() {
 
     let botonVolver = d.createElement('a');
     botonVolver.id = 'botonVolver';
-    botonVolver.innerHTML = 'Volver';
+    botonVolver.innerHTML = 'VOLVER';
     botonVolver.addEventListener('click', GenerarHome);
 
     main.appendChild(botonVolver);

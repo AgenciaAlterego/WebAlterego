@@ -75,12 +75,13 @@ main #imagenesPerfil span img {
 
 
 #botonVolver{
-    margin-top: 150px;
+    margin-top: 20px;
     padding: 10px;
     width: 100%;
     text-align: center;
     color: var(--aecolor-gris-intermedio);
     cursor: pointer;
+    font-size: 0.85em;
 }
 
 #botonVolver:hover{
