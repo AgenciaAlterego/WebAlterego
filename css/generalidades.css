@@ -315,9 +315,9 @@ body {
     /*height: 100vh;*/
     margin: 0;
     padding: 0;
-    flex: 1;
+    /*flex: 1;
     display: flex;
-    flex-direction: column;
+    flex-direction: column;*/
     overflow-x: hidden;
     align-content: space-between;
     color: var(--aecolor-CURRENT-MAIN-COLOR);
@@ -338,6 +338,7 @@ footer {
     display: flex;
     flex-direction: row;
     align-content: space-between;
+    z-index: 2;
 }
 
 /*
@@ -456,6 +457,9 @@ h5 {
     background-color: var(--aecolor-gris-oscuro);
     text-align: center;
     flex: 1 0 26%;
+    background-size: cover;
+    background-position: center center;
+    height: 250px;
 }
 
 .showcase2Box{
@@ -465,6 +469,16 @@ h5 {
     background-color: var(--aecolor-gris-oscuro);
     text-align: center;
     flex: 1 0 51%;
+}
+
+.showcase2Box img, .showcaseBox img{
+    display: none !important;
+}
+
+.showcase2Box:hover, .showcaseBox:hover{
+    transition: 0.5s;
+    opacity: 0.5;
+    
 }
 
 .boton {

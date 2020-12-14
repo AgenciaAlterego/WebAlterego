@@ -1,6 +1,9 @@
 'use strict'
 
 
+d.onload = GenerarHome();
+
+
 function VaciarCanvas() {
     while (mainTitle.firstChild) {
         mainTitle.removeChild(mainTitle.firstChild);
@@ -15,6 +18,11 @@ function VaciarCanvas() {
     let botonera = d.getElementById('mainBotonera');
     if (botonera) {
         botonera.remove;
+    }
+
+    let seccionNosotros = d.getElementById('Nosotros');
+    if (seccionNosotros) {
+        seccionNosotros.remove;
     }
 
 }
@@ -45,7 +53,9 @@ function GenerarHome() {
     let botonContacto = d.createElement('a');
     botonContacto.innerHTML = 'Contacto';
     botonContacto.href = '';
-    botonContacto.addEventListener('click', GenerarNosotros);
+    botonContacto.addEventListener('click', function () {
+        navigateTo('Nosotros');
+    });
     botonContacto.className = 'boton';
     botonera.appendChild(botonContacto);
 
@@ -56,7 +66,7 @@ function GenerarHome() {
 
     // Loop de carga de datos
     for (let tipoDeTrabajo of aTrabajos) {
-        console.log('entre al loop de carga de datos');
+        //console.log('entre al loop de carga de datos');
 
         let section = d.createElement('section');
         switch (tipoDeTrabajo.tipoDeTrabajo) {
@@ -91,6 +101,9 @@ function GenerarHome() {
 
         block = d.createElement('span');
         block.className = 'showcaseBox';
+        block.style.backgroundImage = `url(imgs/isotipo_ae-white.svg)`;
+        block.title = 'Isotipo Álterego';
+
         let blockContent = d.createElement('img');
         blockContent.src = 'imgs/isotipo_ae-white.svg';
         blockContent.style.width = '100%';
@@ -106,29 +119,52 @@ function GenerarHome() {
             block = d.createElement('span');
             block.className = 'showcaseBox';
 
+            block.style.backgroundImage = `url(${trabajo.imgPrincipal})`;
+            block.style.cursor = 'pointer';
+            block.title = trabajo.titulo;
+            block.dataset.tipoDeTrabajo = tipoDeTrabajo.tipoDeTrabajo;
+            block.dataset.tituloDeTrabajo = tipoDeTrabajo.titulo;
+            block.addEventListener('click', GenerarTrabajo);
+
             blockContent = d.createElement('img');
             blockContent.src = trabajo.imgPrincipal;
-            blockContent.style.width = '100%';
-            blockContent.style.margin = '0';
-            blockContent.style.padding = '0';
+            blockContent.title = trabajo.titulo;
+            blockContent.alt = trabajo.titulo;
+
             block.appendChild(blockContent);
 
-            section.appendChild(block);
 
+            section.appendChild(block);
 
         }
 
         mainShowcase.appendChild(section);
+
+
+        let seccionNosotros = d.createElement('section');
+        seccionNosotros.id = 'Nosotros';
+
+        /**
+         * *****************************************************************
+         * 
+         * Pendiente completar esta sección, la de "Nosotros"
+         * 
+         * *****************************************************************
+         */
+
+
+        main.appendChild(seccionNosotros);
+
+
     }
 }
 
-function GenerarNosotros() {
-
+function GenerarTrabajo(e) {
+    console.log('quiero generar un trabajito');
+    console.log(e);
 }
 
 
-
-d.onload = GenerarHome();
 
 
 
