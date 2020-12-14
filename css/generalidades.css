@@ -416,6 +416,9 @@ h5 {
     font-family: 'Gotham-Bold', sans-serif !important;
 }
 
+iframe{
+    border: none !important;
+}
 
 #mainTextBlock {
     display: flex;
@@ -486,6 +489,11 @@ h5 {
     opacity: 0.5;
 
 }
+
+.notHovereable:hover{
+    opacity: 1;
+}
+
 
 .boton {
     padding: 10px;

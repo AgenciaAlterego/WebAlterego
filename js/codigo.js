@@ -99,14 +99,14 @@ function GenerarHome() {
 
         //Primero creo la cabecera de este tipo de trabajo
         let block = d.createElement('span');
-        block.className = 'showcase2Box';
+        block.className = 'showcase2Box notHovereable';
         let blockHeader = d.createElement('h2');
         blockHeader.innerHTML = tipoDeTrabajo.tituloDeSeccion;
         block.appendChild(blockHeader);
         section.appendChild(block);
 
         block = d.createElement('span');
-        block.className = 'showcaseBox';
+        block.className = 'showcaseBox notHovereable';
         block.style.backgroundImage = `url(imgs/isotipo_ae-white.svg)`;
         block.title = 'Isotipo Álterego';
 
@@ -182,7 +182,7 @@ function GenerarHome() {
 
 
 function GenerarTrabajo() {
-    console.log('quiero generar un trabajito');
+    //console.log('quiero generar un trabajito');
 
 
     // Primero vacío mainTitle mainParagraph y mainShowcase
@@ -235,21 +235,23 @@ function GenerarTrabajo() {
 
                             if (contenido.includes('youtu')) {
                                 // El contenido es un video de youtube
-                                block.className = 'showcaseBox';
+                                block.className = 'showcaseBox notHovereable';
+
 
                                 contenido = contenido.replace('watch?v=', 'embed/');
                                 let regex = new RegExp('\&(.*)');
                                 contenido = contenido.replace(regex, '');
+                                contenido += "?rel=0&showinfo=0&autoplay=1&enbalejsapi=1";
 
-                                block.dataset.tipoContenido = 'video';
-                                block.dataset.contenido = contenido;
-                                block.addEventListener('click', AbrirModal);
+                                //block.dataset.tipoContenido = 'video';
+                                //block.dataset.contenido = contenido;
 
                                 let blockContent = d.createElement('iframe');
                                 blockContent.src = contenido;
-                                //blockContent.frameBorder = '0';
-
+                                blockContent.setAttribute("frameborder", "0");
+                                blockContent.setAttribute("allowfullscreen", "");
                                 block.appendChild(blockContent);
+
 
                             } else if (contenido.includes('.com') || contenido.includes('www.') || contenido.includes('http')) {
                                 // El contenido es una página web
