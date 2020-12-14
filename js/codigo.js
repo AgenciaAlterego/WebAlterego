@@ -17,12 +17,17 @@ function VaciarCanvas() {
 
     let botonera = d.getElementById('mainBotonera');
     if (botonera) {
-        botonera.remove;
+        botonera.remove();
     }
 
     let seccionNosotros = d.getElementById('Nosotros');
     if (seccionNosotros) {
-        seccionNosotros.remove;
+        seccionNosotros.remove();
+    }
+
+    let botonVolver = d.getElementById('botonVolver');
+    if (botonVolver) {
+        botonVolver.remove();
     }
 
 }
@@ -35,7 +40,7 @@ function GenerarHome() {
     // Ahora cargo el contenido
 
     mainTitle.innerHTML = 'Somos tu mejor versión';
-    mainParagraph.innerHTML = 'Sabemos que solos llegamos más rápido, pero acompañados llegamos más lejos <br> Por eso es bueno saber que tenés un Álterego dando tu mejor versión.';
+    mainParagraph.innerHTML = 'Sabemos que solos llegamos más rápido, pero acompañados llegamos más lejos. <br> Por eso es bueno saber que tenés un Álterego dando tu mejor versión.';
 
     let botonera = d.createElement('div');
     botonera.id = 'mainBotonera';
@@ -123,7 +128,7 @@ function GenerarHome() {
             block.style.cursor = 'pointer';
             block.title = trabajo.titulo;
             block.dataset.tipoDeTrabajo = tipoDeTrabajo.tipoDeTrabajo;
-            block.dataset.tituloDeTrabajo = tipoDeTrabajo.titulo;
+            block.dataset.tituloDeTrabajo = trabajo.titulo;
             block.addEventListener('click', GenerarTrabajo);
 
             blockContent = d.createElement('img');
@@ -140,28 +145,122 @@ function GenerarHome() {
 
         mainShowcase.appendChild(section);
 
-
-        let seccionNosotros = d.createElement('section');
-        seccionNosotros.id = 'Nosotros';
-
-        /**
-         * *****************************************************************
-         * 
-         * Pendiente completar esta sección, la de "Nosotros"
-         * 
-         * *****************************************************************
-         */
-
-
-        main.appendChild(seccionNosotros);
-
-
     }
+
+
+    let seccionNosotros = d.createElement('section');
+    seccionNosotros.id = 'Nosotros';
+
+    /**
+     * *****************************************************************
+     * 
+     * Pendiente completar esta sección, la de "Nosotros"
+     * 
+     * *****************************************************************
+     */
+
+
+    main.appendChild(seccionNosotros);
 }
 
-function GenerarTrabajo(e) {
+function GenerarTrabajo() {
     console.log('quiero generar un trabajito');
-    console.log(e);
+
+
+    // Primero vacío mainTitle mainParagraph y mainShowcase
+    VaciarCanvas();
+
+    // 
+
+    mainTitle.innerHTML = this.dataset.tituloDeTrabajo;
+
+    for (let tipoDeTrabajo of aTrabajos) {
+        //recorro todo el array de trabajos
+        if (tipoDeTrabajo.tipoDeTrabajo == this.dataset.tipoDeTrabajo) {
+            //Busco el típo de trabajo correpondiente
+            for (let trabajo of tipoDeTrabajo.trabajos) {
+                //Recorro todos los trabajos de ese tipo
+                if (trabajo.titulo == this.dataset.tituloDeTrabajo) {
+                    //Encontré el trabajo!
+                    mainParagraph.innerHTML = trabajo.descripcion;
+
+                    // Creo la sección (que tiene flex)
+                    let section = d.createElement('section');
+
+
+                    //Cargo primero su imagen principal
+
+                    let block = d.createElement('span');
+                    block.className = 'showcase2Box';
+                    block.style.backgroundImage = `url(${trabajo.imgPrincipal})`;
+                    block.title = trabajo.titulo;
+
+                    let blockContent = d.createElement('img');
+                    blockContent.src = trabajo.imgPrincipal;
+                    blockContent.title = trabajo.titulo;
+                    blockContent.alt = trabajo.titulo;
+
+                    block.appendChild(blockContent);
+                    section.appendChild(block);
+
+                    //Ahora recorro y cargo todas sus img secundarias
+                    //Primero me aseguro que exista contenido adicional
+                    if (trabajo.contenidoAdicional) {
+                        for (let contenido of trabajo.contenidoAdicional) {
+
+                            block = d.createElement('span');
+
+                            if (contenido.includes('youtu')) {
+                                // El contenido es un video de youtube
+                                block.className = 'showcase2Box';
+
+                                let blockContent = d.createElement('iframe');
+                                blockContent.src = contenido;
+                                blockContent.frameBorder = '0';
+
+                                block.appendChild(blockContent);
+
+                            } else if (contenido.includes('.com') || contenido.includes('www.') || contenido.includes('http')) {
+                                // El contenido es una página web
+                                block.className = 'showcaseBox';
+
+                            } else {
+                                // El contenido es una imagen
+                                block.className = 'showcaseBox';
+                                block.style.backgroundImage = `url(${contenido})`;
+                                block.title = trabajo.titulo;
+
+                                let blockContent = d.createElement('img');
+                                blockContent.src = contenido;
+                                blockContent.title = trabajo.titulo;
+                                blockContent.alt = trabajo.titulo;
+
+                                block.appendChild(blockContent);
+                            }
+
+                            section.appendChild(block);
+                        }
+
+                        mainShowcase.appendChild(section);
+                    }
+                }
+            }
+        }
+    }
+
+    let botonVolver = d.createElement('a');
+    botonVolver.id = 'botonVolver';
+    botonVolver.innerHTML = 'Volver';
+    botonVolver.addEventListener('click', GenerarHome);
+
+    main.appendChild(botonVolver);
+
+
+    console.log();
+    console.log();
+
+
+
 }
 
 
@@ -187,32 +286,62 @@ for (let nroElemento in navElements) {
     switch (nroElemento) {
         case '0':
             navElements[nroElemento].addEventListener('click', function () {
-                navigateTo(aTrabajos[nroElemento].tipoDeTrabajo);
+                if (d.getElementById(aTrabajos[nroElemento].tipoDeTrabajo)) {
+                    navigateTo(aTrabajos[nroElemento].tipoDeTrabajo);
+                } else {
+                    GenerarHome();
+                    navigateTo(aTrabajos[nroElemento].tipoDeTrabajo);
+                }
             });
             break;
         case '1':
             navElements[nroElemento].addEventListener('click', function () {
-                navigateTo(aTrabajos[nroElemento].tipoDeTrabajo);
+                if (d.getElementById(aTrabajos[nroElemento].tipoDeTrabajo)) {
+                    navigateTo(aTrabajos[nroElemento].tipoDeTrabajo);
+                } else {
+                    GenerarHome();
+                    navigateTo(aTrabajos[nroElemento].tipoDeTrabajo);
+                }
             });
             break;
         case '2':
             navElements[nroElemento].addEventListener('click', function () {
-                navigateTo(aTrabajos[nroElemento].tipoDeTrabajo);
+                if (d.getElementById(aTrabajos[nroElemento].tipoDeTrabajo)) {
+                    navigateTo(aTrabajos[nroElemento].tipoDeTrabajo);
+                } else {
+                    GenerarHome();
+                    navigateTo(aTrabajos[nroElemento].tipoDeTrabajo);
+                }
             });
             break;
         case '3':
             navElements[nroElemento].addEventListener('click', function () {
-                navigateTo(aTrabajos[nroElemento].tipoDeTrabajo);
+                if (d.getElementById(aTrabajos[nroElemento].tipoDeTrabajo)) {
+                    navigateTo(aTrabajos[nroElemento].tipoDeTrabajo);
+                } else {
+                    GenerarHome();
+                    navigateTo(aTrabajos[nroElemento].tipoDeTrabajo);
+                }
             });
             break;
         case '4':
             navElements[nroElemento].addEventListener('click', function () {
-                navigateTo(aTrabajos[nroElemento].tipoDeTrabajo);
+                if (d.getElementById(aTrabajos[nroElemento].tipoDeTrabajo)) {
+                    navigateTo(aTrabajos[nroElemento].tipoDeTrabajo);
+                } else {
+                    GenerarHome();
+                    navigateTo(aTrabajos[nroElemento].tipoDeTrabajo);
+                }
             });
             break;
         case '5':
             navElements[nroElemento].addEventListener('click', function () {
-                navigateTo('Nosotros');
+                if (d.getElementById('Nosotros')) {
+                    navigateTo('Nosotros');
+                } else {
+                    GenerarHome();
+                    navigateTo('Nosotros');
+                }
             });
             break;
     }
@@ -236,7 +365,7 @@ function navigateTo(anchor) {
                     posInicial -= 20;
                     // Cuando llega o supera los 0px, colocar en 0 y detener el intervalo:
                     if (posInicial <= posDestino) {
-                        posInicial = posDestino;
+                        posInicial = posDestino - 110;
                         clearInterval(fx);
                     }
                     window.scrollTo(0, posInicial);
@@ -249,7 +378,7 @@ function navigateTo(anchor) {
                     posInicial += 25;
                     // Cuando llega o supera los 0px, colocar en 0 y detener el intervalo:
                     if (posInicial >= posDestino) {
-                        posInicial = posDestino;
+                        posInicial = posDestino - 110;
                         clearInterval(fx);
                     }
                     window.scrollTo(0, posInicial);

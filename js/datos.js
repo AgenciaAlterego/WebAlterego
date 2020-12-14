@@ -76,6 +76,18 @@ aTrabajos[4] = {
 
 /* Carga de trabajos */
 
+/*
+Estructura de datos por trabajo:
+- Título
+- Descripción
+- Imagen principal / destacada
+- Contenido adicional. Puede ser:
+----- Imagenes
+----- Videos
+----- Link a web externa
+
+*/
+
 /* 3D */
 
 aTrabajos[0].trabajos[0] = new trabajo();
@@ -92,6 +104,8 @@ aTrabajos[0].trabajos[1].titulo = 'Komatsu';
 aTrabajos[0].trabajos[1].descripcion = `Este trabajo es una representación a escala para el lanzamiento de un nuevo modelo de pala mecánica Komatsu, mod. WA1200, la más grande hasta ahora en el mercado de maquinarias para la industria de la construcción y de la minería.`;
 aTrabajos[0].trabajos[1].imgPrincipal = 'imgs/trabajos/3d/Pala.jpg';
 aTrabajos[0].trabajos[1].contenidoAdicional[0] = 'imgs/trabajos/3d/Pala-adc-1.jpg';
+aTrabajos[0].trabajos[1].contenidoAdicional[1] = 'https://youtu.be/0NBu4LPH10c';
+aTrabajos[0].trabajos[1].contenidoAdicional[2] = 'https://youtu.be/jpMKuYfHGPU';
 
 aTrabajos[0].trabajos[2] = new trabajo();
 aTrabajos[0].trabajos[2].titulo = 'Storm Trooper';
@@ -105,6 +119,8 @@ aTrabajos[0].trabajos[3] = new trabajo();
 aTrabajos[0].trabajos[3].titulo = 'Victorinox';
 aTrabajos[0].trabajos[3].descripcion = `Este trabajo es una pieza publicitaria hiperrealista con el objetivo de promocionar en medios gráficos el modelo Spartan de las navajas suizas Victorinox.`;
 aTrabajos[0].trabajos[3].imgPrincipal = 'imgs/trabajos/3d/Victorinox.jpg';
+aTrabajos[0].trabajos[3].contenidoAdicional[0] = 'https://youtu.be/uoGClgypo5k';
+aTrabajos[0].trabajos[3].contenidoAdicional[1] = 'https://youtu.be/d8t_jYWUdDc';
 
 aTrabajos[0].trabajos[4] = new trabajo();
 aTrabajos[0].trabajos[4].titulo = 'Xwing';
@@ -116,14 +132,16 @@ aTrabajos[0].trabajos[5] = new trabajo();
 aTrabajos[0].trabajos[5].titulo = 'Bar Álterego';
 aTrabajos[0].trabajos[5].descripcion = `Este trabajo es un asset pack de un bar pensado para videojuegos Triple A del estilo GTA con modelos hiperrealistas y funcionales optimizados para tiempo real que permiten al jugador vivir una experiencia inmersiva.`;
 aTrabajos[0].trabajos[5].imgPrincipal = 'imgs/trabajos/3d/BarAlterego.jpg';
+aTrabajos[0].trabajos[5].contenidoAdicional[0] = 'https://youtu.be/7wbtd5gTRz8';
+aTrabajos[0].trabajos[5].contenidoAdicional[1] = 'https://youtu.be/4DHwnAoTGv4';
 
 aTrabajos[0].trabajos[6] = new trabajo();
 aTrabajos[0].trabajos[6].titulo = 'Cámara Steampunk';
 aTrabajos[0].trabajos[6].descripcion = `Sabemos que solos llegamos más rápido, pero acompañados llegamos más lejos.\n
 Por eso es bueno saber que tenés un Álterego dando tu mejor versión.`;
 aTrabajos[0].trabajos[6].imgPrincipal = 'imgs/trabajos/3d/Steampunk.jpg';
-aTrabajos[0].trabajos[6].contenidoAdicional[1] = 'imgs/trabajos/3d/Steampunk-adc-1.jpg';
-aTrabajos[0].trabajos[6].contenidoAdicional[2] = 'imgs/trabajos/3d/Steampunk-adc-2.jpg';
+aTrabajos[0].trabajos[6].contenidoAdicional[0] = 'imgs/trabajos/3d/Steampunk-adc-1.jpg';
+aTrabajos[0].trabajos[6].contenidoAdicional[1] = 'imgs/trabajos/3d/Steampunk-adc-2.jpg';
 
 /* Motion */
 

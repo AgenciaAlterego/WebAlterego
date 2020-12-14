@@ -451,6 +451,7 @@ h5 {
 }
 
 .showcaseBox{
+    height: 300px;
     margin: 5px;
     flex-grow: 1;
     /*padding-top: 100%;*/
@@ -459,16 +460,18 @@ h5 {
     flex: 1 0 26%;
     background-size: cover;
     background-position: center center;
-    height: 250px;
 }
 
 .showcase2Box{
+    height: 300px;
     margin: 5px;
     flex-grow: 2;
     /*padding-top: 50%;*/
     background-color: var(--aecolor-gris-oscuro);
     text-align: center;
     flex: 1 0 51%;
+    background-size: cover;
+    background-position: center center;
 }
 
 .showcase2Box img, .showcaseBox img{
