@@ -48,6 +48,7 @@ function GenerarHome() {
     let botonReel = d.createElement('a');
     botonReel.innerHTML = 'Mirá nuestro reel';
     botonReel.href = 'https://www.youtube.com/watch?v=BtFUWzs3HC8';
+    botonReel.target = 'blank';
     botonReel.className = 'boton';
     botonera.appendChild(botonReel);
 
@@ -234,7 +235,7 @@ function GenerarTrabajo() {
 
                             if (contenido.includes('youtu')) {
                                 // El contenido es un video de youtube
-                                block.className = 'showcase2Box';
+                                block.className = 'showcaseBox';
 
                                 contenido = contenido.replace('watch?v=', 'embed/');
                                 let regex = new RegExp('\&(.*)');
