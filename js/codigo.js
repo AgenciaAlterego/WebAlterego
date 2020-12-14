@@ -172,12 +172,12 @@ function GenerarHome() {
 
 
 /**
-     * *****************************************************************
-     * 
-     * Generación de vistas de trabajos
-     * 
-     * *****************************************************************
-     */
+ * *****************************************************************
+ * 
+ * Generación de vistas de trabajos
+ * 
+ * *****************************************************************
+ */
 
 
 function GenerarTrabajo() {
@@ -212,6 +212,9 @@ function GenerarTrabajo() {
                     block.style.backgroundImage = `url(${trabajo.imgPrincipal})`;
                     block.title = trabajo.titulo;
                     block.style.cursor = 'pointer';
+                    block.dataset.tipoContenido = 'imagen';
+                    block.dataset.contenido = trabajo.imgPrincipal;
+                    block.addEventListener('click', AbrirModal);
 
                     let blockContent = d.createElement('img');
                     blockContent.src = trabajo.imgPrincipal;
@@ -233,9 +236,17 @@ function GenerarTrabajo() {
                                 // El contenido es un video de youtube
                                 block.className = 'showcase2Box';
 
+                                contenido = contenido.replace('watch?v=', 'embed/');
+                                let regex = new RegExp('\&(.*)');
+                                contenido = contenido.replace(regex, '');
+
+                                block.dataset.tipoContenido = 'video';
+                                block.dataset.contenido = contenido;
+                                block.addEventListener('click', AbrirModal);
+
                                 let blockContent = d.createElement('iframe');
                                 blockContent.src = contenido;
-                                blockContent.frameBorder = '0';
+                                //blockContent.frameBorder = '0';
 
                                 block.appendChild(blockContent);
 
@@ -248,6 +259,9 @@ function GenerarTrabajo() {
                                 block.className = 'showcaseBox';
                                 block.style.backgroundImage = `url(${contenido})`;
                                 block.title = trabajo.titulo;
+                                block.dataset.tipoContenido = 'imagen';
+                                block.dataset.contenido = contenido;
+                                block.addEventListener('click', AbrirModal);
 
                                 let blockContent = d.createElement('img');
                                 blockContent.src = contenido;
@@ -269,7 +283,7 @@ function GenerarTrabajo() {
 
     let botonVolver = d.createElement('a');
     botonVolver.id = 'botonVolver';
-    botonVolver.innerHTML = 'VOLVER';
+    botonVolver.innerHTML = '> VOLVER <';
     botonVolver.addEventListener('click', GenerarHome);
 
     main.appendChild(botonVolver);
@@ -283,19 +297,64 @@ function GenerarTrabajo() {
 }
 
 
+/**
+ * *****************************************************************
+ * 
+ * Modal
+ * 
+ * *****************************************************************
+ */
 
+function AbrirModal(e) {
+    e.preventDefault();
 
+    let canvas = d.createElement('div');
+    canvas.id = 'modalCanvas';
+
+    let closebtn = d.createElement('span');
+    closebtn.id = 'modalCerrar';
+    closebtn.addEventListener('click', CerrarModal);
+    let closebtnTxt = d.createElement('p');
+    closebtnTxt.innerHTML = 'X';
+
+    closebtn.appendChild(closebtnTxt);
+    canvas.appendChild(closebtn);
+
+    let visor = d.createElement('div');
+    visor.id = 'modalVisor';
+
+    if (this.dataset.tipoContenido == 'imagen') {
+        let imagen = d.createElement('img');
+        imagen.src = this.dataset.contenido;
+        imagen.title = this.title;
+        imagen.alt = this.title;
+        visor.appendChild(imagen);
+    } else if (this.dataset.tipoContenido == 'video') {
+        let iframe = d.createElement('iframe');
+        iframe.src = this.dataset.contenido;
+        visor.appendChild(iframe);
+    }
+
+    canvas.appendChild(visor);
+    d.body.appendChild(canvas);
+
+}
+
+function CerrarModal() {
+    let modal = d.getElementById('modalCanvas');
+    modal.remove();
+}
 
 
 
 
 /**
+ * *****************************************************************
  * 
  * Armado de Navegación superior
  * 
+ * *****************************************************************
  */
-
-
 
 // Creo las interacciones del nav:
 let navElements = d.querySelectorAll('header nav ul li a');
