@@ -75,14 +75,17 @@ main #imagenesPerfil span img {
 
 
 #botonVolver{
-    width: 100%;
-    background-color: var(--aecolor-gris-claro);
-    border-radius: 4px;
-    box-shadow: 0 2px 5px var(--aecolor-gris-intermedio);
-    text-align: center;
+    margin-top: 150px;
     padding: 10px;
-    color: var(--aecolor-negro);
+    width: 100%;
+    text-align: center;
+    color: var(--aecolor-gris-intermedio);
     cursor: pointer;
+}
+
+#botonVolver:hover{
+    transition: 0.5s;
+    color: var(--aecolor-negro);
 }
 
 main iframe{
