@@ -5,8 +5,11 @@ Header
 */
 
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
     max-height: 80px;
-    border-bottom: 2px solid var(--aecolor-gris-intermedio);
+    background-color: var(--aecolor-blanco);
 }
 
 header nav {
@@ -20,20 +23,27 @@ header div {
 
 header div {
     max-height: min-content;
+    padding: 30px;
 }
 
 header img {
     max-height: 100%;
+    min-width: 100px;
 }
 
 header nav {
     display: flex;
+    flex-wrap: nowrap;
 }
 
 header nav ul {
     flex-grow: 1;
     vertical-align: center;
     align-content: center;
+}
+
+header nav ul a {
+    cursor: pointer;
 }
 
 /*
@@ -43,7 +53,7 @@ Main
 */
 
 main {
-/*    margin-top: 50px;*/
+    margin: 50px 0;
     padding: 0 10vw;
 }
 
@@ -52,16 +62,109 @@ main #manifiesto {
     text-align: center;
 }
 
-main #imagenesPerfil{
+main #imagenesPerfil {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
 
-main #imagenesPerfil span img{
+main #imagenesPerfil span img {
     max-width: 100%;
     max-height: 50vh;
 }
+
+
+#botonVolver {
+    margin-top: 20px;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    color: var(--aecolor-gris-intermedio);
+    cursor: pointer;
+    font-size: 0.85em;
+}
+
+#botonVolver:hover {
+    transition: 0.5s;
+    color: var(--aecolor-negro);
+}
+
+main iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.OverlayClickeableTrabajo::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: black;
+}
+
+#modalCanvas {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background-color: rgba(20, 20, 20, .9);
+    padding: auto;
+}
+
+#modalCerrar {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    padding: 15px;
+    background-color: var(--aecolor-gris-claro);
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+#modalCerrar:hover{
+    transition: 0.5s;
+    color: var(--aecolor-negro);
+    background-color: var(--aecolor-blanco);
+}
+
+#modalCerrar p{
+    position: relative;
+    top: -1px;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+#modalVisor {
+    position: absolute;
+    top: 10vh;
+    left: 25vw;
+    width: 50vw;
+    height: 80vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+#modalVisor img,
+#modalVisor iframe {
+    margin: 0;
+    padding: 0;
+    max-height: 100%;
+}
+
+
+
 
 /*
 *****************************************************************************
@@ -69,9 +172,23 @@ Footer
 *****************************************************************************
 */
 
-/*footer {
-    background-color: var(--aecolor-gris-oscuro);
-    position: fixed;
-    bottom: 0;
-    left: 0;
-}*/
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+footer p {
+    padding-left: 30px;
+    flex-grow: 2;
+}
+
+footer ul {
+    flex-grow: 1;
+
+}
+
+
+footer ul img {
+    width: 25px;
+}
