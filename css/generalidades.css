@@ -236,47 +236,47 @@ html {
 }
 
 .BackgroundAecolorNegro {
-    background-color: var(--aecolor-negro);
+    background-color: var(--aecolor-negro) !important;
 }
 
 .AecolorNegro {
-    color: var(--aecolor-negro);
+    color: var(--aecolor-negro) !important;
 }
 
 .BackgroundAecolorGrisOscuro {
-    background-color: var(--aecolor-gris-oscuro);
+    background-color: var(--aecolor-gris-oscuro) !important;
 }
 
 .AecolorGrisOscuro {
-    color: var(--aecolor-gris-oscuro);
+    color: var(--aecolor-gris-oscuro) !important;
 }
 
 .BackgroundAecolorGrisIntermedio {
-    background-color: var(--aecolor-gris-intermedio);
+    background-color: var(--aecolor-gris-intermedio) !important;
 }
 
 .AecolorGrisIntermedio {
-    color: var(--aecolor-gris-intermedio);
+    color: var(--aecolor-gris-intermedio) !important;
 }
 
 .BackgroundAecolorGrisClaro {
-    background-color: var(--aecolor-gris-claro);
+    background-color: var(--aecolor-gris-claro) !important;
 }
 
 .AecolorGrisClaro {
-    color: var(--aecolor-gris-claro);
+    color: var(--aecolor-gris-claro) !important;
 }
 
 .BackgroundAecolorBlanco {
-    background-color: var(--aecolor-blanco);
+    background-color: var(--aecolor-blanco) !important;
 }
 
 .AecolorBlanco {
-    color: var(--aecolor-blanco);
+    color: var(--aecolor-blanco) !important;
 }
 
 .BackgroundAecolorRojo {
-    background-color: var(--aecolor-rojo);
+    background-color: var(--aecolor-rojo) !important;
 }
 
 .AecolorRojo {

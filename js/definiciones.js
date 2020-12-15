@@ -30,15 +30,15 @@ const aDisenadores = [];
 aDisenadores[0] = {
     nombre: 'Emiliano Vallaro',
     foto: 'imgs/FotosAgencia/Foto-Perfil-Emiliano-Vallaro.jpg',
-    descripcion: 'Emiliano Vallaro, Head Designer de la Agencia especializado en interfaces.'
+    descripcion: 'Emiliano Vallaro, Head Designer especializado en interfaces.'
 };
 aDisenadores[1] = {
     nombre: 'Luisina Scuffi',
     foto: 'imgs/FotosAgencia/Foto-Perfil-Luisina-Scuffi.jpg',
-    descripcion: 'Luisina Scuffi, Head Designer de la Agencia especializada en 3D.'
+    descripcion: 'Luisina Scuffi, Head Designer especializada en 3D.'
 };
 aDisenadores[2] = {
     nombre: 'Julián Amé',
     foto: 'imgs/FotosAgencia/Foto-Perfil-Julian-Ame.jpg',
-    descripcion: 'Julián Amé, Head Designer de la Agencia especializado en desarrollos web.'
+    descripcion: 'Julián Amé, Head Designer especializado en desarrollos web.'
 };

@@ -52,6 +52,10 @@ function GenerarHome(tipoDeTrabajoSolcitado) {
         let botonera = d.createElement('div');
         botonera.id = 'mainBotonera';
 
+        let spacer = d.createElement('span');
+        spacer.className = 'spacer';
+        botonera.appendChild(spacer);
+
         let botonReel = d.createElement('a');
         botonReel.innerHTML = 'Mirá nuestro reel';
         botonReel.href = 'https://www.youtube.com/watch?v=BtFUWzs3HC8';
@@ -59,16 +63,16 @@ function GenerarHome(tipoDeTrabajoSolcitado) {
         botonReel.className = 'boton';
         botonera.appendChild(botonReel);
 
-        let spacer = d.createElement('span');
-        spacer.className = 'spacer';
-        botonera.appendChild(spacer);
-
         let botonManifiesto = d.createElement('a');
         botonManifiesto.innerHTML = 'Mirá nuestro manifiesto';
         botonManifiesto.target = 'blank';
         botonManifiesto.href = 'https://www.youtube.com/watch?v=3MM5FnT85aE';
         botonManifiesto.className = 'boton';
         botonera.appendChild(botonManifiesto);
+
+        spacer = d.createElement('span');
+        spacer.className = 'spacer';
+        botonera.appendChild(spacer);
 
         mainTextBlock.appendChild(botonera);
 
@@ -85,15 +89,18 @@ function GenerarHome(tipoDeTrabajoSolcitado) {
 
             //Primero creo la cabecera de este tipo de trabajo
             let block = d.createElement('span');
-            block.className = 'showcase2Box notHovereable';
+            block.className = 'showcase2Box notHovereable BackgroundAecolorBlanco flexContainer';
             let blockHeader = d.createElement('h2');
+            blockHeader.className = 'AecolorNegro';
             blockHeader.innerHTML = tipoDeTrabajo.tituloDeSeccion;
             block.appendChild(blockHeader);
             section.appendChild(block);
 
             block = d.createElement('span');
-            block.className = 'showcaseBox notHovereable';
-            block.style.backgroundImage = `url(imgs/isotipo_ae-white.svg)`;
+            block.className = 'showcaseBox notHovereable BackgroundAecolorBlanco';
+            block.style.backgroundImage = `url(imgs/isotipo_ae-black.svg)`;
+            block.style.backgroundSize = '40%';
+            block.style.backgroundRepeat = 'no-repeat';
             block.title = 'Isotipo Álterego';
 
             let blockContent = d.createElement('img');
@@ -148,7 +155,7 @@ function GenerarHome(tipoDeTrabajoSolcitado) {
 
 
                 mainTitle.innerHTML = 'Visualizá los siguientes proyectos';
-                mainParagraph.innerHTML = 'Ya tuviste un primer acercamiento a algunos de estos trabajos en las historias de Instagram. <br> Hacé clic en cada uno para verlo en detalle.';
+                mainParagraph.innerHTML = 'Ya tuviste un primer acercamiento a algunos de estos trabajos en las historias de Instagram. <br> Hacé clic en cada uno para verlos en detalle.';
 
                 let section = d.createElement('section');
                 section.id = tipoDeTrabajo.tipoDeTrabajo;

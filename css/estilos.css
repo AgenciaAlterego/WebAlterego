@@ -184,6 +184,11 @@ main iframe {
     margin: 1em 0;
 }
 
+#mainBotonera a {
+    margin: 0 5px;
+    flex-grow: 2;
+    flex-basis: 1;
+}
 
 #mainShowcase {
     display: flex;
@@ -210,7 +215,6 @@ main iframe {
     background-position: center center;
 }
 
-
 .showcaseBox {
     /*flex-grow: 1;*/
     flex: 1 0 25%;
@@ -221,18 +225,32 @@ main iframe {
     flex: 2 0 50%;
 }
 
+.showcase2Box:hover,
+.showcaseBox:hover {
+    transition: 0.5s ease-out;
+    opacity: 0.5;
+}
+
 .showcase2Box img,
 .showcaseBox img {
     display: none !important;
 }
 
-.showcase2Box:hover,
-.showcaseBox:hover {
-    transition: 0.5s ease-out;
-    opacity: 0.5;
-
+.showcase2Box h2,
+.showcaseBox h2 {
+    font-size: 4em;
+    text-align: left;
+    word-wrap: break-word;
+    margin: 0.5em 0.5em;
+    flex-grow: 1;
 }
 
+.flexContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
 
 #Nosotros {
     margin-top: 20vh;
@@ -250,7 +268,7 @@ main iframe {
 }
 
 #Nosotros #disenadores span {
-    flex-grow: 1;
+    flex: 1 0 25%;
     margin: 5px;
     display: flex;
     flex-direction: column;
@@ -329,10 +347,40 @@ Clases adicionales
 .boton {
     padding: 10px;
     background-color: var(--aecolor-blanco);
-    border: 1px solid var(--aecolor-gris-oscuro);
+    border: 1px solid var(--aecolor-gris-intermedio);
     border-radius: 4px;
     align-self: center;
     flex-grow: 1;
     text-align: center;
     font-size: 1em;
+}
+
+.boton:hover {
+    transition: 0.5s ease-in;
+    border: 1px solid var(--aecolor-negro);
+}
+
+
+/*
+*****************************************************************************
+Media queries
+*****************************************************************************
+*/
+
+
+@media (max-width: 800px) {
+
+    .showcase2Box h2,
+    .showcaseBox h2 {
+        font-size: 3em;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .showcase2Box h2,
+    .showcaseBox h2 {
+        font-size: 2em;
+    }
 }
