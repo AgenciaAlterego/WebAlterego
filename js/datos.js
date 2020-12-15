@@ -8,7 +8,7 @@ aTrabajos[0] = {
 };
 aTrabajos[1] = {
     tipoDeTrabajo: 'Motion',
-    tituloDeSeccion: 'Motion Graphics y Animación',
+    tituloDeSeccion: 'Postproducción y Motion graphics',
     trabajos: []
 };
 aTrabajos[2] = {
@@ -17,15 +17,16 @@ aTrabajos[2] = {
     trabajos: []
 };
 aTrabajos[3] = {
+    tipoDeTrabajo: 'Apps y Webs',
+    tituloDeSeccion: 'Webs, Apps y Juegos',
+    trabajos: []
+};
+aTrabajos[4] = {
     tipoDeTrabajo: 'Publicidad',
     tituloDeSeccion: 'Campañas publicitarias',
     trabajos: []
 };
-aTrabajos[4] = {
-    tipoDeTrabajo: 'Apps y Webs',
-    tituloDeSeccion: 'Apps, Webs y Juegos',
-    trabajos: []
-};
+
 
 
 function trabajo() {
@@ -74,13 +75,28 @@ aTrabajos[0].trabajos[2].contenidoAdicional[0] = 'https://www.youtube.com/watch?
 aTrabajos[0].trabajos[2].contenidoAdicional[1] = 'https://www.youtube.com/watch?v=d8t_jYWUdDc&feature=youtu.be';
 
 aTrabajos[0].trabajos[3] = new trabajo();
-aTrabajos[0].trabajos[3].titulo = 'Futurama Spaceship';
-aTrabajos[0].trabajos[3].descripcion = `Sabemos que solos llegamos más rápido, pero acompañados llegamos más lejos.\n
-Por eso es bueno saber que tenés un Álterego dando tu mejor versión.`;
-aTrabajos[0].trabajos[3].imgPrincipal = 'imgs/trabajos/3d/Futurama.png';
-aTrabajos[0].trabajos[3].contenidoAdicional[0] = 'imgs/trabajos/3d/Futurama-adc-1.jpg';
-aTrabajos[0].trabajos[3].contenidoAdicional[1] = 'imgs/trabajos/3d/Futurama-adc-2.jpg';
-aTrabajos[0].trabajos[3].contenidoAdicional[2] = 'imgs/trabajos/3d/Futurama-adc-3.jpg';
+aTrabajos[0].trabajos[3].titulo = 'X Wing Star Wars Spaceship';
+aTrabajos[0].trabajos[3].descripcion = `Una de las naves más icónica de Star Wars.`;
+aTrabajos[0].trabajos[3].imgPrincipal = 'imgs/trabajos/3d/Xwing.png';
+aTrabajos[0].trabajos[3].contenidoAdicional[0] = 'https://www.youtube.com/watch?v=eEdbsAXMMkI&feature=youtu.be';
+aTrabajos[0].trabajos[3].contenidoAdicional[1] = 'https://www.youtube.com/watch?v=SOOKeBWOM3I&feature=youtu.be';
+
+aTrabajos[0].trabajos[4] = new trabajo();
+aTrabajos[0].trabajos[4].titulo = 'Futurama Spaceship';
+aTrabajos[0].trabajos[4].descripcion = `Esta nave fue realizada bajo un texturizado realista con detalles de óxido y manchas de pintura desgastada.`;
+aTrabajos[0].trabajos[4].imgPrincipal = 'imgs/trabajos/3d/Futurama.png';
+aTrabajos[0].trabajos[4].contenidoAdicional[0] = 'https://www.youtube.com/watch?v=7UIb2GDqA4M&feature=youtu.be';
+aTrabajos[0].trabajos[4].contenidoAdicional[1] = 'imgs/trabajos/3d/Futurama-adc-1.jpg';
+aTrabajos[0].trabajos[4].contenidoAdicional[2] = 'imgs/trabajos/3d/Futurama-adc-2.jpg';
+aTrabajos[0].trabajos[4].contenidoAdicional[3] = 'imgs/trabajos/3d/Futurama-adc-3.jpg';
+aTrabajos[0].trabajos[4].contenidoAdicional[4] = 'https://www.youtube.com/watch?v=kUvryowso90&feature=youtu.be';
+
+aTrabajos[0].trabajos[5] = new trabajo();
+aTrabajos[0].trabajos[5].titulo = 'Steampunk Camera';
+aTrabajos[0].trabajos[5].descripcion = `Esta cámara fue modelada bajo la línea estética retrofuturista Steampunk.`;
+aTrabajos[0].trabajos[5].imgPrincipal = 'imgs/trabajos/3d/Steampunk.jpg';
+aTrabajos[0].trabajos[5].contenidoAdicional[0] = 'imgs/trabajos/3d/Steampunk-adc-1.jpg';
+aTrabajos[0].trabajos[5].contenidoAdicional[1] = 'imgs/trabajos/3d/Steampunk-adc-2.jpg';
 
 aTrabajos[0].trabajos[4] = new trabajo();
 aTrabajos[0].trabajos[4].titulo = 'Storm Trooper';
@@ -90,19 +106,7 @@ aTrabajos[0].trabajos[4].imgPrincipal = 'imgs/trabajos/3d/Stormtrooper.jpg';
 aTrabajos[0].trabajos[4].contenidoAdicional[0] = 'imgs/trabajos/3d/Stormtrooper-adc-1.jpg';
 aTrabajos[0].trabajos[4].contenidoAdicional[1] = 'imgs/trabajos/3d/Stormtrooper-adc-2.jpg';
 
-aTrabajos[0].trabajos[5] = new trabajo();
-aTrabajos[0].trabajos[5].titulo = 'Xwing';
-aTrabajos[0].trabajos[5].descripcion = `Sabemos que solos llegamos más rápido, pero acompañados llegamos más lejos.\n
-Por eso es bueno saber que tenés un Álterego dando tu mejor versión.`;
-aTrabajos[0].trabajos[5].imgPrincipal = 'imgs/trabajos/3d/Xwing.png';
 
-aTrabajos[0].trabajos[6] = new trabajo();
-aTrabajos[0].trabajos[6].titulo = 'Cámara Steampunk';
-aTrabajos[0].trabajos[6].descripcion = `Sabemos que solos llegamos más rápido, pero acompañados llegamos más lejos.\n
-Por eso es bueno saber que tenés un Álterego dando tu mejor versión.`;
-aTrabajos[0].trabajos[6].imgPrincipal = 'imgs/trabajos/3d/Steampunk.jpg';
-aTrabajos[0].trabajos[6].contenidoAdicional[0] = 'imgs/trabajos/3d/Steampunk-adc-1.jpg';
-aTrabajos[0].trabajos[6].contenidoAdicional[1] = 'imgs/trabajos/3d/Steampunk-adc-2.jpg';
 
 /* Motion */
 
@@ -130,8 +134,7 @@ aTrabajos[1].trabajos[2].contenidoAdicional[1] = 'https://www.youtube.com/watch?
 
 aTrabajos[1].trabajos[3] = new trabajo();
 aTrabajos[1].trabajos[3].titulo = 'Matte Painting Playa de Estacionamiento';
-aTrabajos[1].trabajos[3].descripcion = `Sabemos que solos llegamos más rápido, pero acompañados llegamos más lejos.\n
-Por eso es bueno saber que tenés un Álterego dando tu mejor versión.`;
+aTrabajos[1].trabajos[3].descripcion = `A través de la técnica de matte painting se ambientó una playa de estacionamiento con estética post apocalíptica.`;
 aTrabajos[1].trabajos[3].imgPrincipal = 'imgs/trabajos/Motion/MattePainting.jpg';
 aTrabajos[1].trabajos[3].contenidoAdicional[0] = 'imgs/trabajos/Motion/MattePainting-adc-1.jpg';
 aTrabajos[1].trabajos[3].contenidoAdicional[1] = 'https://www.youtube.com/watch?v=nqMKVKLLSU4&feature=youtu.be';
@@ -145,7 +148,46 @@ aTrabajos[1].trabajos[4].contenidoAdicional[1] = 'https://www.youtube.com/watch?
 
 aTrabajos[1].trabajos[5] = new trabajo();
 aTrabajos[1].trabajos[5].titulo = 'Un Feliz Personaje - Trackeo de Escena';
-aTrabajos[1].trabajos[5].descripcion = `Video explicativo realizado para Chevrolet Argentina sobre la utilización de Whatsapp Business como nuevo canal de ventas.`;
+aTrabajos[1].trabajos[5].descripcion = `Se le dio vida a un personaje en tres dimensiones, insertándolo en una escena realista mediante el trackeo de la misma.`;
 aTrabajos[1].trabajos[5].imgPrincipal = 'imgs/trabajos/Motion/Feliz-Personaje.jpg';
 aTrabajos[1].trabajos[5].contenidoAdicional[0] = 'imgs/trabajos/Motion/Feliz-Personaje-adc-1.jpg';
 aTrabajos[1].trabajos[5].contenidoAdicional[1] = 'https://www.youtube.com/watch?v=AAuu-kzhftM&feature=youtu.be';
+
+/* Diseño e ilustración */
+
+aTrabajos[2].trabajos[0] = new trabajo();
+aTrabajos[2].trabajos[0].titulo = 'Heisenberg - Say my name!';
+aTrabajos[2].trabajos[0].descripcion = `Ilustración en arte vectorial de Heisenberg realizada para la convocatoria oficial en RRSS del lanzamiento de la última temporada de Breaking Bad.`;
+aTrabajos[2].trabajos[0].imgPrincipal = 'imgs/trabajos/Motion/Mtv.jpg';
+
+aTrabajos[2].trabajos[1] = new trabajo();
+aTrabajos[2].trabajos[1].titulo = 'Nike Running Trainers';
+aTrabajos[2].trabajos[1].descripcion = `Ilustración vectorial utilizada para lanzar un nuevo modelo de zapatillas de la reconocida marca Nike.`;
+aTrabajos[2].trabajos[1].imgPrincipal = 'imgs/trabajos/Motion/Mtv.jpg';
+
+aTrabajos[2].trabajos[2] = new trabajo();
+aTrabajos[2].trabajos[2].titulo = 'Nissan - Smart & Wild';
+aTrabajos[2].trabajos[2].descripcion = `Fotomontaje publicitario realizado para el lanzamiento de la Nueva camioneta Nissan que conecta la naturaleza con el concepto Smart & Wild.`;
+aTrabajos[2].trabajos[2].imgPrincipal = 'imgs/trabajos/Motion/Mtv.jpg';
+
+/* Webs, Apps y Juegos */
+
+aTrabajos[3].trabajos[0] = new trabajo();
+aTrabajos[3].trabajos[0].titulo = 'Farmashop';
+aTrabajos[3].trabajos[0].descripcion = `App mobile diseñada para comprar artículos de farmacia y medicamentos con y sin receta, sin tener que moverte de tu casa.`;
+aTrabajos[3].trabajos[0].imgPrincipal = 'imgs/trabajos/Motion/Mtv.jpg';
+
+aTrabajos[3].trabajos[1] = new trabajo();
+aTrabajos[3].trabajos[1].titulo = 'BeerPoint - Cervecería Artesanal';
+aTrabajos[3].trabajos[1].descripcion = `Landing Page realizada para BeerPoint, una cervecería artesanal porteña.`;
+aTrabajos[3].trabajos[1].imgPrincipal = 'imgs/trabajos/Motion/Mtv.jpg';
+
+aTrabajos[3].trabajos[2] = new trabajo();
+aTrabajos[3].trabajos[2].titulo = 'Prime - El juego más seguro';
+aTrabajos[3].trabajos[2].descripcion = `Advert-Game para campaña de concientización sobre sexo seguro para la marca de preservativos Prime.`;
+aTrabajos[3].trabajos[2].imgPrincipal = 'imgs/trabajos/Motion/Mtv.jpg';
+
+aTrabajos[3].trabajos[1] = new trabajo();
+aTrabajos[3].trabajos[1].titulo = 'Prime - El juego más seguro';
+aTrabajos[3].trabajos[1].descripcion = `Advert-Game para campaña de concientización sobre sexo seguro para la marca de preservativos Prime.`;
+aTrabajos[3].trabajos[1].imgPrincipal = 'imgs/trabajos/Motion/Mtv.jpg';

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Experiencia Álterego</title>
+    <title>Landing de trabajos 3D</title>
 
     <link rel="shortcut icon" href="imgs/favicon-01.png" type="image/x-icon">
 
@@ -13,23 +13,11 @@
 </head>
 
 <body>
-
     <header>
         <div>
             <img src="imgs/MARCA_AE-Secundario-ver2-negro.svg" alt="Isologotipo de la Agencia Álterego"
                 style="color: black;">
         </div>
-        <span></span>
-        <nav>
-            <ul>
-                <li><a>3D</a></li>
-                <li><a>Motion</a></li>
-                <li><a>Diseño e Ilustración</a></li>
-                <li><a>Publicidad</a></li>
-                <li><a>Apps y Webs</a></li>
-                <li><a>Nosotros</a></li>
-            </ul>
-        </nav>
     </header>
     <main id="main">
         <div class="spacer"></div>
@@ -75,7 +63,7 @@
     <script src="js/datos.js"></script>
     <script src="js/codigo.js"></script>
     <script>
-        const publicTipoDeTrabajoSolicitado = null;
+        const publicTipoDeTrabajoSolicitado = aTrabajos[0].tipoDeTrabajo;
         d.onload = GenerarHome(publicTipoDeTrabajoSolicitado);
     </script>
 </body>

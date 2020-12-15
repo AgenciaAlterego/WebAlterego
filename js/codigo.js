@@ -1,9 +1,5 @@
 'use strict'
 
-
-d.onload = GenerarHome();
-
-
 function VaciarCanvas() {
     while (mainTitle.firstChild) {
         mainTitle.removeChild(mainTitle.firstChild);
@@ -32,126 +28,194 @@ function VaciarCanvas() {
 
 }
 
-function GenerarHome() {
+function GenerarHome(tipoDeTrabajoSolcitado) {
+    // Tipo de trabajo puede venir vacío, en ese caso, tengo que renderear todo.
+    // Si viene con algúna tipología de trabajo, entonces tengo qeu renderear solo eso.
 
     // Primero vacío mainTitle mainParagraph y mainShowcase
     VaciarCanvas();
 
     // Ahora cargo el contenido
 
-    mainTitle.innerHTML = 'Somos tu mejor versión';
-    mainParagraph.innerHTML = 'Sabemos que solos llegamos más rápido, pero acompañados llegamos más lejos. <br> Por eso es bueno saber que tenés un Álterego dando tu mejor versión.';
+    if (!tipoDeTrabajoSolcitado) {
+        //Si entró acá, es porque no se solicitó un tipo de trabajo particular, entonces tengo que renderear todo.
+        mainTitle.innerHTML = 'Somos tu mejor versión';
+        mainParagraph.innerHTML = 'Sabemos que solos llegamos más rápido, pero acompañados llegamos más lejos. <br> Por eso es bueno saber que tenés un Álterego dando tu mejor versión.';
 
-    let botonera = d.createElement('div');
-    botonera.id = 'mainBotonera';
+        let botonera = d.createElement('div');
+        botonera.id = 'mainBotonera';
 
-    let botonReel = d.createElement('a');
-    botonReel.innerHTML = 'Mirá nuestro reel';
-    botonReel.href = 'https://www.youtube.com/watch?v=BtFUWzs3HC8';
-    botonReel.target = 'blank';
-    botonReel.className = 'boton';
-    botonera.appendChild(botonReel);
+        let botonReel = d.createElement('a');
+        botonReel.innerHTML = 'Mirá nuestro reel';
+        botonReel.href = 'https://www.youtube.com/watch?v=BtFUWzs3HC8';
+        botonReel.target = 'blank';
+        botonReel.className = 'boton';
+        botonera.appendChild(botonReel);
 
-    let spacer = d.createElement('span');
-    spacer.className = 'spacer';
-    botonera.appendChild(spacer);
+        let spacer = d.createElement('span');
+        spacer.className = 'spacer';
+        botonera.appendChild(spacer);
 
-    let botonContacto = d.createElement('a');
-    botonContacto.innerHTML = 'Contacto';
-    botonContacto.href = '';
-    botonContacto.addEventListener('click', function () {
-        navigateTo('Nosotros');
-    });
-    botonContacto.className = 'boton';
-    botonera.appendChild(botonContacto);
+        let botonManifiesto = d.createElement('a');
+        botonManifiesto.innerHTML = 'Mirá nuestro manifiesto';
+        botonManifiesto.target = 'blank';
+        botonManifiesto.href = 'https://www.youtube.com/watch?v=3MM5FnT85aE';
+        botonManifiesto.className = 'boton';
+        botonera.appendChild(botonManifiesto);
 
-    mainTextBlock.appendChild(botonera);
+        mainTextBlock.appendChild(botonera);
 
-    //console.log('llegué antes del for');
-    //console.log(aTrabajos);
+        //console.log('llegué antes del for');
+        //console.log(aTrabajos);
 
-    // Loop de carga de datos
-    for (let tipoDeTrabajo of aTrabajos) {
-        //console.log('entre al loop de carga de datos');
+        // Loop de carga de datos
+        for (let tipoDeTrabajo of aTrabajos) {
+            //console.log('entre al loop de carga de datos');
 
-        let section = d.createElement('section');
-        switch (tipoDeTrabajo.tipoDeTrabajo) {
-            case '3D':
-                section.id = '3D';
-                break;
-            case 'Motion':
-                section.id = 'Motion';
-                break;
-            case 'Diseño e Ilustración':
-                section.id = 'Diseño e Ilustración';
-                break;
-            case 'Diseño e Ilustración':
-                section.id = 'Diseño e Ilustración';
-                break;
-            case 'Publicidad':
-                section.id = 'Publicidad';
-                break;
-            case 'Apps y Webs':
-                section.id = 'Apps y Webs';
-                break;
-        }
-
-
-        //Primero creo la cabecera de este tipo de trabajo
-        let block = d.createElement('span');
-        block.className = 'showcase2Box notHovereable';
-        let blockHeader = d.createElement('h2');
-        blockHeader.innerHTML = tipoDeTrabajo.tituloDeSeccion;
-        block.appendChild(blockHeader);
-        section.appendChild(block);
-
-        block = d.createElement('span');
-        block.className = 'showcaseBox notHovereable';
-        block.style.backgroundImage = `url(imgs/isotipo_ae-white.svg)`;
-        block.title = 'Isotipo Álterego';
-
-        let blockContent = d.createElement('img');
-        blockContent.src = 'imgs/isotipo_ae-white.svg';
-        blockContent.style.width = '100%';
-        blockContent.style.margin = '0';
-        blockContent.style.padding = '0';
-        block.appendChild(blockContent);
-        section.appendChild(block);
+            let section = d.createElement('section');
+            section.id = tipoDeTrabajo.tipoDeTrabajo;
+            /*
+            //Creo que esto era un despropósito. Falta chequealo bien.
+            switch (tipoDeTrabajo.tipoDeTrabajo) {
+                case '3D':
+                    section.id = '3D';
+                    break;
+                case 'Motion':
+                    section.id = 'Motion';
+                    break;
+                case 'Diseño e Ilustración':
+                    section.id = 'Diseño e Ilustración';
+                    break;
+                case 'Diseño e Ilustración':
+                    section.id = 'Diseño e Ilustración';
+                    break;
+                case 'Publicidad':
+                    section.id = 'Publicidad';
+                    break;
+                case 'Apps y Webs':
+                    section.id = 'Apps y Webs';
+                    break;
+            }*/
 
 
-
-        for (let trabajo of tipoDeTrabajo.trabajos) {
-            // Ahora cargo todos los trabajos por bloque
-            block = d.createElement('span');
-            block.className = 'showcaseBox';
-
-            block.style.backgroundImage = `url(${trabajo.imgPrincipal})`;
-            block.style.cursor = 'pointer';
-            block.title = trabajo.titulo;
-            block.dataset.tipoDeTrabajo = tipoDeTrabajo.tipoDeTrabajo;
-            block.dataset.tituloDeTrabajo = trabajo.titulo;
-            block.addEventListener('click', GenerarTrabajo);
-
-            blockContent = d.createElement('img');
-            blockContent.src = trabajo.imgPrincipal;
-            blockContent.title = trabajo.titulo;
-            blockContent.alt = trabajo.titulo;
-
-            block.appendChild(blockContent);
-
-
+            //Primero creo la cabecera de este tipo de trabajo
+            let block = d.createElement('span');
+            block.className = 'showcase2Box notHovereable';
+            let blockHeader = d.createElement('h2');
+            blockHeader.innerHTML = tipoDeTrabajo.tituloDeSeccion;
+            block.appendChild(blockHeader);
             section.appendChild(block);
 
+            block = d.createElement('span');
+            block.className = 'showcaseBox notHovereable';
+            block.style.backgroundImage = `url(imgs/isotipo_ae-white.svg)`;
+            block.title = 'Isotipo Álterego';
+
+            let blockContent = d.createElement('img');
+            blockContent.src = 'imgs/isotipo_ae-white.svg';
+            blockContent.style.width = '100%';
+            blockContent.style.margin = '0';
+            blockContent.style.padding = '0';
+            block.appendChild(blockContent);
+            section.appendChild(block);
+
+
+
+            for (let trabajo of tipoDeTrabajo.trabajos) {
+                // Ahora cargo todos los trabajos por bloque
+                block = d.createElement('span');
+                block.className = 'showcaseBox';
+
+                block.style.backgroundImage = `url(${trabajo.imgPrincipal})`;
+                block.style.cursor = 'pointer';
+                block.title = trabajo.titulo;
+                block.dataset.tipoDeTrabajo = tipoDeTrabajo.tipoDeTrabajo;
+                block.dataset.tituloDeTrabajo = trabajo.titulo;
+                block.addEventListener('click', GenerarTrabajo);
+
+                blockContent = d.createElement('img');
+                blockContent.src = trabajo.imgPrincipal;
+                blockContent.title = trabajo.titulo;
+                blockContent.alt = trabajo.titulo;
+
+                block.appendChild(blockContent);
+
+
+                section.appendChild(block);
+
+            }
+
+            mainShowcase.appendChild(section);
+
         }
 
-        mainShowcase.appendChild(section);
+        GenerarNosotros();
+    } else {
+        // Loop de carga de datos
+        for (let tipoDeTrabajo of aTrabajos) {
 
+            if (tipoDeTrabajo.tipoDeTrabajo == tipoDeTrabajoSolcitado) {
+
+                mainTitle.innerHTML = `Trabajos de ${tipoDeTrabajo.tituloDeSeccion}`;
+                mainParagraph.innerHTML = 'Sabemos que solos llegamos más rápido, pero acompañados llegamos más lejos. <br> Por eso es bueno saber que tenés un Álterego dando tu mejor versión.';
+
+                let section = d.createElement('section');
+                section.id = tipoDeTrabajo.tipoDeTrabajo;
+
+
+                //Primero creo la cabecera de este tipo de trabajo
+                let block = d.createElement('span');
+                block.className = 'showcase2Box notHovereable';
+                let blockHeader = d.createElement('h2');
+                blockHeader.innerHTML = tipoDeTrabajo.tituloDeSeccion;
+                block.appendChild(blockHeader);
+                section.appendChild(block);
+
+                block = d.createElement('span');
+                block.className = 'showcaseBox notHovereable';
+                block.style.backgroundImage = `url(imgs/isotipo_ae-white.svg)`;
+                block.title = 'Isotipo Álterego';
+
+                let blockContent = d.createElement('img');
+                blockContent.src = 'imgs/isotipo_ae-white.svg';
+                blockContent.style.width = '100%';
+                blockContent.style.margin = '0';
+                blockContent.style.padding = '0';
+                block.appendChild(blockContent);
+                section.appendChild(block);
+
+
+
+                for (let trabajo of tipoDeTrabajo.trabajos) {
+                    // Ahora cargo todos los trabajos por bloque
+                    block = d.createElement('span');
+                    block.className = 'showcaseBox';
+
+                    block.style.backgroundImage = `url(${trabajo.imgPrincipal})`;
+                    block.style.cursor = 'pointer';
+                    block.title = trabajo.titulo;
+                    block.dataset.tipoDeTrabajo = tipoDeTrabajo.tipoDeTrabajo;
+                    block.dataset.tituloDeTrabajo = trabajo.titulo;
+                    block.addEventListener('click', GenerarTrabajo);
+
+                    blockContent = d.createElement('img');
+                    blockContent.src = trabajo.imgPrincipal;
+                    blockContent.title = trabajo.titulo;
+                    blockContent.alt = trabajo.titulo;
+
+                    block.appendChild(blockContent);
+
+
+                    section.appendChild(block);
+
+                }
+
+                mainShowcase.appendChild(section);
+
+            }
+        }
     }
-
-    GenerarNosotros();
-
 }
-
 
 
 
@@ -324,7 +388,9 @@ function GenerarTrabajo() {
     let botonVolver = d.createElement('a');
     botonVolver.id = 'botonVolver';
     botonVolver.innerHTML = '> VOLVER <';
-    botonVolver.addEventListener('click', GenerarHome);
+    botonVolver.addEventListener('click', function(){
+        GenerarHome(publicTipoDeTrabajoSolicitado);
+    });
 
     main.appendChild(botonVolver);
 
