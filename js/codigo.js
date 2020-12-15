@@ -26,6 +26,13 @@ function VaciarCanvas() {
         botonVolver.remove();
     }
 
+    /* Esto es solo para seminario, debería eliminarlo luego */
+    let fraseFinal = d.getElementById('fraseFinal');
+    if (fraseFinal) {
+        fraseFinal.remove();
+    }
+    
+
 }
 
 function GenerarHome(tipoDeTrabajoSolcitado) {
@@ -74,28 +81,6 @@ function GenerarHome(tipoDeTrabajoSolcitado) {
 
             let section = d.createElement('section');
             section.id = tipoDeTrabajo.tipoDeTrabajo;
-            /*
-            //Creo que esto era un despropósito. Falta chequealo bien.
-            switch (tipoDeTrabajo.tipoDeTrabajo) {
-                case '3D':
-                    section.id = '3D';
-                    break;
-                case 'Motion':
-                    section.id = 'Motion';
-                    break;
-                case 'Diseño e Ilustración':
-                    section.id = 'Diseño e Ilustración';
-                    break;
-                case 'Diseño e Ilustración':
-                    section.id = 'Diseño e Ilustración';
-                    break;
-                case 'Publicidad':
-                    section.id = 'Publicidad';
-                    break;
-                case 'Apps y Webs':
-                    section.id = 'Apps y Webs';
-                    break;
-            }*/
 
 
             //Primero creo la cabecera de este tipo de trabajo
@@ -151,6 +136,7 @@ function GenerarHome(tipoDeTrabajoSolcitado) {
 
         GenerarNosotros();
     } else {
+        //Si entró acá, es porque se solicitó un tipo de trabajo particular,rendereo solo los trabajos de ese tipo.
         // Loop de carga de datos
         for (let tipoDeTrabajo of aTrabajos) {
 
@@ -211,9 +197,15 @@ function GenerarHome(tipoDeTrabajoSolcitado) {
                 }
 
                 mainShowcase.appendChild(section);
-
             }
         }
+
+
+        //Incluyo un mensaje final ----- esto es para seminario. Debería borrarse a posterior.
+        let fraseFinal = d.createElement('h2');
+        fraseFinal.id = 'fraseFinal';
+        fraseFinal.innerHTML = 'Sigamos avanzando. Avísame por el grupo de Whatsapp que ya terminaste de visualizar esta estación.';
+        main.appendChild(fraseFinal);
     }
 }
 
@@ -388,7 +380,7 @@ function GenerarTrabajo() {
     let botonVolver = d.createElement('a');
     botonVolver.id = 'botonVolver';
     botonVolver.innerHTML = '> VOLVER <';
-    botonVolver.addEventListener('click', function(){
+    botonVolver.addEventListener('click', function () {
         GenerarHome(publicTipoDeTrabajoSolicitado);
     });
 

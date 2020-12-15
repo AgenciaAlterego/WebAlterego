@@ -171,7 +171,7 @@ main iframe {
 }
 
 #mainTitle {
-    font-family: '';
+    /*font-family: '';*/
     font-weight: 800;
 }
 
@@ -269,6 +269,22 @@ main iframe {
 #Nosotros #disenadores span p{
     font-size: 0.8em !important;
 }
+
+
+/*
+*****************************************************************************
+Esto es de seminario - para las landings adicionales
+*****************************************************************************
+*/
+
+#fraseFinal{
+    text-align: center;
+    font-weight: 800;
+    color: var(--aecolor-negro);
+    margin-top: 20vh;
+}
+
+
 
 /*
 *****************************************************************************
