@@ -246,24 +246,28 @@ main iframe {
     flex-direction: row;
 }
 
-#Nosotros article span{
-    flex: 1 0 25%;
+#Nosotros #disenadores span{
+    flex-grow: 1;
     margin: 5px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-/*
+
 #Nosotros article span div{
     flex-grow: 1;
-}*/
+}
 
-#Nosotros article span #imagenesDisenadores{
-    /*flex-grow: 1;*/
+#Nosotros #disenadores span #imagenesDisenadores{
+    flex-grow: 1;
     height: 80vh;
     background-color: var(--aecolor-gris-oscuro);
     background-size: cover;
     background-position: center center;
+}
+
+#Nosotros #disenadores span p{
+    font-size: 0.8em !important;
 }
 
 /*

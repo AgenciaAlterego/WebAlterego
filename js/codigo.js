@@ -160,7 +160,7 @@ function GenerarNosotros() {
     seccionNosotros.id = 'Nosotros';
 
     let h2 = d.createElement('h2');
-    h2.innerHTML = 'Quienes somos, La agencia y las personas'
+    h2.innerHTML = 'Quiénes somos, la agencia y las personas'
     seccionNosotros.appendChild(h2);
 
     let p = d.createElement('p');

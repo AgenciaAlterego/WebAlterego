@@ -362,11 +362,12 @@ footer {
     background: rgb(0, 0, 0);
     background: var(--aecolor-blanco);
 }
-
+/*
 #backgroundTexture {
     margin: 0;
     padding: 0;
-    background-image: url(../imgs/noisy_net/noisy_net_@2X.png);
+    ////background-image: url(../imgs/noisy_net/noisy_net_@2X.png);
+    //// Se descontinuó la versión que utilizaba la textura, y se borró los archivos
     height: 300%;
     width: 300%;
     position: fixed;
@@ -375,7 +376,7 @@ footer {
     animation: grainMovement 10s steps(10) infinite;
     mix-blend-mode: multiply;
     z-index: -1;
-}
+}*/
 
 a {
     text-decoration: none;
