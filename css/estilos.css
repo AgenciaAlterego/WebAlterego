@@ -53,10 +53,11 @@ Main
 */
 
 main {
-    margin: 50px 0;
+    margin: 20vh 0;
     padding: 0 10vw;
 }
 
+/*
 main #manifiesto {
     margin: 50px 50px;
     text-align: center;
@@ -71,7 +72,7 @@ main #imagenesPerfil {
 main #imagenesPerfil span img {
     max-width: 100%;
     max-height: 50vh;
-}
+}*/
 
 
 #botonVolver {
@@ -94,7 +95,7 @@ main iframe {
     height: 100%;
 }
 
-.OverlayClickeableTrabajo::before{
+.OverlayClickeableTrabajo::before {
     position: absolute;
     top: 0;
     left: 0;
@@ -125,13 +126,13 @@ main iframe {
     border-radius: 50%;
 }
 
-#modalCerrar:hover{
+#modalCerrar:hover {
     transition: 0.5s;
     color: var(--aecolor-negro);
     background-color: var(--aecolor-blanco);
 }
 
-#modalCerrar p{
+#modalCerrar p {
     position: relative;
     top: -1px;
     width: 15px;
@@ -163,6 +164,148 @@ main iframe {
     max-height: 100%;
 }
 
+#mainTextBlock,
+#Nosotros {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#mainTitle {
+    /*font-family: '';*/
+    font-weight: 800;
+}
+
+
+#mainBotonera {
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+    margin: 1em 0;
+}
+
+#mainBotonera a {
+    margin: 0 5px;
+    flex-grow: 2;
+    flex-basis: 1;
+}
+
+#mainShowcase {
+    display: flex;
+    flex-direction: column;
+    color: var(--aecolor-blanco);
+}
+
+#mainShowcase section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0px;
+    align-content: center;
+}
+
+
+.showcase2Box,
+.showcaseBox {
+    height: 300px;
+    margin: 5px;
+    background-color: var(--aecolor-gris-oscuro);
+    text-align: center;
+    background-size: cover;
+    background-position: center center;
+}
+
+.showcaseBox {
+    /*flex-grow: 1;*/
+    flex: 1 0 25%;
+}
+
+.showcase2Box {
+    /*flex-grow: 2;*/
+    flex: 2 0 50%;
+}
+
+.showcase2Box:hover,
+.showcaseBox:hover {
+    transition: 0.5s ease-out;
+    opacity: 0.5;
+}
+
+.showcase2Box img,
+.showcaseBox img {
+    display: none !important;
+}
+
+.showcase2Box h2,
+.showcaseBox h2 {
+    font-size: 4em;
+    text-align: left;
+    word-wrap: break-word;
+    margin: 0.5em 0.5em;
+    flex-grow: 1;
+}
+
+.flexContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#Nosotros {
+    margin-top: 20vh;
+}
+
+#Nosotros h3,
+#Nosotros p,
+#Nosotros article {
+    margin-top: 20px;
+}
+
+#Nosotros #disenadores {
+    display: flex;
+    flex-direction: row;
+}
+
+#Nosotros #disenadores span {
+    flex: 1 0 25%;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#Nosotros article span div {
+    flex-grow: 1;
+}
+
+#Nosotros #disenadores span #imagenesDisenadores {
+    flex-grow: 1;
+    height: 80vh;
+    background-color: var(--aecolor-gris-oscuro);
+    background-size: cover;
+    background-position: center center;
+}
+
+#Nosotros #disenadores span p {
+    font-size: 0.8em !important;
+}
+
+
+/*
+*****************************************************************************
+Esto es de seminario - para las landings adicionales
+*****************************************************************************
+*/
+
+#fraseFinal {
+    font-family: 'Gotham-Bold', sans-serif !important;
+    font-size: 2em;
+    text-align: center;
+    font-weight: 800;
+    color: var(--aecolor-negro);
+    margin-top: 20vh;
+}
 
 
 
@@ -191,4 +334,53 @@ footer ul {
 
 footer ul img {
     width: 25px;
+}
+
+
+/*
+*****************************************************************************
+Clases adicionales
+*****************************************************************************
+*/
+
+
+.boton {
+    padding: 10px;
+    background-color: var(--aecolor-blanco);
+    border: 1px solid var(--aecolor-gris-intermedio);
+    border-radius: 4px;
+    align-self: center;
+    flex-grow: 1;
+    text-align: center;
+    font-size: 1em;
+}
+
+.boton:hover {
+    transition: 0.5s ease-in;
+    border: 1px solid var(--aecolor-negro);
+}
+
+
+/*
+*****************************************************************************
+Media queries
+*****************************************************************************
+*/
+
+
+@media (max-width: 800px) {
+
+    .showcase2Box h2,
+    .showcaseBox h2 {
+        font-size: 3em;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .showcase2Box h2,
+    .showcaseBox h2 {
+        font-size: 2em;
+    }
 }

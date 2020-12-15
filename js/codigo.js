@@ -1,9 +1,5 @@
 'use strict'
 
-
-d.onload = GenerarHome();
-
-
 function VaciarCanvas() {
     while (mainTitle.firstChild) {
         mainTitle.removeChild(mainTitle.firstChild);
@@ -30,144 +26,253 @@ function VaciarCanvas() {
         botonVolver.remove();
     }
 
+    /* Esto es solo para seminario, debería eliminarlo luego */
+    let fraseFinal = d.getElementById('fraseFinal');
+    if (fraseFinal) {
+        fraseFinal.remove();
+    }
+    
+
 }
 
-function GenerarHome() {
+function GenerarHome(tipoDeTrabajoSolcitado) {
+    // Tipo de trabajo puede venir vacío, en ese caso, tengo que renderear todo.
+    // Si viene con algúna tipología de trabajo, entonces tengo qeu renderear solo eso.
 
     // Primero vacío mainTitle mainParagraph y mainShowcase
     VaciarCanvas();
 
     // Ahora cargo el contenido
 
-    mainTitle.innerHTML = 'Somos tu mejor versión';
-    mainParagraph.innerHTML = 'Sabemos que solos llegamos más rápido, pero acompañados llegamos más lejos. <br> Por eso es bueno saber que tenés un Álterego dando tu mejor versión.';
+    if (!tipoDeTrabajoSolcitado) {
+        //Si entró acá, es porque no se solicitó un tipo de trabajo particular, entonces tengo que renderear todo.
+        mainTitle.innerHTML = 'Somos tu mejor versión';
+        mainParagraph.innerHTML = 'Sabemos que solos llegamos más rápido, pero acompañados llegamos más lejos. <br> Por eso es bueno saber que tenés un Álterego dando tu mejor versión.';
 
-    let botonera = d.createElement('div');
-    botonera.id = 'mainBotonera';
+        let botonera = d.createElement('div');
+        botonera.id = 'mainBotonera';
 
-    let botonReel = d.createElement('a');
-    botonReel.innerHTML = 'Mirá nuestro reel';
-    botonReel.href = 'https://www.youtube.com/watch?v=BtFUWzs3HC8';
-    botonReel.target = 'blank';
-    botonReel.className = 'boton';
-    botonera.appendChild(botonReel);
+        let spacer = d.createElement('span');
+        spacer.className = 'spacer';
+        botonera.appendChild(spacer);
 
-    let spacer = d.createElement('span');
-    spacer.className = 'spacer';
-    botonera.appendChild(spacer);
+        let botonReel = d.createElement('a');
+        botonReel.innerHTML = 'Mirá nuestro reel';
+        botonReel.href = 'https://www.youtube.com/watch?v=BtFUWzs3HC8';
+        botonReel.target = 'blank';
+        botonReel.className = 'boton';
+        botonera.appendChild(botonReel);
 
-    let botonContacto = d.createElement('a');
-    botonContacto.innerHTML = 'Contacto';
-    botonContacto.href = '';
-    botonContacto.addEventListener('click', function () {
-        navigateTo('Nosotros');
-    });
-    botonContacto.className = 'boton';
-    botonera.appendChild(botonContacto);
+        let botonManifiesto = d.createElement('a');
+        botonManifiesto.innerHTML = 'Mirá nuestro manifiesto';
+        botonManifiesto.target = 'blank';
+        botonManifiesto.href = 'https://www.youtube.com/watch?v=3MM5FnT85aE';
+        botonManifiesto.className = 'boton';
+        botonera.appendChild(botonManifiesto);
 
-    mainTextBlock.appendChild(botonera);
+        spacer = d.createElement('span');
+        spacer.className = 'spacer';
+        botonera.appendChild(spacer);
 
-    //console.log('llegué antes del for');
-    //console.log(aTrabajos);
+        mainTextBlock.appendChild(botonera);
 
-    // Loop de carga de datos
-    for (let tipoDeTrabajo of aTrabajos) {
-        //console.log('entre al loop de carga de datos');
+        //console.log('llegué antes del for');
+        //console.log(aTrabajos);
 
-        let section = d.createElement('section');
-        switch (tipoDeTrabajo.tipoDeTrabajo) {
-            case '3D':
-                section.id = '3D';
-                break;
-            case 'Motion':
-                section.id = 'Motion';
-                break;
-            case 'Diseño e Ilustración':
-                section.id = 'Diseño e Ilustración';
-                break;
-            case 'Diseño e Ilustración':
-                section.id = 'Diseño e Ilustración';
-                break;
-            case 'Publicidad':
-                section.id = 'Publicidad';
-                break;
-            case 'Apps y Webs':
-                section.id = 'Apps y Webs';
-                break;
-        }
+        // Loop de carga de datos
+        for (let tipoDeTrabajo of aTrabajos) {
+            //console.log('entre al loop de carga de datos');
+
+            let section = d.createElement('section');
+            section.id = tipoDeTrabajo.tipoDeTrabajo;
 
 
-        //Primero creo la cabecera de este tipo de trabajo
-        let block = d.createElement('span');
-        block.className = 'showcase2Box notHovereable';
-        let blockHeader = d.createElement('h2');
-        blockHeader.innerHTML = tipoDeTrabajo.tituloDeSeccion;
-        block.appendChild(blockHeader);
-        section.appendChild(block);
-
-        block = d.createElement('span');
-        block.className = 'showcaseBox notHovereable';
-        block.style.backgroundImage = `url(imgs/isotipo_ae-white.svg)`;
-        block.title = 'Isotipo Álterego';
-
-        let blockContent = d.createElement('img');
-        blockContent.src = 'imgs/isotipo_ae-white.svg';
-        blockContent.style.width = '100%';
-        blockContent.style.margin = '0';
-        blockContent.style.padding = '0';
-        block.appendChild(blockContent);
-        section.appendChild(block);
-
-
-
-        for (let trabajo of tipoDeTrabajo.trabajos) {
-            // Ahora cargo todos los trabajos por bloque
-            block = d.createElement('span');
-            block.className = 'showcaseBox';
-
-            block.style.backgroundImage = `url(${trabajo.imgPrincipal})`;
-            block.style.cursor = 'pointer';
-            block.title = trabajo.titulo;
-            block.dataset.tipoDeTrabajo = tipoDeTrabajo.tipoDeTrabajo;
-            block.dataset.tituloDeTrabajo = trabajo.titulo;
-            block.addEventListener('click', GenerarTrabajo);
-
-            blockContent = d.createElement('img');
-            blockContent.src = trabajo.imgPrincipal;
-            blockContent.title = trabajo.titulo;
-            blockContent.alt = trabajo.titulo;
-
-            block.appendChild(blockContent);
-
-
+            //Primero creo la cabecera de este tipo de trabajo
+            let block = d.createElement('span');
+            block.className = 'showcase2Box notHovereable BackgroundAecolorBlanco flexContainer';
+            let blockHeader = d.createElement('h2');
+            blockHeader.className = 'AecolorNegro';
+            blockHeader.innerHTML = tipoDeTrabajo.tituloDeSeccion;
+            block.appendChild(blockHeader);
             section.appendChild(block);
 
+            block = d.createElement('span');
+            block.className = 'showcaseBox notHovereable BackgroundAecolorBlanco';
+            block.style.backgroundImage = `url(imgs/isotipo_ae-black.svg)`;
+            block.style.backgroundSize = '40%';
+            block.style.backgroundRepeat = 'no-repeat';
+            block.title = 'Isotipo Álterego';
+
+            let blockContent = d.createElement('img');
+            blockContent.src = 'imgs/isotipo_ae-white.svg';
+            blockContent.style.width = '100%';
+            blockContent.style.margin = '0';
+            blockContent.style.padding = '0';
+            block.appendChild(blockContent);
+            section.appendChild(block);
+
+
+
+            for (let trabajo of tipoDeTrabajo.trabajos) {
+                // Ahora cargo todos los trabajos por bloque
+                block = d.createElement('span');
+                block.className = 'showcaseBox';
+
+                block.style.backgroundImage = `url(${trabajo.imgPrincipal})`;
+                block.style.cursor = 'pointer';
+                block.title = trabajo.titulo;
+                block.dataset.tipoDeTrabajo = tipoDeTrabajo.tipoDeTrabajo;
+                block.dataset.tituloDeTrabajo = trabajo.titulo;
+                block.addEventListener('click', GenerarTrabajo);
+
+                blockContent = d.createElement('img');
+                blockContent.src = trabajo.imgPrincipal;
+                blockContent.title = trabajo.titulo;
+                blockContent.alt = trabajo.titulo;
+
+                block.appendChild(blockContent);
+
+
+                section.appendChild(block);
+
+            }
+
+            mainShowcase.appendChild(section);
+
         }
 
-        mainShowcase.appendChild(section);
+        GenerarNosotros();
+    } else {
+        //Si entró acá, es porque se solicitó un tipo de trabajo particular,rendereo solo los trabajos de ese tipo.
+        // Loop de carga de datos
+        for (let tipoDeTrabajo of aTrabajos) {
 
+            if (tipoDeTrabajo.tipoDeTrabajo == tipoDeTrabajoSolcitado) {
+
+                //Esto lo saco porque no es para seminario
+                //mainTitle.innerHTML = `Trabajos de ${tipoDeTrabajo.tituloDeSeccion}`;
+                //mainParagraph.innerHTML = 'Sabemos que solos llegamos más rápido, pero acompañados llegamos más lejos. <br> Por eso es bueno saber que tenés un Álterego dando tu mejor versión.';
+
+
+                mainTitle.innerHTML = 'Visualizá los siguientes proyectos';
+                mainParagraph.innerHTML = 'Ya tuviste un primer acercamiento a algunos de estos trabajos en las historias de Instagram. <br> Hacé clic en cada uno para verlos en detalle.';
+
+                let section = d.createElement('section');
+                section.id = tipoDeTrabajo.tipoDeTrabajo;
+
+
+                //Primero creo la cabecera de este tipo de trabajo
+                let block = d.createElement('span');
+                block.className = 'showcase2Box notHovereable';
+                let blockHeader = d.createElement('h2');
+                blockHeader.innerHTML = tipoDeTrabajo.tituloDeSeccion;
+                block.appendChild(blockHeader);
+                section.appendChild(block);
+
+                block = d.createElement('span');
+                block.className = 'showcaseBox notHovereable';
+                block.style.backgroundImage = `url(imgs/isotipo_ae-white.svg)`;
+                block.title = 'Isotipo Álterego';
+
+                let blockContent = d.createElement('img');
+                blockContent.src = 'imgs/isotipo_ae-white.svg';
+                blockContent.style.width = '100%';
+                blockContent.style.margin = '0';
+                blockContent.style.padding = '0';
+                block.appendChild(blockContent);
+                section.appendChild(block);
+
+
+
+                for (let trabajo of tipoDeTrabajo.trabajos) {
+                    // Ahora cargo todos los trabajos por bloque
+                    block = d.createElement('span');
+                    block.className = 'showcaseBox';
+
+                    block.style.backgroundImage = `url(${trabajo.imgPrincipal})`;
+                    block.style.cursor = 'pointer';
+                    block.title = trabajo.titulo;
+                    block.dataset.tipoDeTrabajo = tipoDeTrabajo.tipoDeTrabajo;
+                    block.dataset.tituloDeTrabajo = trabajo.titulo;
+                    block.addEventListener('click', GenerarTrabajo);
+
+                    blockContent = d.createElement('img');
+                    blockContent.src = trabajo.imgPrincipal;
+                    blockContent.title = trabajo.titulo;
+                    blockContent.alt = trabajo.titulo;
+
+                    block.appendChild(blockContent);
+
+
+                    section.appendChild(block);
+
+                }
+
+                mainShowcase.appendChild(section);
+            }
+        }
+
+
+        //Incluyo un mensaje final ----- esto es para seminario. Debería borrarse a posterior.
+        let fraseFinal = d.createElement('p');
+        fraseFinal.id = 'fraseFinal';
+        fraseFinal.innerHTML = 'Sigamos avanzando. <br> Avísame por el grupo de Whatsapp que ya terminaste de visualizar esta estación.';
+        main.appendChild(fraseFinal);
     }
-
-
-    let seccionNosotros = d.createElement('section');
-    seccionNosotros.id = 'Nosotros';
-
-    /**
-     * *****************************************************************
-     * 
-     * Pendiente completar esta sección, la de "Nosotros"
-     * 
-     * *****************************************************************
-     */
-
-
-    main.appendChild(seccionNosotros);
 }
 
 
 
+function GenerarNosotros() {
+    let seccionNosotros = d.createElement('section');
+    seccionNosotros.id = 'Nosotros';
+
+    let h2 = d.createElement('h2');
+    h2.innerHTML = 'Quiénes somos, la agencia y las personas'
+    seccionNosotros.appendChild(h2);
+
+    let p = d.createElement('p');
+    p.innerHTML = manifiesto;
+    seccionNosotros.appendChild(p);
+
+    let article = d.createElement('article');
+    article.id = 'disenadores';
+
+    for (let disenador of aDisenadores) {
+        let span = d.createElement('span');
+        let imgDiv = d.createElement('div');
+        imgDiv.id = 'imagenesDisenadores';
+        imgDiv.style.backgroundImage = `url(${disenador.foto})`;
+        imgDiv.title = disenador.nombre;
+
+        let img = d.createElement('img');
+        img.src = disenador.foto;
+        img.title = disenador.nombre;
+        img.alt = disenador.descripcion;
+        img.className = 'hidden';
+        imgDiv.appendChild(img);
+
+        span.appendChild(imgDiv);
 
 
+        let textDiv = d.createElement('div');
+
+        let nombreDisenador = d.createElement('h3');
+        nombreDisenador.innerHTML = disenador.nombre;
+        textDiv.appendChild(nombreDisenador);
+
+        let descripcion = d.createElement('p');
+        descripcion.innerHTML = disenador.descripcion;
+        textDiv.appendChild(descripcion);
+
+        span.appendChild(textDiv);
+
+        article.appendChild(span);
+    }
+
+    seccionNosotros.appendChild(article);
+    main.appendChild(seccionNosotros);
+}
 
 
 
@@ -256,6 +361,12 @@ function GenerarTrabajo() {
                             } else if (contenido.includes('.com') || contenido.includes('www.') || contenido.includes('http')) {
                                 // El contenido es una página web
                                 block.className = 'showcaseBox';
+                                block.style.backgroundImage = `url(imgs/click-me.png)`;
+                                block.title = 'Ver Online';
+                                block.addEventListener('click', function(){
+                                    window.open(contenido, '_blank');
+                                });
+
 
                             } else {
                                 // El contenido es una imagen
@@ -287,7 +398,9 @@ function GenerarTrabajo() {
     let botonVolver = d.createElement('a');
     botonVolver.id = 'botonVolver';
     botonVolver.innerHTML = '> VOLVER <';
-    botonVolver.addEventListener('click', GenerarHome);
+    botonVolver.addEventListener('click', function () {
+        GenerarHome(publicTipoDeTrabajoSolicitado);
+    });
 
     main.appendChild(botonVolver);
 
