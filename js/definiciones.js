@@ -25,12 +25,15 @@ un Álterego dando tu mejor versión. <br>\n
 <br>\n
 <strong>:: Agencia Álterego ::</strong>`;
 
+const urlManifiesto = 'https://www.youtube.com/watch?v=3MM5FnT85aE';
+const urlReel = 'https://www.youtube.com/watch?v=BtFUWzs3HC8';
+
 
 const aDisenadores = [];
 aDisenadores[0] = {
     nombre: 'Emiliano Vallaro',
     foto: 'imgs/FotosAgencia/Foto-Perfil-Emiliano-Vallaro.jpg',
-    descripcion: 'Emiliano Vallaro, Head Designer especializado en interfaces.'
+    descripcion: 'Emiliano Vallaro, Head Designer especializado en interfaces y motion.'
 };
 aDisenadores[1] = {
     nombre: 'Luisina Scuffi',

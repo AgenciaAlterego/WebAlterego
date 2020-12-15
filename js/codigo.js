@@ -58,7 +58,7 @@ function GenerarHome(tipoDeTrabajoSolcitado) {
 
         let botonReel = d.createElement('a');
         botonReel.innerHTML = 'Mirá nuestro reel';
-        botonReel.href = 'https://www.youtube.com/watch?v=BtFUWzs3HC8';
+        botonReel.href = urlReel;
         botonReel.target = 'blank';
         botonReel.className = 'boton';
         botonera.appendChild(botonReel);
@@ -66,7 +66,7 @@ function GenerarHome(tipoDeTrabajoSolcitado) {
         let botonManifiesto = d.createElement('a');
         botonManifiesto.innerHTML = 'Mirá nuestro manifiesto';
         botonManifiesto.target = 'blank';
-        botonManifiesto.href = 'https://www.youtube.com/watch?v=3MM5FnT85aE';
+        botonManifiesto.href = urlManifiesto;
         botonManifiesto.className = 'boton';
         botonera.appendChild(botonManifiesto);
 
