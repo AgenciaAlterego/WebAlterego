@@ -164,7 +164,8 @@ main iframe {
     max-height: 100%;
 }
 
-#mainTextBlock, #Nosotros {
+#mainTextBlock,
+#Nosotros {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -233,20 +234,22 @@ main iframe {
 }
 
 
-#Nosotros{
+#Nosotros {
     margin-top: 20vh;
 }
 
-#Nosotros h3, #Nosotros p, #Nosotros article{
+#Nosotros h3,
+#Nosotros p,
+#Nosotros article {
     margin-top: 20px;
 }
 
-#Nosotros #disenadores{
+#Nosotros #disenadores {
     display: flex;
     flex-direction: row;
 }
 
-#Nosotros #disenadores span{
+#Nosotros #disenadores span {
     flex-grow: 1;
     margin: 5px;
     display: flex;
@@ -254,11 +257,11 @@ main iframe {
     justify-content: center;
 }
 
-#Nosotros article span div{
+#Nosotros article span div {
     flex-grow: 1;
 }
 
-#Nosotros #disenadores span #imagenesDisenadores{
+#Nosotros #disenadores span #imagenesDisenadores {
     flex-grow: 1;
     height: 80vh;
     background-color: var(--aecolor-gris-oscuro);
@@ -266,7 +269,7 @@ main iframe {
     background-position: center center;
 }
 
-#Nosotros #disenadores span p{
+#Nosotros #disenadores span p {
     font-size: 0.8em !important;
 }
 
@@ -277,7 +280,9 @@ Esto es de seminario - para las landings adicionales
 *****************************************************************************
 */
 
-#fraseFinal{
+#fraseFinal {
+    font-family: 'Gotham-Bold', sans-serif !important;
+    font-size: 2em;
     text-align: center;
     font-weight: 800;
     color: var(--aecolor-negro);

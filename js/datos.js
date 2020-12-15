@@ -3,7 +3,7 @@
 var aTrabajos = [];
 aTrabajos[0] = {
     tipoDeTrabajo: '3D',
-    tituloDeSeccion: '3D Modelado y texturizado',
+    tituloDeSeccion: '3D Modelado y Texturizado',
     trabajos: []
 };
 aTrabajos[1] = {
@@ -209,6 +209,7 @@ aTrabajos[3].trabajos[0].descripcion = `App mobile diseñada para comprar artíc
 aTrabajos[3].trabajos[0].imgPrincipal = 'imgs/trabajos/Webs/Farmashop.png';
 aTrabajos[3].trabajos[0].contenidoAdicional[0] = 'imgs/trabajos/Webs/Farmashop-adc-1.png';
 aTrabajos[3].trabajos[0].contenidoAdicional[1] = 'https://bit.ly/FarmaShop-EV';
+aTrabajos[3].trabajos[0].contenidoAdicional[2] = 'imgs/trabajos/Webs/Farmashop-adc-2.png';
 
 aTrabajos[3].trabajos[1] = new trabajo();
 aTrabajos[3].trabajos[1].titulo = 'BeerPoint - Cervecería Artesanal';
@@ -225,6 +226,37 @@ aTrabajos[3].trabajos[2].imgPrincipal = 'imgs/trabajos/Webs/Prime.png';
 aTrabajos[3].trabajos[2].contenidoAdicional[0] = 'imgs/trabajos/Webs/Prime-adc-1.png';
 aTrabajos[3].trabajos[2].contenidoAdicional[1] = 'imgs/trabajos/Webs/Prime-adc-2.png';
 aTrabajos[3].trabajos[2].contenidoAdicional[2] = 'https://imperioame.github.io/Prime_game/';
+
+aTrabajos[3].trabajos[3] = new trabajo();
+aTrabajos[3].trabajos[3].titulo = 'Afstation';
+aTrabajos[3].trabajos[3].descripcion = `Advert-Game para campaña de concientización sobre sexo seguro para la marca de preservativos Prime.`;
+aTrabajos[3].trabajos[3].imgPrincipal = 'imgs/trabajos/Webs/Afstation.jpg';
+aTrabajos[3].trabajos[3].contenidoAdicional[0] = 'imgs/trabajos/Webs/Afstation-adc-1.jpg';
+aTrabajos[3].trabajos[3].contenidoAdicional[1] = 'imgs/trabajos/Webs/Afstation-adc-2.jpg';
+aTrabajos[3].trabajos[3].contenidoAdicional[2] = 'imgs/trabajos/Webs/Afstation-adc-3.jpg';
+
+aTrabajos[3].trabajos[4] = new trabajo();
+aTrabajos[3].trabajos[4].titulo = 'Staley Martial Arts';
+aTrabajos[3].trabajos[4].descripcion = `Sitio web institucional diseñado y realizado en wordpress para el dojo de artes marciales Staley Martial Arts, ubicado en Chicago, EEUU.`;
+aTrabajos[3].trabajos[4].imgPrincipal = 'imgs/trabajos/Webs/Staley.jpg';
+aTrabajos[3].trabajos[4].contenidoAdicional[0] = 'imgs/trabajos/Webs/Staley-adc-1.jpg';
+aTrabajos[3].trabajos[4].contenidoAdicional[1] = 'imgs/trabajos/Webs/Staley-adc-2.jpg';
+
+aTrabajos[3].trabajos[5] = new trabajo();
+aTrabajos[3].trabajos[5].titulo = 'Antrieb Sudamericana S.A.';
+aTrabajos[3].trabajos[5].descripcion = `Sitio web institucional con catálogo web para una empresa Argentina, fabricante de elementos de máquina.`;
+aTrabajos[3].trabajos[5].imgPrincipal = 'imgs/trabajos/Webs/AntriebSa.png';
+aTrabajos[3].trabajos[5].contenidoAdicional[0] = 'imgs/trabajos/Webs/AntriebSa-adc-1.png';
+aTrabajos[3].trabajos[5].contenidoAdicional[1] = 'imgs/trabajos/Webs/AntriebSa-adc-2.png';
+aTrabajos[3].trabajos[5].contenidoAdicional[2] = 'www.antriebsa.com';
+
+aTrabajos[3].trabajos[6] = new trabajo();
+aTrabajos[3].trabajos[6].titulo = 'Vecindad';
+aTrabajos[3].trabajos[6].descripcion = `Juego web de estrategia por turnos realizado en jquery, incluye un sistema de economía e inteligencia artificial como oponentes.`;
+aTrabajos[3].trabajos[6].imgPrincipal = 'imgs/trabajos/Webs/Vecindad.png';
+aTrabajos[3].trabajos[6].contenidoAdicional[0] = 'imgs/trabajos/Webs/Vecindad-adc-1.png';
+aTrabajos[3].trabajos[6].contenidoAdicional[1] = 'imgs/trabajos/Webs/Vecindad-adc-2.png';
+aTrabajos[3].trabajos[6].contenidoAdicional[2] = 'https://imperioame.github.io/vecindad/';
 
 
 /* Campañas publicitarias */

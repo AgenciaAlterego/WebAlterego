@@ -142,8 +142,13 @@ function GenerarHome(tipoDeTrabajoSolcitado) {
 
             if (tipoDeTrabajo.tipoDeTrabajo == tipoDeTrabajoSolcitado) {
 
-                mainTitle.innerHTML = `Trabajos de ${tipoDeTrabajo.tituloDeSeccion}`;
-                mainParagraph.innerHTML = 'Sabemos que solos llegamos más rápido, pero acompañados llegamos más lejos. <br> Por eso es bueno saber que tenés un Álterego dando tu mejor versión.';
+                //Esto lo saco porque no es para seminario
+                //mainTitle.innerHTML = `Trabajos de ${tipoDeTrabajo.tituloDeSeccion}`;
+                //mainParagraph.innerHTML = 'Sabemos que solos llegamos más rápido, pero acompañados llegamos más lejos. <br> Por eso es bueno saber que tenés un Álterego dando tu mejor versión.';
+
+
+                mainTitle.innerHTML = 'Visualizá los siguientes proyectos';
+                mainParagraph.innerHTML = 'Ya tuviste un primer acercamiento a algunos de estos trabajos en las historias de Instagram. <br> Hacé clic en cada uno para verlo en detalle.';
 
                 let section = d.createElement('section');
                 section.id = tipoDeTrabajo.tipoDeTrabajo;
@@ -202,9 +207,9 @@ function GenerarHome(tipoDeTrabajoSolcitado) {
 
 
         //Incluyo un mensaje final ----- esto es para seminario. Debería borrarse a posterior.
-        let fraseFinal = d.createElement('h2');
+        let fraseFinal = d.createElement('p');
         fraseFinal.id = 'fraseFinal';
-        fraseFinal.innerHTML = 'Sigamos avanzando. Avísame por el grupo de Whatsapp que ya terminaste de visualizar esta estación.';
+        fraseFinal.innerHTML = 'Sigamos avanzando. <br> Avísame por el grupo de Whatsapp que ya terminaste de visualizar esta estación.';
         main.appendChild(fraseFinal);
     }
 }
@@ -349,6 +354,12 @@ function GenerarTrabajo() {
                             } else if (contenido.includes('.com') || contenido.includes('www.') || contenido.includes('http')) {
                                 // El contenido es una página web
                                 block.className = 'showcaseBox';
+                                block.style.backgroundImage = `url(imgs/click-me.png)`;
+                                block.title = 'Ver Online';
+                                block.addEventListener('click', function(){
+                                    window.open(contenido, '_blank');
+                                });
+
 
                             } else {
                                 // El contenido es una imagen
