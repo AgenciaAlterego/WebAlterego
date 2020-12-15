@@ -79,9 +79,9 @@ aTrabajos[0].trabajos[3].titulo = 'X Wing Star Wars Spaceship';
 aTrabajos[0].trabajos[3].descripcion = `Una de las naves más icónica de Star Wars.`;
 aTrabajos[0].trabajos[3].imgPrincipal = 'imgs/trabajos/3d/Xwing.png';
 aTrabajos[0].trabajos[3].contenidoAdicional[0] = 'https://www.youtube.com/watch?v=eEdbsAXMMkI&feature=youtu.be';
-aTrabajos[0].trabajos[3].contenidoAdicional[1] = 'imgs/trabajos/3d/Xwing-adc-1.png';
+aTrabajos[0].trabajos[3].contenidoAdicional[1] = 'imgs/trabajos/3d/Xwing-adc-1.jpg';
 aTrabajos[0].trabajos[3].contenidoAdicional[2] = 'https://www.youtube.com/watch?v=SOOKeBWOM3I&feature=youtu.be';
-aTrabajos[0].trabajos[3].contenidoAdicional[3] = 'imgs/trabajos/3d/Xwing-adc-2.png';
+aTrabajos[0].trabajos[3].contenidoAdicional[3] = 'imgs/trabajos/3d/Xwing-adc-2.jpg';
 
 aTrabajos[0].trabajos[4] = new trabajo();
 aTrabajos[0].trabajos[4].titulo = 'Futurama Spaceship';
@@ -89,7 +89,7 @@ aTrabajos[0].trabajos[4].descripcion = `Esta nave fue realizada bajo un texturiz
 aTrabajos[0].trabajos[4].imgPrincipal = 'imgs/trabajos/3d/Futurama.png';
 aTrabajos[0].trabajos[4].contenidoAdicional[0] = 'https://www.youtube.com/watch?v=kUvryowso90&feature=youtu.be';
 aTrabajos[0].trabajos[4].contenidoAdicional[1] = 'imgs/trabajos/3d/Futurama-adc-1.png';
-aTrabajos[0].trabajos[4].contenidoAdicional[2] = 'imgs/trabajos/3d/Futurama-adc-2.png';
+aTrabajos[0].trabajos[4].contenidoAdicional[2] = 'imgs/trabajos/3d/Futurama-adc-2.jpg';
 aTrabajos[0].trabajos[4].contenidoAdicional[3] = 'https://www.youtube.com/watch?v=7UIb2GDqA4M&feature=youtu.be';
 
 aTrabajos[0].trabajos[5] = new trabajo();
@@ -208,7 +208,7 @@ aTrabajos[3].trabajos[0].titulo = 'Farmashop';
 aTrabajos[3].trabajos[0].descripcion = `App mobile diseñada para comprar artículos de farmacia y medicamentos con y sin receta, sin tener que moverte de tu casa.`;
 aTrabajos[3].trabajos[0].imgPrincipal = 'imgs/trabajos/Webs/Farmashop.png';
 aTrabajos[3].trabajos[0].contenidoAdicional[0] = 'imgs/trabajos/Webs/Farmashop-adc-1.png';
-aTrabajos[3].trabajos[0].contenidoAdicional[1] = 'https://www.youtube.com/watch?v=uhrQd0jsqA8&feature=youtu.be';
+aTrabajos[3].trabajos[0].contenidoAdicional[1] = 'https://bit.ly/FarmaShop-EV';
 
 aTrabajos[3].trabajos[1] = new trabajo();
 aTrabajos[3].trabajos[1].titulo = 'BeerPoint - Cervecería Artesanal';
@@ -216,7 +216,7 @@ aTrabajos[3].trabajos[1].descripcion = `Landing Page realizada para BeerPoint, u
 aTrabajos[3].trabajos[1].imgPrincipal = 'imgs/trabajos/Webs/Beerpoint.jpg';
 aTrabajos[3].trabajos[1].contenidoAdicional[0] = 'imgs/trabajos/Webs/Beerpoint-adc-1.jpg';
 aTrabajos[3].trabajos[1].contenidoAdicional[1] = 'imgs/trabajos/Webs/Beerpoint-adc-2.jpg';
-aTrabajos[3].trabajos[1].contenidoAdicional[2] = 'https://bit.ly/FarmaShop-EV';
+aTrabajos[3].trabajos[1].contenidoAdicional[2] = 'https://www.youtube.com/watch?v=uhrQd0jsqA8&feature=youtu.be';
 
 aTrabajos[3].trabajos[2] = new trabajo();
 aTrabajos[3].trabajos[2].titulo = 'Prime - El juego más seguro';
