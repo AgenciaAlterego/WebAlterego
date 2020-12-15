@@ -148,26 +148,63 @@ function GenerarHome() {
 
     }
 
+    GenerarNosotros();
 
-    let seccionNosotros = d.createElement('section');
-    seccionNosotros.id = 'Nosotros';
-
-    /**
-     * *****************************************************************
-     * 
-     * Pendiente completar esta sección, la de "Nosotros"
-     * 
-     * *****************************************************************
-     */
-
-
-    main.appendChild(seccionNosotros);
 }
 
 
 
 
+function GenerarNosotros() {
+    let seccionNosotros = d.createElement('section');
+    seccionNosotros.id = 'Nosotros';
 
+    let h2 = d.createElement('h2');
+    h2.innerHTML = 'Quienes somos, La agencia y las personas'
+    seccionNosotros.appendChild(h2);
+
+    let p = d.createElement('p');
+    p.innerHTML = manifiesto;
+    seccionNosotros.appendChild(p);
+
+    let article = d.createElement('article');
+    article.id = 'disenadores';
+
+    for (let disenador of aDisenadores) {
+        let span = d.createElement('span');
+        let imgDiv = d.createElement('div');
+        imgDiv.id = 'imagenesDisenadores';
+        imgDiv.style.backgroundImage = `url(${disenador.foto})`;
+        imgDiv.title = disenador.nombre;
+
+        let img = d.createElement('img');
+        img.src = disenador.foto;
+        img.title = disenador.nombre;
+        img.alt = disenador.descripcion;
+        img.className = 'hidden';
+        imgDiv.appendChild(img);
+
+        span.appendChild(imgDiv);
+
+
+        let textDiv = d.createElement('div');
+
+        let nombreDisenador = d.createElement('h3');
+        nombreDisenador.innerHTML = disenador.nombre;
+        textDiv.appendChild(nombreDisenador);
+
+        let descripcion = d.createElement('p');
+        descripcion.innerHTML = disenador.descripcion;
+        textDiv.appendChild(descripcion);
+
+        span.appendChild(textDiv);
+
+        article.appendChild(span);
+    }
+
+    seccionNosotros.appendChild(article);
+    main.appendChild(seccionNosotros);
+}
 
 
 
