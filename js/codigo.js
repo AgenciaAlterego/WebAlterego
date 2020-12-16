@@ -298,6 +298,7 @@ function GenerarNosotros() {
 
 function GenerarTrabajo(e) {
 
+    console.log(e);
 
     // Primero vacío mainTitle mainParagraph y mainShowcase
     VaciarCanvas();
