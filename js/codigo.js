@@ -35,21 +35,23 @@ function VaciarCanvas() {
 
 }
 
-function GenerarHome(tipoDeTrabajoSolcitado) {
+function GenerarHome(tipoDeTrabajoSolcitado, offset) {
     // Tipo de trabajo puede venir vacío, en ese caso, tengo que renderear todo.
     // Si viene con algúna tipología de trabajo, entonces tengo qeu renderear solo eso.
 
     // Primero vacío mainTitle mainParagraph y mainShowcase
     VaciarCanvas();
 
-
     // Me aseguro que el logo no tenga "volver atras"
     let headerLogo = d.querySelector('header div img');
     headerLogo.className = '';
+    headerLogo.onclick = null;
+    /*
+    //Tengo que hacerlo con onclick porque el addeventlistener se stackea, y no lo puedo borrar
     headerLogo.removeEventListener('click', function () {
-        GenerarHome(publicTipoDeTrabajoSolicitado);
+        GenerarHome(tipoDeTrabajoSolcitado, offset);
     });
-
+    */
 
 
     // Ahora cargo el contenido
@@ -229,6 +231,11 @@ function GenerarHome(tipoDeTrabajoSolcitado) {
         fraseFinal.innerHTML = fraseFinalLandingSeminario;
         main.appendChild(fraseFinal);
     }
+
+    if (offset) {
+        //Si entro acá, es porque hay información de offset vertical, entonces tengo que scrollear a ahí
+        navigateTo(null, offset);
+    }
 }
 
 
@@ -298,8 +305,7 @@ function GenerarNosotros() {
 
 function GenerarTrabajo(e) {
 
-    console.log(e);
-    console.log(e.offsetY);
+    navigateTo(null,0);
 
     // Primero vacío mainTitle mainParagraph y mainShowcase
     VaciarCanvas();
@@ -307,9 +313,16 @@ function GenerarTrabajo(e) {
     // Hago el "volver atras" en el logo
     let headerLogo = d.querySelector('header div img');
     headerLogo.className = 'cursorPointer';
+    headerLogo.onclick = function(){
+        GenerarHome(publicTipoDeTrabajoSolicitado, e.offsetY);
+    };
+    
+    
+    /*
+    //Tengo que hacerlo con onclick porque el addeventlistener se stackea, y no lo puedo borrar
     headerLogo.addEventListener('click', function () {
-        GenerarHome(publicTipoDeTrabajoSolicitado);
-    });
+        GenerarHome(publicTipoDeTrabajoSolicitado, e.offsetY);
+    });*/
 
     mainTitle.innerHTML = this.dataset.tituloDeTrabajo;
 
@@ -374,7 +387,7 @@ function GenerarTrabajo(e) {
                                 block.appendChild(blockContent);
 
 
-                            } else if (contenido.includes('github.com')){
+                            } else if (contenido.includes('github.com')) {
                                 // El contenido es un repo en GIT
                                 block.style.backgroundImage = `url(imgs/repo-github.png)`;
                                 block.className = 'showcaseBox';
@@ -383,7 +396,7 @@ function GenerarTrabajo(e) {
                                     window.open(contenido, '_blank');
                                 });
 
-                            }else if (contenido.includes('.com') || contenido.includes('www.') || contenido.includes('http')) {
+                            } else if (contenido.includes('.com') || contenido.includes('www.') || contenido.includes('http')) {
                                 // El contenido es una página web
                                 block.className = 'showcaseBox';
                                 block.style.backgroundImage = `url(imgs/click-me.png)`;
@@ -420,20 +433,16 @@ function GenerarTrabajo(e) {
         }
     }
 
+
     let botonVolver = d.createElement('a');
     botonVolver.id = 'botonVolver';
+    botonVolver.className = 'boton';
     botonVolver.innerHTML = '> VOLVER <';
     botonVolver.addEventListener('click', function () {
-        GenerarHome(publicTipoDeTrabajoSolicitado);
+        GenerarHome(publicTipoDeTrabajoSolicitado, e.offsetY);
     });
 
     main.appendChild(botonVolver);
-
-
-    console.log();
-    console.log();
-
-
 
 }
 
@@ -508,7 +517,7 @@ for (let nroElemento in navElements) {
                 if (d.getElementById(aTrabajos[nroElemento].tipoDeTrabajo)) {
                     navigateTo(aTrabajos[nroElemento].tipoDeTrabajo);
                 } else {
-                    GenerarHome();
+                    GenerarHome(publicTipoDeTrabajoSolicitado);
                     navigateTo(aTrabajos[nroElemento].tipoDeTrabajo);
                 }
             });
@@ -518,7 +527,7 @@ for (let nroElemento in navElements) {
                 if (d.getElementById(aTrabajos[nroElemento].tipoDeTrabajo)) {
                     navigateTo(aTrabajos[nroElemento].tipoDeTrabajo);
                 } else {
-                    GenerarHome();
+                    GenerarHome(publicTipoDeTrabajoSolicitado);
                     navigateTo(aTrabajos[nroElemento].tipoDeTrabajo);
                 }
             });
@@ -528,7 +537,7 @@ for (let nroElemento in navElements) {
                 if (d.getElementById(aTrabajos[nroElemento].tipoDeTrabajo)) {
                     navigateTo(aTrabajos[nroElemento].tipoDeTrabajo);
                 } else {
-                    GenerarHome();
+                    GenerarHome(publicTipoDeTrabajoSolicitado);
                     navigateTo(aTrabajos[nroElemento].tipoDeTrabajo);
                 }
             });
@@ -538,7 +547,7 @@ for (let nroElemento in navElements) {
                 if (d.getElementById(aTrabajos[nroElemento].tipoDeTrabajo)) {
                     navigateTo(aTrabajos[nroElemento].tipoDeTrabajo);
                 } else {
-                    GenerarHome();
+                    GenerarHome(publicTipoDeTrabajoSolicitado);
                     navigateTo(aTrabajos[nroElemento].tipoDeTrabajo);
                 }
             });
@@ -548,7 +557,7 @@ for (let nroElemento in navElements) {
                 if (d.getElementById(aTrabajos[nroElemento].tipoDeTrabajo)) {
                     navigateTo(aTrabajos[nroElemento].tipoDeTrabajo);
                 } else {
-                    GenerarHome();
+                    GenerarHome(publicTipoDeTrabajoSolicitado);
                     navigateTo(aTrabajos[nroElemento].tipoDeTrabajo);
                 }
             });
@@ -558,7 +567,7 @@ for (let nroElemento in navElements) {
                 if (d.getElementById('Nosotros')) {
                     navigateTo('Nosotros');
                 } else {
-                    GenerarHome();
+                    GenerarHome(publicTipoDeTrabajoSolicitado);
                     navigateTo('Nosotros');
                 }
             });
@@ -566,12 +575,19 @@ for (let nroElemento in navElements) {
     }
 }
 
-function navigateTo(anchor) {
+function navigateTo(anchor, offset) {
     //console.log(anchor);
 
     // Posición del scroll:
     let posInicial = window.pageYOffset;
-    let posDestino = d.getElementById(anchor).offsetTop;
+    let posDestino ;
+    if (offset || offset == 0) {
+        //Si entro acá es es porque le doy offset, de ser así, primero tengo que navegar ahí.
+        posDestino = offset - 300;
+    } else {
+        posDestino = d.getElementById(anchor).offsetTop;
+    }
+
 
     //console.log(posDestino);
 
