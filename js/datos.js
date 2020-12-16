@@ -8,7 +8,7 @@ aTrabajos[0] = {
 };
 aTrabajos[1] = {
     tipoDeTrabajo: 'Motion',
-    tituloDeSeccion: 'Postproducción y Motion graphics',
+    tituloDeSeccion: 'Postproducción y Motion Graphics',
     trabajos: []
 };
 aTrabajos[2] = {
@@ -23,7 +23,7 @@ aTrabajos[3] = {
 };
 aTrabajos[4] = {
     tipoDeTrabajo: 'Publicidad',
-    tituloDeSeccion: 'Campañas publicitarias',
+    tituloDeSeccion: 'Campañas Publicitarias',
     trabajos: []
 };
 
@@ -98,8 +98,8 @@ aTrabajos[0].trabajos[5].descripcion = `Esta cámara fue modelada bajo la línea
 aTrabajos[0].trabajos[5].imgPrincipal = 'imgs/trabajos/3d/Steampunk.jpg';
 aTrabajos[0].trabajos[5].contenidoAdicional[0] = 'https://www.youtube.com/watch?v=Gc1fMVaBi2c&feature=youtu.be';
 aTrabajos[0].trabajos[5].contenidoAdicional[1] = 'https://www.youtube.com/watch?v=R-7xVzw6_ls&feature=youtu.be';
-aTrabajos[0].trabajos[5].contenidoAdicional[1] = 'imgs/trabajos/3d/Steampunk-adc-1.jpg';
-aTrabajos[0].trabajos[5].contenidoAdicional[1] = 'imgs/trabajos/3d/Steampunk-adc-2.jpg';
+aTrabajos[0].trabajos[5].contenidoAdicional[2] = 'imgs/trabajos/3d/Steampunk-adc-1.jpg';
+aTrabajos[0].trabajos[5].contenidoAdicional[3] = 'imgs/trabajos/3d/Steampunk-adc-2.jpg';
 
 aTrabajos[0].trabajos[6] = new trabajo();
 aTrabajos[0].trabajos[6].titulo = 'Storm Trooper';
@@ -224,8 +224,9 @@ aTrabajos[3].trabajos[2].titulo = 'Prime - El juego más seguro';
 aTrabajos[3].trabajos[2].descripcion = `Advert-Game para campaña de concientización sobre sexo seguro para la marca de preservativos Prime.`;
 aTrabajos[3].trabajos[2].imgPrincipal = 'imgs/trabajos/Webs/Prime.png';
 aTrabajos[3].trabajos[2].contenidoAdicional[0] = 'imgs/trabajos/Webs/Prime-adc-1.png';
-aTrabajos[3].trabajos[2].contenidoAdicional[1] = 'imgs/trabajos/Webs/Prime-adc-2.png';
-aTrabajos[3].trabajos[2].contenidoAdicional[2] = 'https://imperioame.github.io/Prime_game/';
+aTrabajos[3].trabajos[2].contenidoAdicional[1] = 'https://github.com/imperioame/Prime_game';
+aTrabajos[3].trabajos[2].contenidoAdicional[2] = 'imgs/trabajos/Webs/Prime-adc-2.png';
+aTrabajos[3].trabajos[2].contenidoAdicional[3] = 'https://imperioame.github.io/Prime_game/';
 
 aTrabajos[3].trabajos[3] = new trabajo();
 aTrabajos[3].trabajos[3].titulo = 'Afstation';
@@ -255,8 +256,18 @@ aTrabajos[3].trabajos[6].titulo = 'Vecindad';
 aTrabajos[3].trabajos[6].descripcion = `Juego web de estrategia por turnos realizado en jquery, incluye un sistema de economía e inteligencia artificial como oponentes.`;
 aTrabajos[3].trabajos[6].imgPrincipal = 'imgs/trabajos/Webs/Vecindad.png';
 aTrabajos[3].trabajos[6].contenidoAdicional[0] = 'imgs/trabajos/Webs/Vecindad-adc-1.png';
-aTrabajos[3].trabajos[6].contenidoAdicional[1] = 'imgs/trabajos/Webs/Vecindad-adc-2.png';
-aTrabajos[3].trabajos[6].contenidoAdicional[2] = 'https://imperioame.github.io/vecindad/';
+aTrabajos[3].trabajos[6].contenidoAdicional[1] = 'https://github.com/imperioame/vecindad';
+aTrabajos[3].trabajos[6].contenidoAdicional[2] = 'imgs/trabajos/Webs/Vecindad-adc-2.png';
+aTrabajos[3].trabajos[6].contenidoAdicional[3] = 'https://imperioame.github.io/vecindad/';
+
+aTrabajos[3].trabajos[7] = new trabajo();
+aTrabajos[3].trabajos[7].titulo = 'Web institucional Agencia Álterego';
+aTrabajos[3].trabajos[7].descripcion = `Sitio web institucional de la agencia, realizado internamente en la agencia, en javascript y css puro - sin uso de frameworks adicionales.`;
+aTrabajos[3].trabajos[7].imgPrincipal = 'imgs/trabajos/Webs/AgenciaAlterego.png';
+aTrabajos[3].trabajos[7].contenidoAdicional[0] = 'imgs/trabajos/Webs/AgenciaAlterego-adc-1.png';
+aTrabajos[3].trabajos[7].contenidoAdicional[1] = 'imgs/trabajos/Webs/AgenciaAlterego-adc-2.png';
+aTrabajos[3].trabajos[7].contenidoAdicional[2] = 'https://github.com/AgenciaAlterego/WebAlterego';
+aTrabajos[3].trabajos[7].contenidoAdicional[3] = 'https://agenciaalterego.com.ar/';
 
 
 /* Campañas publicitarias */
