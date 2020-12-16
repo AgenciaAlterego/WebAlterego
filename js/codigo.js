@@ -56,8 +56,8 @@ function GenerarHome(tipoDeTrabajoSolcitado) {
 
     if (!tipoDeTrabajoSolcitado) {
         //Si entró acá, es porque no se solicitó un tipo de trabajo particular, entonces tengo que renderear todo.
-        mainTitle.innerHTML = 'Somos tu mejor versión';
-        mainParagraph.innerHTML = 'Sabemos que solos llegamos más rápido, pero acompañados llegamos más lejos. <br> Por eso es bueno saber que tenés un Álterego dando tu mejor versión.';
+        mainTitle.innerHTML = titularWeb;
+        mainParagraph.innerHTML = bajadaWeb;
 
         let botonera = d.createElement('div');
         botonera.id = 'mainBotonera';
@@ -164,8 +164,8 @@ function GenerarHome(tipoDeTrabajoSolcitado) {
                 //mainParagraph.innerHTML = 'Sabemos que solos llegamos más rápido, pero acompañados llegamos más lejos. <br> Por eso es bueno saber que tenés un Álterego dando tu mejor versión.';
 
 
-                mainTitle.innerHTML = 'Visualizá los siguientes proyectos';
-                mainParagraph.innerHTML = 'Ya tuviste un primer acercamiento a algunos de estos trabajos en las historias de Instagram. <br> Hacé clic en cada uno para verlos en detalle.';
+                mainTitle.innerHTML = TitularLandingSeminario;
+                mainParagraph.innerHTML = BajadaLandingSeminario;
 
                 let section = d.createElement('section');
                 section.id = tipoDeTrabajo.tipoDeTrabajo;
@@ -226,7 +226,7 @@ function GenerarHome(tipoDeTrabajoSolcitado) {
         //Incluyo un mensaje final ----- esto es para seminario. Debería borrarse a posterior.
         let fraseFinal = d.createElement('p');
         fraseFinal.id = 'fraseFinal';
-        fraseFinal.innerHTML = 'Sigamos avanzando. <br> Avísame por el grupo de Whatsapp que ya terminaste de visualizar esta estación.';
+        fraseFinal.innerHTML = fraseFinalLandingSeminario;
         main.appendChild(fraseFinal);
     }
 }
@@ -299,6 +299,7 @@ function GenerarNosotros() {
 function GenerarTrabajo(e) {
 
     console.log(e);
+    console.log(e.offsetY);
 
     // Primero vacío mainTitle mainParagraph y mainShowcase
     VaciarCanvas();
