@@ -296,8 +296,7 @@ function GenerarNosotros() {
  */
 
 
-function GenerarTrabajo() {
-    //console.log('quiero generar un trabajito');
+function GenerarTrabajo(e) {
 
 
     // Primero vacío mainTitle mainParagraph y mainShowcase

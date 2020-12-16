@@ -102,12 +102,13 @@ aTrabajos[0].trabajos[5].contenidoAdicional[2] = 'imgs/trabajos/3d/Steampunk-adc
 aTrabajos[0].trabajos[5].contenidoAdicional[3] = 'imgs/trabajos/3d/Steampunk-adc-2.jpg';
 
 aTrabajos[0].trabajos[6] = new trabajo();
-aTrabajos[0].trabajos[6].titulo = 'Storm Trooper';
-aTrabajos[0].trabajos[6].descripcion = `Sabemos que solos llegamos más rápido, pero acompañados llegamos más lejos.\n
-Por eso es bueno saber que tenés un Álterego dando tu mejor versión.`;
+aTrabajos[0].trabajos[6].titulo = 'Stormtrooper Helmet';
+aTrabajos[0].trabajos[6].descripcion = `Este casco de Stormtrooper fue modelado a pedido de un fanático para poder imprimirlo en 3D.`;
 aTrabajos[0].trabajos[6].imgPrincipal = 'imgs/trabajos/3d/Stormtrooper.jpg';
 aTrabajos[0].trabajos[6].contenidoAdicional[0] = 'imgs/trabajos/3d/Stormtrooper-adc-1.jpg';
-aTrabajos[0].trabajos[6].contenidoAdicional[1] = 'imgs/trabajos/3d/Stormtrooper-adc-2.jpg';
+aTrabajos[0].trabajos[6].contenidoAdicional[1] = 'https://www.youtube.com/watch?v=Iv32GRtdrAA&feature=youtu.be';
+aTrabajos[0].trabajos[6].contenidoAdicional[2] = 'imgs/trabajos/3d/Stormtrooper-adc-2.jpg';
+aTrabajos[0].trabajos[6].contenidoAdicional[3] = 'https://www.youtube.com/watch?v=hF5Jx6XQVdc&feature=youtu.be';
 
 
 
@@ -262,7 +263,7 @@ aTrabajos[3].trabajos[6].contenidoAdicional[3] = 'https://imperioame.github.io/v
 
 aTrabajos[3].trabajos[7] = new trabajo();
 aTrabajos[3].trabajos[7].titulo = 'Web institucional Agencia Álterego';
-aTrabajos[3].trabajos[7].descripcion = `Sitio web institucional de la agencia, realizado internamente en la agencia, en javascript y css puro - sin uso de frameworks adicionales.`;
+aTrabajos[3].trabajos[7].descripcion = `Sitio web institucional de la agencia, realizado internamente en la agencia, en javascript y css puro, sin uso de frameworks adicionales. <br> 100% frontend con carga de contenido dinámico.`;
 aTrabajos[3].trabajos[7].imgPrincipal = 'imgs/trabajos/Webs/AgenciaAlterego.png';
 aTrabajos[3].trabajos[7].contenidoAdicional[0] = 'imgs/trabajos/Webs/AgenciaAlterego-adc-1.png';
 aTrabajos[3].trabajos[7].contenidoAdicional[1] = 'imgs/trabajos/Webs/AgenciaAlterego-adc-2.png';
