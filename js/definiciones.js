@@ -1,5 +1,7 @@
 'use strict'
 
+/* Js */
+
 const d = document;
 const main = d.getElementById('main');
 const mainTextBlock = d.getElementById('mainTextBlock');
@@ -9,6 +11,8 @@ const mainShowcase = d.getElementById('mainShowcase');
 
 
 
+
+/* Textos */
 
 const manifiesto = `No somos uno, compartimos más que la pasión. De chicos siempre quisimos \n
 más.<br>\n
@@ -25,8 +29,26 @@ un Álterego dando tu mejor versión. <br>\n
 <br>\n
 <strong>:: Agencia Álterego ::</strong>`;
 
+
+const titularWeb = 'Somos tu mejor versión';
+const bajadaWeb = 'Sabemos que solos llegamos más rápido, pero acompañados llegamos más lejos. <br> Por eso es bueno saber que tenés un Álterego dando tu mejor versión.';
+
+//Esto es de seminario final
+const TitularLandingSeminario = 'Visualizá los siguientes proyectos';
+const BajadaLandingSeminario = 'Ya tuviste un primer acercamiento a algunos de estos trabajos en las historias de Instagram. <br> Hacé clic en cada uno para verlos en detalle.';
+const fraseFinalLandingSeminario = 'Sigamos avanzando. <br><br> Avísame por el grupo de Whatsapp que ya terminaste de visualizar esta estación.';
+
+
+
+/* Links */
+
+
 const urlManifiesto = 'https://www.youtube.com/watch?v=3MM5FnT85aE';
 const urlReel = 'https://www.youtube.com/watch?v=BtFUWzs3HC8';
+
+
+
+/* Personas */
 
 
 const aDisenadores = [];

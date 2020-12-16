@@ -53,11 +53,12 @@ Estructura de datos por trabajo:
 /* 3D */
 
 aTrabajos[0].trabajos[0] = new trabajo();
-aTrabajos[0].trabajos[0].titulo = 'Asset Pack - Bar';
-aTrabajos[0].trabajos[0].descripcion = `Este trabajo es un asset pack de un bar pensado para videojuegos Triple A del estilo GTA con modelos hiperrealistas y funcionales optimizados para tiempo real que permiten al jugador vivir una experiencia inmersiva.`;
-aTrabajos[0].trabajos[0].imgPrincipal = 'imgs/trabajos/3d/BarAlterego.jpg';
-aTrabajos[0].trabajos[0].contenidoAdicional[0] = 'https://www.youtube.com/watch?v=7wbtd5gTRz8&feature=youtu.be';
-aTrabajos[0].trabajos[0].contenidoAdicional[1] = 'https://www.youtube.com/watch?v=4DHwnAoTGv4&feature=youtu.be';
+aTrabajos[0].trabajos[0].titulo = 'Stormtrooper Helmet - Star Wars';
+aTrabajos[0].trabajos[0].descripcion = `Este casco de Stormtrooper fue modelado a pedido de un fanático para poder imprimirlo en 3D.`;
+aTrabajos[0].trabajos[0].imgPrincipal = 'imgs/trabajos/3d/Stormtrooper.jpg';
+aTrabajos[0].trabajos[0].contenidoAdicional[0] = 'https://www.youtube.com/watch?v=Iv32GRtdrAA&feature=youtu.be';
+aTrabajos[0].trabajos[0].contenidoAdicional[1] = 'imgs/trabajos/3d/Stormtrooper-adc-1.jpg';
+aTrabajos[0].trabajos[0].contenidoAdicional[2] = 'https://www.youtube.com/watch?v=hF5Jx6XQVdc&feature=youtu.be';
 
 aTrabajos[0].trabajos[1] = new trabajo();
 aTrabajos[0].trabajos[1].titulo = 'Pala Mecánica Komatsu WA1200';
@@ -102,14 +103,11 @@ aTrabajos[0].trabajos[5].contenidoAdicional[2] = 'imgs/trabajos/3d/Steampunk-adc
 aTrabajos[0].trabajos[5].contenidoAdicional[3] = 'imgs/trabajos/3d/Steampunk-adc-2.jpg';
 
 aTrabajos[0].trabajos[6] = new trabajo();
-aTrabajos[0].trabajos[6].titulo = 'Stormtrooper Helmet';
-aTrabajos[0].trabajos[6].descripcion = `Este casco de Stormtrooper fue modelado a pedido de un fanático para poder imprimirlo en 3D.`;
-aTrabajos[0].trabajos[6].imgPrincipal = 'imgs/trabajos/3d/Stormtrooper.jpg';
-aTrabajos[0].trabajos[6].contenidoAdicional[0] = 'imgs/trabajos/3d/Stormtrooper-adc-1.jpg';
-aTrabajos[0].trabajos[6].contenidoAdicional[1] = 'https://www.youtube.com/watch?v=Iv32GRtdrAA&feature=youtu.be';
-aTrabajos[0].trabajos[6].contenidoAdicional[2] = 'imgs/trabajos/3d/Stormtrooper-adc-2.jpg';
-aTrabajos[0].trabajos[6].contenidoAdicional[3] = 'https://www.youtube.com/watch?v=hF5Jx6XQVdc&feature=youtu.be';
-
+aTrabajos[0].trabajos[6].titulo = 'Asset Pack - Bar';
+aTrabajos[0].trabajos[6].descripcion = `Este trabajo es un asset pack de un bar pensado para videojuegos Triple A del estilo GTA con modelos hiperrealistas y funcionales optimizados para tiempo real que permiten al jugador vivir una experiencia inmersiva.`;
+aTrabajos[0].trabajos[6].imgPrincipal = 'imgs/trabajos/3d/BarAlterego.jpg';
+aTrabajos[0].trabajos[6].contenidoAdicional[0] = 'https://www.youtube.com/watch?v=7wbtd5gTRz8&feature=youtu.be';
+aTrabajos[0].trabajos[6].contenidoAdicional[1] = 'https://www.youtube.com/watch?v=4DHwnAoTGv4&feature=youtu.be';
 
 
 /* Motion */
