@@ -31,7 +31,7 @@ function VaciarCanvas() {
     if (fraseFinal) {
         fraseFinal.remove();
     }
-    
+
 
 }
 
@@ -41,6 +41,16 @@ function GenerarHome(tipoDeTrabajoSolcitado) {
 
     // Primero vacío mainTitle mainParagraph y mainShowcase
     VaciarCanvas();
+
+
+    // Me aseguro que el logo no tenga "volver atras"
+    let headerLogo = d.querySelector('header div img');
+    headerLogo.className = '';
+    headerLogo.removeEventListener('click', function () {
+        GenerarHome(publicTipoDeTrabajoSolicitado);
+    });
+
+
 
     // Ahora cargo el contenido
 
@@ -58,7 +68,7 @@ function GenerarHome(tipoDeTrabajoSolcitado) {
 
         let botonReel = d.createElement('a');
         botonReel.innerHTML = 'Mirá nuestro reel';
-        botonReel.href = 'https://www.youtube.com/watch?v=BtFUWzs3HC8';
+        botonReel.href = urlReel;
         botonReel.target = 'blank';
         botonReel.className = 'boton';
         botonera.appendChild(botonReel);
@@ -66,7 +76,7 @@ function GenerarHome(tipoDeTrabajoSolcitado) {
         let botonManifiesto = d.createElement('a');
         botonManifiesto.innerHTML = 'Mirá nuestro manifiesto';
         botonManifiesto.target = 'blank';
-        botonManifiesto.href = 'https://www.youtube.com/watch?v=3MM5FnT85aE';
+        botonManifiesto.href = urlManifiesto;
         botonManifiesto.className = 'boton';
         botonera.appendChild(botonManifiesto);
 
@@ -286,14 +296,18 @@ function GenerarNosotros() {
  */
 
 
-function GenerarTrabajo() {
-    //console.log('quiero generar un trabajito');
+function GenerarTrabajo(e) {
 
 
     // Primero vacío mainTitle mainParagraph y mainShowcase
     VaciarCanvas();
 
-    // 
+    // Hago el "volver atras" en el logo
+    let headerLogo = d.querySelector('header div img');
+    headerLogo.className = 'cursorPointer';
+    headerLogo.addEventListener('click', function () {
+        GenerarHome(publicTipoDeTrabajoSolicitado);
+    });
 
     mainTitle.innerHTML = this.dataset.tituloDeTrabajo;
 
@@ -358,12 +372,21 @@ function GenerarTrabajo() {
                                 block.appendChild(blockContent);
 
 
-                            } else if (contenido.includes('.com') || contenido.includes('www.') || contenido.includes('http')) {
+                            } else if (contenido.includes('github.com')){
+                                // El contenido es un repo en GIT
+                                block.style.backgroundImage = `url(imgs/repo-github.png)`;
+                                block.className = 'showcaseBox';
+                                block.title = 'Ver Código';
+                                block.addEventListener('click', function () {
+                                    window.open(contenido, '_blank');
+                                });
+
+                            }else if (contenido.includes('.com') || contenido.includes('www.') || contenido.includes('http')) {
                                 // El contenido es una página web
                                 block.className = 'showcaseBox';
                                 block.style.backgroundImage = `url(imgs/click-me.png)`;
                                 block.title = 'Ver Online';
-                                block.addEventListener('click', function(){
+                                block.addEventListener('click', function () {
                                     window.open(contenido, '_blank');
                                 });
 

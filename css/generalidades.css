@@ -432,3 +432,7 @@ iframe{
     flex-grow: 1;
     min-height: 50px;
 }
+
+.cursorPointer{
+    cursor: pointer;
+}
