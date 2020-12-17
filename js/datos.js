@@ -220,7 +220,7 @@ aTrabajos[3].trabajos[1].contenidoAdicional[2] = 'https://www.youtube.com/watch?
 
 aTrabajos[3].trabajos[2] = new trabajo();
 aTrabajos[3].trabajos[2].titulo = 'Prime - El juego más seguro';
-aTrabajos[3].trabajos[2].descripcion = `Advert-Game para campaña de concientización sobre sexo seguro para la marca de preservativos Prime.`;
+aTrabajos[3].trabajos[2].descripcion = `Advert-Game para campaña de concientización sobre sexo seguro para la marca de preservativos Prime. <br> Realizado en Construct 2 con producción integral de todos los assets gráficos, y banda sonora realizada a medida.`;
 aTrabajos[3].trabajos[2].imgPrincipal = 'imgs/trabajos/Webs/Prime.png';
 aTrabajos[3].trabajos[2].contenidoAdicional[0] = 'imgs/trabajos/Webs/Prime-adc-1.png';
 aTrabajos[3].trabajos[2].contenidoAdicional[1] = 'https://github.com/imperioame/Prime_game';
@@ -229,7 +229,7 @@ aTrabajos[3].trabajos[2].contenidoAdicional[3] = 'https://imperioame.github.io/P
 
 aTrabajos[3].trabajos[3] = new trabajo();
 aTrabajos[3].trabajos[3].titulo = 'Afstation';
-aTrabajos[3].trabajos[3].descripcion = `Advert-Game para campaña de concientización sobre sexo seguro para la marca de preservativos Prime.`;
+aTrabajos[3].trabajos[3].descripcion = `Esta web e-commerce de artículos informáticos fue desarrollada para extender el potencial lanzamiento.`;
 aTrabajos[3].trabajos[3].imgPrincipal = 'imgs/trabajos/Webs/Afstation.jpg';
 aTrabajos[3].trabajos[3].contenidoAdicional[0] = 'imgs/trabajos/Webs/Afstation-adc-1.jpg';
 aTrabajos[3].trabajos[3].contenidoAdicional[1] = 'imgs/trabajos/Webs/Afstation-adc-2.jpg';
@@ -237,10 +237,11 @@ aTrabajos[3].trabajos[3].contenidoAdicional[2] = 'imgs/trabajos/Webs/Afstation-a
 
 aTrabajos[3].trabajos[4] = new trabajo();
 aTrabajos[3].trabajos[4].titulo = 'Staley Martial Arts';
-aTrabajos[3].trabajos[4].descripcion = `Sitio web institucional diseñado y realizado en wordpress para el dojo de artes marciales Staley Martial Arts, ubicado en Chicago, EEUU.`;
+aTrabajos[3].trabajos[4].descripcion = `Sitio web institucional diseñado y realizado en Wordpress para el dojo de artes marciales Staley Martial Arts, ubicado en Chicago, EEUU.`;
 aTrabajos[3].trabajos[4].imgPrincipal = 'imgs/trabajos/Webs/Staley.jpg';
 aTrabajos[3].trabajos[4].contenidoAdicional[0] = 'imgs/trabajos/Webs/Staley-adc-1.jpg';
 aTrabajos[3].trabajos[4].contenidoAdicional[1] = 'imgs/trabajos/Webs/Staley-adc-2.jpg';
+aTrabajos[3].trabajos[4].contenidoAdicional[2] = 'https://www.staleymartialarts.com/';
 
 aTrabajos[3].trabajos[5] = new trabajo();
 aTrabajos[3].trabajos[5].titulo = 'Antrieb Sudamericana S.A.';
