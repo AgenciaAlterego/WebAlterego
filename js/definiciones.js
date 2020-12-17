@@ -36,7 +36,7 @@ const bajadaWeb = 'Sabemos que solos llegamos más rápido, pero acompañados ll
 //Esto es de seminario final
 const TitularLandingSeminario = 'Visualizá los siguientes proyectos';
 const BajadaLandingSeminario = 'Ya tuviste un primer acercamiento a algunos de estos trabajos en las historias de Instagram. <br> Hacé clic en cada uno para verlos en detalle.';
-const fraseFinalLandingSeminario = 'Sigamos avanzando. <br><br> Avísame por el grupo de Whatsapp que ya terminaste de visualizar esta estación.';
+const fraseFinalLandingSeminario = 'Sigamos avanzando. <br><br> Avisame por el grupo de Whatsapp que ya terminaste de visualizar esta estación.';
 
 
 
