@@ -74,22 +74,6 @@ main #imagenesPerfil span img {
     max-height: 50vh;
 }*/
 
-
-#botonVolver {
-    margin-top: 20px;
-    padding: 10px;
-    width: 100%;
-    text-align: center;
-    color: var(--aecolor-gris-intermedio);
-    cursor: pointer;
-    font-size: 0.85em;
-}
-
-#botonVolver:hover {
-    transition: 0.5s;
-    color: var(--aecolor-negro);
-}
-
 main iframe {
     width: 100%;
     height: 100%;
@@ -357,9 +341,25 @@ Clases adicionales
 
 .boton:hover {
     transition: 0.5s ease-in;
+    border: 1px solid var(--aecolor-negro);
+
+}
+
+
+#botonVolver {
+    margin-top: 20px;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    color: var(--aecolor-gris-intermedio);
+    cursor: pointer;
+    font-size: 0.85em;
+}
+
+#botonVolver:hover {
+    transition: 0.5s;
     color: var(--aecolor-rojo);
     border: 1px solid var(--aecolor-rojo);
-
 }
 
 
