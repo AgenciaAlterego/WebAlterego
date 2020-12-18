@@ -348,19 +348,21 @@ Clases adicionales
 
 #botonVolver {
     margin-top: 20px;
-    padding: 10px;
+    padding: 10px 0;
     width: 100%;
     text-align: center;
-    color: var(--aecolor-rojo);
-    border: 1px solid var(--aecolor-rojo);
+    color: var(--aecolor-blanco);
+    border: 1px solid var(--aecolor-blanco);
+    background-color: var(--aecolor-azul);
     cursor: pointer;
     font-size: 0.85em;
 }
 
 #botonVolver:hover {
     transition: 0.5s;
-    color: var(--aecolor-negro);
-    border: 1px solid var(--aecolor-negro);
+    color: var(--aecolor-azul);
+    background-color: var(--aecolor-blanco);
+    border: 1px solid var(--aecolor-azul);
 }
 
 

@@ -232,6 +232,7 @@ html {
     --aecolor-gris-claro: #CCCCCC;
     --aecolor-blanco: #FFFFFF;
     --aecolor-rojo: #F2333A;
+    --aecolor-azul: #337ff2;
     --aecolor-CURRENT-MAIN-COLOR: var(var(--aecolor-negro));
 }
 
