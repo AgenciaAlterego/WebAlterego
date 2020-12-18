@@ -305,7 +305,7 @@ function GenerarNosotros() {
 
 function GenerarTrabajo(e) {
 
-    navigateTo(null,0);
+    navigateTo(null, 0);
 
     // Primero vacío mainTitle mainParagraph y mainShowcase
     VaciarCanvas();
@@ -313,11 +313,11 @@ function GenerarTrabajo(e) {
     // Hago el "volver atras" en el logo
     let headerLogo = d.querySelector('header div img');
     headerLogo.className = 'cursorPointer';
-    headerLogo.onclick = function(){
+    headerLogo.onclick = function () {
         GenerarHome(publicTipoDeTrabajoSolicitado, e.offsetY);
     };
-    
-    
+
+
     /*
     //Tengo que hacerlo con onclick porque el addeventlistener se stackea, y no lo puedo borrar
     headerLogo.addEventListener('click', function () {
@@ -580,7 +580,7 @@ function navigateTo(anchor, offset) {
 
     // Posición del scroll:
     let posInicial = window.pageYOffset;
-    let posDestino ;
+    let posDestino;
     if (offset || offset == 0) {
         //Si entro acá es es porque le doy offset, de ser así, primero tengo que navegar ahí.
         posDestino = offset - 300;
