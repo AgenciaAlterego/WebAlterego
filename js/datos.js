@@ -113,26 +113,26 @@ aTrabajos[0].trabajos[6].contenidoAdicional[1] = 'https://www.youtube.com/watch?
 /* Motion */
 
 aTrabajos[1].trabajos[0] = new trabajo();
-aTrabajos[1].trabajos[0].titulo = 'Contenedores para Separar Residuos - La Anónima';
-aTrabajos[1].trabajos[0].descripcion = `Campaña de concientización sobre la separación de residuos para la cadena de supermercados nacional La Anónima.`;
-aTrabajos[1].trabajos[0].imgPrincipal = 'imgs/trabajos/Motion/LaAnonima-Contenedores.jpg';
-aTrabajos[1].trabajos[0].contenidoAdicional[0] = 'imgs/trabajos/Motion/LaAnonima-Contenedores-adc-1.jpg';
-aTrabajos[1].trabajos[0].contenidoAdicional[1] = 'https://www.youtube.com/watch?v=DixgvteYBhQ&feature=youtu.be';
-aTrabajos[1].trabajos[0].contenidoAdicional[2] = 'imgs/trabajos/Motion/LaAnonima-Contenedores-adc-2.jpg';
+aTrabajos[1].trabajos[0].titulo = `L'oreal - Back to the sun`;
+aTrabajos[1].trabajos[0].descripcion = `Evento interno de L’oreal realizado a pedido de una agencia publicitaria multinacional.`;
+aTrabajos[1].trabajos[0].imgPrincipal = 'imgs/trabajos/Motion/Loreal.jpg';
+aTrabajos[1].trabajos[0].contenidoAdicional[0] = 'imgs/trabajos/Motion/Loreal-adc-1.jpg';
+aTrabajos[1].trabajos[0].contenidoAdicional[1] = 'https://www.youtube.com/watch?v=mpROsTzl8_8&feature=youtu.be';
 
 aTrabajos[1].trabajos[1] = new trabajo();
-aTrabajos[1].trabajos[1].titulo = 'MTV Logo Animation';
-aTrabajos[1].trabajos[1].descripcion = `Animación en motion graphics 3D para los MTV Music Awards.`;
-aTrabajos[1].trabajos[1].imgPrincipal = 'imgs/trabajos/Motion/Mtv.jpg';
-aTrabajos[1].trabajos[1].contenidoAdicional[0] = 'imgs/trabajos/Motion/Mtv-adc-1.jpg';
-aTrabajos[1].trabajos[1].contenidoAdicional[1] = 'https://www.youtube.com/watch?v=r8WYG1Z5bUI&feature=youtu.be';
+aTrabajos[1].trabajos[1].titulo = 'Contenedores para Separar Residuos - La Anónima';
+aTrabajos[1].trabajos[1].descripcion = `Campaña de concientización sobre la separación de residuos para la cadena de supermercados nacional La Anónima.`;
+aTrabajos[1].trabajos[1].imgPrincipal = 'imgs/trabajos/Motion/LaAnonima-Contenedores.jpg';
+aTrabajos[1].trabajos[1].contenidoAdicional[0] = 'imgs/trabajos/Motion/LaAnonima-Contenedores-adc-1.jpg';
+aTrabajos[1].trabajos[1].contenidoAdicional[1] = 'https://www.youtube.com/watch?v=DixgvteYBhQ&feature=youtu.be';
+aTrabajos[1].trabajos[1].contenidoAdicional[2] = 'imgs/trabajos/Motion/LaAnonima-Contenedores-adc-2.jpg';
 
 aTrabajos[1].trabajos[2] = new trabajo();
-aTrabajos[1].trabajos[2].titulo = `L'oreal - Back to the sun`;
-aTrabajos[1].trabajos[2].descripcion = `Evento interno de L’oreal realizado a pedido de una agencia publicitaria multinacional.`;
-aTrabajos[1].trabajos[2].imgPrincipal = 'imgs/trabajos/Motion/Loreal.jpg';
-aTrabajos[1].trabajos[2].contenidoAdicional[0] = 'imgs/trabajos/Motion/Loreal-adc-1.jpg';
-aTrabajos[1].trabajos[2].contenidoAdicional[1] = 'https://www.youtube.com/watch?v=mpROsTzl8_8&feature=youtu.be';
+aTrabajos[1].trabajos[2].titulo = 'MTV Logo Animation';
+aTrabajos[1].trabajos[2].descripcion = `Animación en motion graphics 3D para los MTV Music Awards.`;
+aTrabajos[1].trabajos[2].imgPrincipal = 'imgs/trabajos/Motion/Mtv.jpg';
+aTrabajos[1].trabajos[2].contenidoAdicional[0] = 'imgs/trabajos/Motion/Mtv-adc-1.jpg';
+aTrabajos[1].trabajos[2].contenidoAdicional[1] = 'https://www.youtube.com/watch?v=r8WYG1Z5bUI&feature=youtu.be';
 
 aTrabajos[1].trabajos[3] = new trabajo();
 aTrabajos[1].trabajos[3].titulo = 'Matte Painting Playa de Estacionamiento';
