@@ -101,7 +101,7 @@ function GenerarHome(tipoDeTrabajoSolcitado, offset) {
 
             //Primero creo la cabecera de este tipo de trabajo
             let block = d.createElement('span');
-            block.className = 'showcase2Box notHovereable BackgroundAecolorBlanco flexContainer';
+            block.className = 'showcase2Box notHovereable BackgroundAecolorBlanco flexContainer col-2-sd';
             let blockHeader = d.createElement('h2');
             blockHeader.className = 'AecolorNegro';
             blockHeader.innerHTML = tipoDeTrabajo.tituloDeSeccion;
@@ -109,7 +109,7 @@ function GenerarHome(tipoDeTrabajoSolcitado, offset) {
             section.appendChild(block);
 
             block = d.createElement('span');
-            block.className = 'showcaseBox notHovereable BackgroundAecolorBlanco';
+            block.className = 'showcaseBox notHovereable BackgroundAecolorBlanco col-2-sd';
             block.style.backgroundImage = `url(imgs/isotipo_ae-black.svg)`;
             block.style.backgroundSize = '40%';
             block.style.backgroundRepeat = 'no-repeat';
@@ -375,7 +375,7 @@ function GenerarTrabajo(e) {
                                 contenido = contenido.replace('watch?v=', 'embed/');
                                 let regex = new RegExp('\&(.*)');
                                 contenido = contenido.replace(regex, '');
-                                contenido += "?rel=0&showinfo=0&autoplay=1&enbalejsapi=1";
+                                contenido += "?rel=0&showinfo=0&autoplay=0&enbalejsapi=1";
 
                                 //block.dataset.tipoContenido = 'video';
                                 //block.dataset.contenido = contenido;
@@ -437,7 +437,7 @@ function GenerarTrabajo(e) {
     let botonVolver = d.createElement('a');
     botonVolver.id = 'botonVolver';
     botonVolver.className = 'boton';
-    botonVolver.innerHTML = '> VOLVER <';
+    botonVolver.innerHTML = 'VOLVER';
     botonVolver.addEventListener('click', function () {
         GenerarHome(publicTipoDeTrabajoSolicitado, e.offsetY);
     });

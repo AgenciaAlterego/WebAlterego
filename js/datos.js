@@ -113,25 +113,26 @@ aTrabajos[0].trabajos[6].contenidoAdicional[1] = 'https://www.youtube.com/watch?
 /* Motion */
 
 aTrabajos[1].trabajos[0] = new trabajo();
-aTrabajos[1].trabajos[0].titulo = 'MTV Logo Animation';
-aTrabajos[1].trabajos[0].descripcion = `Animación en motion graphics 3D para los MTV Music Awards.`;
-aTrabajos[1].trabajos[0].imgPrincipal = 'imgs/trabajos/Motion/Mtv.jpg';
-aTrabajos[1].trabajos[0].contenidoAdicional[0] = 'imgs/trabajos/Motion/Mtv-adc-1.jpg';
-aTrabajos[1].trabajos[0].contenidoAdicional[1] = 'https://www.youtube.com/watch?v=r8WYG1Z5bUI&feature=youtu.be';
+aTrabajos[1].trabajos[0].titulo = `L'oreal - Back to the sun`;
+aTrabajos[1].trabajos[0].descripcion = `Evento interno de L’oreal realizado a pedido de una agencia publicitaria multinacional.`;
+aTrabajos[1].trabajos[0].imgPrincipal = 'imgs/trabajos/Motion/Loreal.jpg';
+aTrabajos[1].trabajos[0].contenidoAdicional[0] = 'imgs/trabajos/Motion/Loreal-adc-1.jpg';
+aTrabajos[1].trabajos[0].contenidoAdicional[1] = 'https://www.youtube.com/watch?v=mpROsTzl8_8&feature=youtu.be';
 
 aTrabajos[1].trabajos[1] = new trabajo();
-aTrabajos[1].trabajos[1].titulo = `L'oreal - Back to the sun`;
-aTrabajos[1].trabajos[1].descripcion = `Evento interno de L’oreal realizado a pedido de una agencia publicitaria multinacional.`;
-aTrabajos[1].trabajos[1].imgPrincipal = 'imgs/trabajos/Motion/Loreal.jpg';
-aTrabajos[1].trabajos[1].contenidoAdicional[0] = 'imgs/trabajos/Motion/Loreal-adc-1.jpg';
-aTrabajos[1].trabajos[1].contenidoAdicional[1] = 'https://www.youtube.com/watch?v=mpROsTzl8_8&feature=youtu.be';
+aTrabajos[1].trabajos[1].titulo = 'Contenedores para Separar Residuos - La Anónima';
+aTrabajos[1].trabajos[1].descripcion = `Campaña de concientización sobre la separación de residuos para la cadena de supermercados nacional La Anónima.`;
+aTrabajos[1].trabajos[1].imgPrincipal = 'imgs/trabajos/Motion/LaAnonima-Contenedores.jpg';
+aTrabajos[1].trabajos[1].contenidoAdicional[0] = 'imgs/trabajos/Motion/LaAnonima-Contenedores-adc-1.jpg';
+aTrabajos[1].trabajos[1].contenidoAdicional[1] = 'https://www.youtube.com/watch?v=DixgvteYBhQ&feature=youtu.be';
+aTrabajos[1].trabajos[1].contenidoAdicional[2] = 'imgs/trabajos/Motion/LaAnonima-Contenedores-adc-2.jpg';
 
 aTrabajos[1].trabajos[2] = new trabajo();
-aTrabajos[1].trabajos[2].titulo = 'Contenedores para Separar Residuos - La Anónima';
-aTrabajos[1].trabajos[2].descripcion = `Campaña de concientización sobre la separación de residuos para la cadena de supermercados nacional La Anónima.`;
-aTrabajos[1].trabajos[2].imgPrincipal = 'imgs/trabajos/Motion/LaAnonima-Contenedores.jpg';
-aTrabajos[1].trabajos[2].contenidoAdicional[0] = 'imgs/trabajos/Motion/LaAnonima-Contenedores-adc-1.jpg';
-aTrabajos[1].trabajos[2].contenidoAdicional[1] = 'https://www.youtube.com/watch?v=DixgvteYBhQ&feature=youtu.be';
+aTrabajos[1].trabajos[2].titulo = 'MTV Logo Animation';
+aTrabajos[1].trabajos[2].descripcion = `Animación en motion graphics 3D para los MTV Music Awards.`;
+aTrabajos[1].trabajos[2].imgPrincipal = 'imgs/trabajos/Motion/Mtv.jpg';
+aTrabajos[1].trabajos[2].contenidoAdicional[0] = 'imgs/trabajos/Motion/Mtv-adc-1.jpg';
+aTrabajos[1].trabajos[2].contenidoAdicional[1] = 'https://www.youtube.com/watch?v=r8WYG1Z5bUI&feature=youtu.be';
 
 aTrabajos[1].trabajos[3] = new trabajo();
 aTrabajos[1].trabajos[3].titulo = 'Matte Painting Playa de Estacionamiento';
@@ -141,18 +142,18 @@ aTrabajos[1].trabajos[3].contenidoAdicional[0] = 'imgs/trabajos/Motion/MattePain
 aTrabajos[1].trabajos[3].contenidoAdicional[1] = 'https://www.youtube.com/watch?v=nqMKVKLLSU4&feature=youtu.be';
 
 aTrabajos[1].trabajos[4] = new trabajo();
-aTrabajos[1].trabajos[4].titulo = 'Whatsapp Business - Chevrolet';
-aTrabajos[1].trabajos[4].descripcion = `Video explicativo realizado para Chevrolet Argentina sobre la utilización de Whatsapp Business como nuevo canal de ventas.`;
-aTrabajos[1].trabajos[4].imgPrincipal = 'imgs/trabajos/Motion/Chevrolet-whatsapp.jpg';
-aTrabajos[1].trabajos[4].contenidoAdicional[0] = 'imgs/trabajos/Motion/Chevrolet-whatsapp-adc-1.jpg';
-aTrabajos[1].trabajos[4].contenidoAdicional[1] = 'https://www.youtube.com/watch?v=OEFJEAboxf0&feature=youtu.be';
+aTrabajos[1].trabajos[4].titulo = 'Un Feliz Personaje - Trackeo de Escena';
+aTrabajos[1].trabajos[4].descripcion = `Se le dio vida a un personaje en tres dimensiones, insertándolo en una escena realista mediante el trackeo de la misma.`;
+aTrabajos[1].trabajos[4].imgPrincipal = 'imgs/trabajos/Motion/Feliz-Personaje.jpg';
+aTrabajos[1].trabajos[4].contenidoAdicional[0] = 'imgs/trabajos/Motion/Feliz-Personaje-adc-1.jpg';
+aTrabajos[1].trabajos[4].contenidoAdicional[1] = 'https://www.youtube.com/watch?v=AAuu-kzhftM&feature=youtu.be';
 
 aTrabajos[1].trabajos[5] = new trabajo();
-aTrabajos[1].trabajos[5].titulo = 'Un Feliz Personaje - Trackeo de Escena';
-aTrabajos[1].trabajos[5].descripcion = `Se le dio vida a un personaje en tres dimensiones, insertándolo en una escena realista mediante el trackeo de la misma.`;
-aTrabajos[1].trabajos[5].imgPrincipal = 'imgs/trabajos/Motion/Feliz-Personaje.jpg';
-aTrabajos[1].trabajos[5].contenidoAdicional[0] = 'imgs/trabajos/Motion/Feliz-Personaje-adc-1.jpg';
-aTrabajos[1].trabajos[5].contenidoAdicional[1] = 'https://www.youtube.com/watch?v=AAuu-kzhftM&feature=youtu.be';
+aTrabajos[1].trabajos[5].titulo = 'Whatsapp Business - Chevrolet';
+aTrabajos[1].trabajos[5].descripcion = `Video explicativo realizado para Chevrolet Argentina sobre la utilización de Whatsapp Business como nuevo canal de ventas.`;
+aTrabajos[1].trabajos[5].imgPrincipal = 'imgs/trabajos/Motion/Chevrolet-whatsapp.jpg';
+aTrabajos[1].trabajos[5].contenidoAdicional[0] = 'imgs/trabajos/Motion/Chevrolet-whatsapp-adc-1.jpg';
+aTrabajos[1].trabajos[5].contenidoAdicional[1] = 'https://www.youtube.com/watch?v=OEFJEAboxf0&feature=youtu.be';
 
 /* Diseño e ilustración */
 
@@ -205,27 +206,30 @@ aTrabajos[2].trabajos[4].contenidoAdicional[2] = 'imgs/trabajos/Diseno/Choi-adc-
 aTrabajos[3].trabajos[0] = new trabajo();
 aTrabajos[3].trabajos[0].titulo = 'Farmashop';
 aTrabajos[3].trabajos[0].descripcion = `App mobile diseñada para comprar artículos de farmacia y medicamentos con y sin receta, sin tener que moverte de tu casa.`;
-aTrabajos[3].trabajos[0].imgPrincipal = 'imgs/trabajos/Webs/Farmashop.png';
+aTrabajos[3].trabajos[0].imgPrincipal = 'imgs/trabajos/Webs/Farmashop.jpg';
 aTrabajos[3].trabajos[0].contenidoAdicional[0] = 'imgs/trabajos/Webs/Farmashop-adc-1.png';
-aTrabajos[3].trabajos[0].contenidoAdicional[1] = 'https://bit.ly/FarmaShop-EV';
-aTrabajos[3].trabajos[0].contenidoAdicional[2] = 'imgs/trabajos/Webs/Farmashop-adc-2.png';
+aTrabajos[3].trabajos[0].contenidoAdicional[1] = 'imgs/trabajos/Webs/Farmashop-adc-2.png';
+aTrabajos[3].trabajos[0].contenidoAdicional[2] = 'https://bit.ly/FarmaShop-EV';
+aTrabajos[3].trabajos[0].contenidoAdicional[3] = 'imgs/trabajos/Webs/Farmashop-adc-3.png';
 
 aTrabajos[3].trabajos[1] = new trabajo();
-aTrabajos[3].trabajos[1].titulo = 'BeerPoint - Cervecería Artesanal';
-aTrabajos[3].trabajos[1].descripcion = `Landing Page realizada para BeerPoint, una cervecería artesanal porteña.`;
-aTrabajos[3].trabajos[1].imgPrincipal = 'imgs/trabajos/Webs/Beerpoint.jpg';
-aTrabajos[3].trabajos[1].contenidoAdicional[0] = 'imgs/trabajos/Webs/Beerpoint-adc-1.jpg';
-aTrabajos[3].trabajos[1].contenidoAdicional[1] = 'imgs/trabajos/Webs/Beerpoint-adc-2.jpg';
-aTrabajos[3].trabajos[1].contenidoAdicional[2] = 'https://www.youtube.com/watch?v=uhrQd0jsqA8&feature=youtu.be';
+aTrabajos[3].trabajos[1].titulo = 'Staley Martial Arts';
+aTrabajos[3].trabajos[1].descripcion = `Sitio web institucional diseñado y realizado en Wordpress para el dojo de artes marciales Staley Martial Arts, ubicado en Chicago, EEUU.`;
+aTrabajos[3].trabajos[1].imgPrincipal = 'imgs/trabajos/Webs/Staley.jpg';
+aTrabajos[3].trabajos[1].contenidoAdicional[0] = 'imgs/trabajos/Webs/Staley-adc-1.jpg';
+aTrabajos[3].trabajos[1].contenidoAdicional[1] = 'imgs/trabajos/Webs/Staley-adc-2.jpg';
+aTrabajos[3].trabajos[1].contenidoAdicional[2] = 'https://www.staleymartialarts.com/';
+aTrabajos[3].trabajos[1].contenidoAdicional[3] = 'imgs/trabajos/Webs/Staley-adc-3.jpg';
 
 aTrabajos[3].trabajos[2] = new trabajo();
 aTrabajos[3].trabajos[2].titulo = 'Prime - El juego más seguro';
 aTrabajos[3].trabajos[2].descripcion = `Advert-Game para campaña de concientización sobre sexo seguro para la marca de preservativos Prime. <br> Realizado en Construct 2 con producción integral de todos los assets gráficos, y banda sonora realizada a medida.`;
-aTrabajos[3].trabajos[2].imgPrincipal = 'imgs/trabajos/Webs/Prime.png';
+aTrabajos[3].trabajos[2].imgPrincipal = 'imgs/trabajos/Webs/Prime.jpg';
 aTrabajos[3].trabajos[2].contenidoAdicional[0] = 'imgs/trabajos/Webs/Prime-adc-1.png';
 aTrabajos[3].trabajos[2].contenidoAdicional[1] = 'https://github.com/imperioame/Prime_game';
 aTrabajos[3].trabajos[2].contenidoAdicional[2] = 'imgs/trabajos/Webs/Prime-adc-2.png';
-aTrabajos[3].trabajos[2].contenidoAdicional[3] = 'https://imperioame.github.io/Prime_game/';
+aTrabajos[3].trabajos[2].contenidoAdicional[3] = 'imgs/trabajos/Webs/Prime-adc-3.png';
+aTrabajos[3].trabajos[2].contenidoAdicional[4] = 'https://imperioame.github.io/Prime_game/';
 
 aTrabajos[3].trabajos[3] = new trabajo();
 aTrabajos[3].trabajos[3].titulo = 'Afstation';
@@ -236,12 +240,13 @@ aTrabajos[3].trabajos[3].contenidoAdicional[1] = 'imgs/trabajos/Webs/Afstation-a
 aTrabajos[3].trabajos[3].contenidoAdicional[2] = 'imgs/trabajos/Webs/Afstation-adc-3.jpg';
 
 aTrabajos[3].trabajos[4] = new trabajo();
-aTrabajos[3].trabajos[4].titulo = 'Staley Martial Arts';
-aTrabajos[3].trabajos[4].descripcion = `Sitio web institucional diseñado y realizado en Wordpress para el dojo de artes marciales Staley Martial Arts, ubicado en Chicago, EEUU.`;
-aTrabajos[3].trabajos[4].imgPrincipal = 'imgs/trabajos/Webs/Staley.jpg';
-aTrabajos[3].trabajos[4].contenidoAdicional[0] = 'imgs/trabajos/Webs/Staley-adc-1.jpg';
-aTrabajos[3].trabajos[4].contenidoAdicional[1] = 'imgs/trabajos/Webs/Staley-adc-2.jpg';
-aTrabajos[3].trabajos[4].contenidoAdicional[2] = 'https://www.staleymartialarts.com/';
+aTrabajos[3].trabajos[4].titulo = 'BeerPoint - Cervecería Artesanal';
+aTrabajos[3].trabajos[4].descripcion = `Landing Page realizada para BeerPoint, una cervecería artesanal porteña.`;
+aTrabajos[3].trabajos[4].imgPrincipal = 'imgs/trabajos/Webs/Beerpoint.jpg';
+aTrabajos[3].trabajos[4].contenidoAdicional[0] = 'imgs/trabajos/Webs/Beerpoint-adc-1.jpg';
+aTrabajos[3].trabajos[4].contenidoAdicional[1] = 'imgs/trabajos/Webs/Beerpoint-adc-2.jpg';
+aTrabajos[3].trabajos[4].contenidoAdicional[2] = 'https://www.youtube.com/watch?v=uhrQd0jsqA8&feature=youtu.be';
+aTrabajos[3].trabajos[4].contenidoAdicional[3] = 'imgs/trabajos/Webs/Beerpoint-adc-3.jpg';
 
 aTrabajos[3].trabajos[5] = new trabajo();
 aTrabajos[3].trabajos[5].titulo = 'Antrieb Sudamericana S.A.';
@@ -263,11 +268,12 @@ aTrabajos[3].trabajos[6].contenidoAdicional[3] = 'https://imperioame.github.io/v
 aTrabajos[3].trabajos[7] = new trabajo();
 aTrabajos[3].trabajos[7].titulo = 'Web institucional Agencia Álterego';
 aTrabajos[3].trabajos[7].descripcion = `Sitio web institucional de la agencia, realizado internamente en la agencia, en javascript y css puro, sin uso de frameworks adicionales. <br> 100% frontend con carga de contenido dinámico.`;
-aTrabajos[3].trabajos[7].imgPrincipal = 'imgs/trabajos/Webs/AgenciaAlterego.png';
+aTrabajos[3].trabajos[7].imgPrincipal = 'imgs/trabajos/Webs/AgenciaAlterego.jpg';
 aTrabajos[3].trabajos[7].contenidoAdicional[0] = 'imgs/trabajos/Webs/AgenciaAlterego-adc-1.png';
-aTrabajos[3].trabajos[7].contenidoAdicional[1] = 'imgs/trabajos/Webs/AgenciaAlterego-adc-2.png';
+aTrabajos[3].trabajos[7].contenidoAdicional[1] = 'imgs/trabajos/Webs/AgenciaAlterego-adc-2.jpg';
 aTrabajos[3].trabajos[7].contenidoAdicional[2] = 'https://github.com/AgenciaAlterego/WebAlterego';
-aTrabajos[3].trabajos[7].contenidoAdicional[3] = 'https://agenciaalterego.com.ar/';
+aTrabajos[3].trabajos[7].contenidoAdicional[3] = 'imgs/trabajos/Webs/AgenciaAlterego-adc-3.jpg';
+aTrabajos[3].trabajos[7].contenidoAdicional[4] = 'https://agenciaalterego.com.ar/';
 
 
 /* Campañas publicitarias */
