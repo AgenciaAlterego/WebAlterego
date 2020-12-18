@@ -351,15 +351,16 @@ Clases adicionales
     padding: 10px;
     width: 100%;
     text-align: center;
-    color: var(--aecolor-gris-intermedio);
+    color: var(--aecolor-rojo);
+    border: 1px solid var(--aecolor-rojo);
     cursor: pointer;
     font-size: 0.85em;
 }
 
 #botonVolver:hover {
     transition: 0.5s;
-    color: var(--aecolor-rojo);
-    border: 1px solid var(--aecolor-rojo);
+    color: var(--aecolor-gris-intermedio);
+    border: 1px solid var(--aecolor-negro);
 }
 
 
