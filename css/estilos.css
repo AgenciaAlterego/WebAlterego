@@ -359,7 +359,7 @@ Clases adicionales
 
 #botonVolver:hover {
     transition: 0.5s;
-    color: var(--aecolor-gris-intermedio);
+    color: var(--aecolor-negro);
     border: 1px solid var(--aecolor-negro);
 }
 
