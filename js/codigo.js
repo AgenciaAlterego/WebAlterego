@@ -437,7 +437,7 @@ function GenerarTrabajo(e) {
     let botonVolver = d.createElement('a');
     botonVolver.id = 'botonVolver';
     botonVolver.className = 'boton';
-    botonVolver.innerHTML = '> VOLVER <';
+    botonVolver.innerHTML = 'VOLVER';
     botonVolver.addEventListener('click', function () {
         GenerarHome(publicTipoDeTrabajoSolicitado, e.offsetY);
     });

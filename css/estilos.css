@@ -357,7 +357,9 @@ Clases adicionales
 
 .boton:hover {
     transition: 0.5s ease-in;
-    border: 1px solid var(--aecolor-negro);
+    color: var(--aecolor-rojo);
+    border: 1px solid var(--aecolor-rojo);
+
 }
 
 
