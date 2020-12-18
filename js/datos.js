@@ -270,9 +270,9 @@ aTrabajos[3].trabajos[7].titulo = 'Web institucional Agencia Álterego';
 aTrabajos[3].trabajos[7].descripcion = `Sitio web institucional de la agencia, realizado internamente en la agencia, en javascript y css puro, sin uso de frameworks adicionales. <br> 100% frontend con carga de contenido dinámico.`;
 aTrabajos[3].trabajos[7].imgPrincipal = 'imgs/trabajos/Webs/AgenciaAlterego.jpg';
 aTrabajos[3].trabajos[7].contenidoAdicional[0] = 'imgs/trabajos/Webs/AgenciaAlterego-adc-1.png';
-aTrabajos[3].trabajos[7].contenidoAdicional[1] = 'imgs/trabajos/Webs/AgenciaAlterego-adc-2.png';
+aTrabajos[3].trabajos[7].contenidoAdicional[1] = 'imgs/trabajos/Webs/AgenciaAlterego-adc-2.jpg';
 aTrabajos[3].trabajos[7].contenidoAdicional[2] = 'https://github.com/AgenciaAlterego/WebAlterego';
-aTrabajos[3].trabajos[7].contenidoAdicional[3] = 'imgs/trabajos/Webs/AgenciaAlterego-adc-3.png';
+aTrabajos[3].trabajos[7].contenidoAdicional[3] = 'imgs/trabajos/Webs/AgenciaAlterego-adc-3.jpg';
 aTrabajos[3].trabajos[7].contenidoAdicional[4] = 'https://agenciaalterego.com.ar/';
 
 
