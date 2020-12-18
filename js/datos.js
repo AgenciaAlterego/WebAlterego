@@ -213,13 +213,13 @@ aTrabajos[3].trabajos[0].contenidoAdicional[2] = 'https://bit.ly/FarmaShop-EV';
 aTrabajos[3].trabajos[0].contenidoAdicional[3] = 'imgs/trabajos/Webs/Farmashop-adc-3.png';
 
 aTrabajos[3].trabajos[1] = new trabajo();
-aTrabajos[3].trabajos[1].titulo = 'BeerPoint - Cervecería Artesanal';
-aTrabajos[3].trabajos[1].descripcion = `Landing Page realizada para BeerPoint, una cervecería artesanal porteña.`;
-aTrabajos[3].trabajos[1].imgPrincipal = 'imgs/trabajos/Webs/Beerpoint.jpg';
-aTrabajos[3].trabajos[1].contenidoAdicional[0] = 'imgs/trabajos/Webs/Beerpoint-adc-1.jpg';
-aTrabajos[3].trabajos[1].contenidoAdicional[1] = 'imgs/trabajos/Webs/Beerpoint-adc-2.jpg';
-aTrabajos[3].trabajos[1].contenidoAdicional[2] = 'https://www.youtube.com/watch?v=uhrQd0jsqA8&feature=youtu.be';
-aTrabajos[3].trabajos[1].contenidoAdicional[3] = 'imgs/trabajos/Webs/Beerpoint-adc-3.jpg';
+aTrabajos[3].trabajos[1].titulo = 'Staley Martial Arts';
+aTrabajos[3].trabajos[1].descripcion = `Sitio web institucional diseñado y realizado en Wordpress para el dojo de artes marciales Staley Martial Arts, ubicado en Chicago, EEUU.`;
+aTrabajos[3].trabajos[1].imgPrincipal = 'imgs/trabajos/Webs/Staley.jpg';
+aTrabajos[3].trabajos[1].contenidoAdicional[0] = 'imgs/trabajos/Webs/Staley-adc-1.jpg';
+aTrabajos[3].trabajos[1].contenidoAdicional[1] = 'imgs/trabajos/Webs/Staley-adc-2.jpg';
+aTrabajos[3].trabajos[1].contenidoAdicional[2] = 'https://www.staleymartialarts.com/';
+aTrabajos[3].trabajos[1].contenidoAdicional[3] = 'imgs/trabajos/Webs/Staley-adc-3.jpg';
 
 aTrabajos[3].trabajos[2] = new trabajo();
 aTrabajos[3].trabajos[2].titulo = 'Prime - El juego más seguro';
@@ -240,13 +240,13 @@ aTrabajos[3].trabajos[3].contenidoAdicional[1] = 'imgs/trabajos/Webs/Afstation-a
 aTrabajos[3].trabajos[3].contenidoAdicional[2] = 'imgs/trabajos/Webs/Afstation-adc-3.jpg';
 
 aTrabajos[3].trabajos[4] = new trabajo();
-aTrabajos[3].trabajos[4].titulo = 'Staley Martial Arts';
-aTrabajos[3].trabajos[4].descripcion = `Sitio web institucional diseñado y realizado en Wordpress para el dojo de artes marciales Staley Martial Arts, ubicado en Chicago, EEUU.`;
-aTrabajos[3].trabajos[4].imgPrincipal = 'imgs/trabajos/Webs/Staley.jpg';
-aTrabajos[3].trabajos[4].contenidoAdicional[0] = 'imgs/trabajos/Webs/Staley-adc-1.jpg';
-aTrabajos[3].trabajos[4].contenidoAdicional[1] = 'imgs/trabajos/Webs/Staley-adc-2.jpg';
-aTrabajos[3].trabajos[4].contenidoAdicional[2] = 'https://www.staleymartialarts.com/';
-aTrabajos[3].trabajos[4].contenidoAdicional[3] = 'imgs/trabajos/Webs/Staley-adc-3.jpg';
+aTrabajos[3].trabajos[4].titulo = 'BeerPoint - Cervecería Artesanal';
+aTrabajos[3].trabajos[4].descripcion = `Landing Page realizada para BeerPoint, una cervecería artesanal porteña.`;
+aTrabajos[3].trabajos[4].imgPrincipal = 'imgs/trabajos/Webs/Beerpoint.jpg';
+aTrabajos[3].trabajos[4].contenidoAdicional[0] = 'imgs/trabajos/Webs/Beerpoint-adc-1.jpg';
+aTrabajos[3].trabajos[4].contenidoAdicional[1] = 'imgs/trabajos/Webs/Beerpoint-adc-2.jpg';
+aTrabajos[3].trabajos[4].contenidoAdicional[2] = 'https://www.youtube.com/watch?v=uhrQd0jsqA8&feature=youtu.be';
+aTrabajos[3].trabajos[4].contenidoAdicional[3] = 'imgs/trabajos/Webs/Beerpoint-adc-3.jpg';
 
 aTrabajos[3].trabajos[5] = new trabajo();
 aTrabajos[3].trabajos[5].titulo = 'Antrieb Sudamericana S.A.';
