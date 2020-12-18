@@ -386,4 +386,14 @@ Media queries
     .showcaseBox h2 {
         font-size: 2em;
     }
+
+    .showcase2Box,
+    .showcaseBox{
+        flex: 3 0 95%;
+    }
+
+    .col-2-sd{
+        flex: 2 0 30%;
+    }
+
 }
