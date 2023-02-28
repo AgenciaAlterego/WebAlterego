@@ -275,6 +275,11 @@ main iframe {
     font-size: 0.8em !important;
 }
 
+#Nosotros #disenadores span p a{
+    text-decoration: underline;
+    text-decoration-color: rgb(190,190, 190);
+}
+
 
 /*
 *****************************************************************************
